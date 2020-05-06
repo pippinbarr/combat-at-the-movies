@@ -1,8 +1,8 @@
-let Prototyping = new Phaser.Class({
+let Prototype = new Phaser.Class({
 
   Extends: Phaser.Scene,
 
-  initialize: function Prototyping() {
+  initialize: function Prototype() {
     Phaser.Scene.call(this, {
       key: 'prototype'
     });
