@@ -1,0 +1,41 @@
+{
+	"textures": [
+		{
+			"image": "atlas.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 10,
+				"h": 9
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "tank.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 7
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 7
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 8,
+						"h": 7
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:809f2308552638d4fc8048d41c584808:f1a6384160ee45fc67688d843a310e1d:cbce6b53f0f49e0bf15173c25c41f876$"
+	}
+}

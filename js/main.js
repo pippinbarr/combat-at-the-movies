@@ -3,13 +3,19 @@ const START_SCENE = "prototype";
 
 let config = {
   type: Phaser.AUTO,
-  width: 800,
-  height: 400,
+  width: 640 / 5,
+  height: 480 / 5,
   scene: [
     Boot, Preloader, Prototype
   ],
+  render: {
+    antialias: false,
+    pixelArt: true,
+    antialiasGL: false
+  },
   pixelArt: true,
   antialias: false,
+  antialiasGL: false,
   physics: {
     default: 'arcade',
     arcade: {
@@ -19,8 +25,8 @@ let config = {
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.BOTH,
-    width: 800,
-    height: 400
+    width: 640 / 5,
+    height: 480 / 5,
   }
 };
 

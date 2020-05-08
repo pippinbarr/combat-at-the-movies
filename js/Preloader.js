@@ -9,7 +9,8 @@ let Preloader = new Phaser.Class({
   },
 
   preload: function() {
-
+    // Load the atlas
+    this.load.multiatlas('atlas', 'assets/atlas/atlas.json', 'assets/atlas');
   },
 
   create: function() {
