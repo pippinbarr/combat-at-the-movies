@@ -13,11 +13,12 @@ let Prototype = new Phaser.Class({
 
   create: function() {
     this.cameras.main.setBackgroundColor('#000');
-    this.player = this.physics.add.sprite(100, 240, `tank`).setScale(5);
-    this.player.setFrame(0);
-    this.player.speed = 0;
-    this.player.moveAngle = 0;
+    this.player = new Tank(this, 100 / SCALE, 240 / SCALE, `tank`, true);
+    this.add.existing(this.player);
     this.cursors = this.input.keyboard.createCursorKeys();
+
+    this.enemy = new Tank(this, 200 / SCALE, 240 / SCALE, `tank`, true);
+    this.add.existing(this.enemy);
   },
 
   update: function() {
@@ -26,23 +27,12 @@ let Prototype = new Phaser.Class({
     // this.physics.velocityFromRotation(this.player.rotation, this.player.speed, this.player.body.velocity);
 
     if (this.game.getFrame() % 12 === 0) {
-      this.player.x += this.player.speed * Math.cos(Phaser.Math.DegToRad(this.player.moveAngle));
-      this.player.y += this.player.speed * Math.sin(Phaser.Math.DegToRad(this.player.moveAngle));
-      if (this.player.rotationDirection != 0) {
-        this.player.moveAngle += this.player.rotationDirection * PLAYER_ROTATION_STEP;
-        let frame = this.player.frame.name;
-        frame += this.player.rotationDirection;
-        if (frame < 0) {
-          frame = 3;
-          this.player.angle -= 90;
-        }
-        else if (frame > 3) {
-          frame = 0;
-          this.player.angle += 90;
-        }
-        this.player.setFrame(frame);
-      }
+      this.player.update();
     }
+
+    this.physics.collide(this.player, this.enemy, (a, b) => {
+      a.undo();
+    });
   },
 
   handleInput: function() {
@@ -57,7 +47,7 @@ let Prototype = new Phaser.Class({
     }
 
     if (this.cursors.up.isDown) {
-      this.player.speed = PLAYER_SPEED;
+      this.player.speed = this.player.maxSpeed;
     }
     else {
       this.player.speed = 0;
