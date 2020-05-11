@@ -3,8 +3,8 @@ const START_SCENE = "prototype";
 
 let config = {
   type: Phaser.AUTO,
-  width: 640 / 5,
-  height: 480 / 5,
+  width: 640,
+  height: 480,
   scene: [
     Boot, Preloader, Prototype
   ],
@@ -25,8 +25,8 @@ let config = {
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.BOTH,
-    width: 640 / 5,
-    height: 480 / 5,
+    width: 640,
+    height: 480,
   }
 };
 

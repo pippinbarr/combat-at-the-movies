@@ -1,5 +1,5 @@
 const PLAYER_ROTATION_STEP = 90 / 4;
-const PLAYER_SPEED = 2;
+const PLAYER_SPEED = 5;
 
 let Prototype = new Phaser.Class({
 
@@ -13,8 +13,10 @@ let Prototype = new Phaser.Class({
 
   create: function() {
     this.cameras.main.setBackgroundColor('#000');
-    this.player = this.physics.add.sprite(10, 10, `atlas`, `tank.png`);
+    this.player = this.physics.add.sprite(100, 240, `tank`).setScale(5);
+    this.player.setFrame(0);
     this.player.speed = 0;
+    this.player.moveAngle = 0;
     this.cursors = this.input.keyboard.createCursorKeys();
   },
 
@@ -24,9 +26,22 @@ let Prototype = new Phaser.Class({
     // this.physics.velocityFromRotation(this.player.rotation, this.player.speed, this.player.body.velocity);
 
     if (this.game.getFrame() % 12 === 0) {
-      this.player.x += this.player.speed * Math.cos(Phaser.Math.DegToRad(this.player.angle));
-      this.player.y += this.player.speed * Math.sin(Phaser.Math.DegToRad(this.player.angle));
-      this.player.angle += PLAYER_ROTATION_STEP * this.player.rotationDirection;
+      this.player.x += this.player.speed * Math.cos(Phaser.Math.DegToRad(this.player.moveAngle));
+      this.player.y += this.player.speed * Math.sin(Phaser.Math.DegToRad(this.player.moveAngle));
+      if (this.player.rotationDirection != 0) {
+        this.player.moveAngle += this.player.rotationDirection * PLAYER_ROTATION_STEP;
+        let frame = this.player.frame.name;
+        frame += this.player.rotationDirection;
+        if (frame < 0) {
+          frame = 3;
+          this.player.angle -= 90;
+        }
+        else if (frame > 3) {
+          frame = 0;
+          this.player.angle += 90;
+        }
+        this.player.setFrame(frame);
+      }
     }
   },
 
