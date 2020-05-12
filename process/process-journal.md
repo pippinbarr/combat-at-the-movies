@@ -54,3 +54,13 @@ This is all kind of important because I'm (at least for now) trying to make the 
 ALTHOUGH, perhaps I could look into some super degraded-sounding audio of a voice instead? I mean, that's not really something the Atari could do though is it? I'll have to consider that. Well I just did a little research and it sounds like the Atari 2600 _could_ do some version of voice stuff! Here's a [discussion of that on Atari Age](https://atariage.com/forums/topic/46941-speech-synthesis-on-vcs/). There's this ROM hack called [Berzerk Voice Enhanced](https://atariage.com/hack_page.php?SystemID=2600&SoftwareHackID=171), which I'm going to assume stays true to the Atari's sound capacity, given the nature of these people. Apparently the game QuadRun was also one that had voice, just announcing the title.
 
 Having listened to the voice: hyper distorted is the main character. Maybe I could work out how to filter a voice/my voice in Audacity to a point where it sounds enough like this? For Rosebud, You Talkin' To Me? Like Tears in Rain.
+
+# Collisions, confusions (Tuesday, 12 May 2020, 16:01PM)
+
+Well I finally got a version of pixel-based collision done, even though it is truly, truly horrible. Truly horrible. Like, I don't know quite how to express how shit it is? Depressing really. The problems all arise because I'm trying to mimick how the Atari works and how Combat works, and those aren't tools readily available to me with something like Phaser. So it's all very stopgap bad solutions I'm not all that happy with.
+
+But then on the other hand I've been really keen to get the game to at least appear relatively similar to the original game so that it's not distractingly _not_ Combat, you know? I'm losing track of the point of that though. To the extent I'm not _actually_ making an Atari game, why am I trying to fake Atari-style elements? And if I'm not making an Atari game, then what am I actually doing and why am I beholden to Atari graphics, Atari collisions, Atari sound design, and so on?
+
+Is the point of this game that it's literally _Combat_, and therefore an Atari take on these things? Or is the point that it's move scene re-expressed using a tank and _Combat_ happens to be an iconic tank game that gives it some kind of grounding? And also provides constraints of other things like graphic and sound and so forth.
+
+I feel a little confused by the project right now. Can you tell?
