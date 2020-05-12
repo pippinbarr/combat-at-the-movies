@@ -15,7 +15,7 @@ let Preloader = new Phaser.Class({
     this.load.spritesheet('tank', 'assets/spritesheets/tank-spritesheet.png', {
       frameWidth: 8,
       frameHeight: 8,
-      endFrame: 3
+      endFrame: 15
     });
   },
 

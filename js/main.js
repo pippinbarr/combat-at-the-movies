@@ -1,11 +1,11 @@
 const DEBUG = false;
 const START_SCENE = "prototype";
-const SCALE = 1;
+const SCALE = 5;
 
 let config = {
   type: Phaser.AUTO,
-  width: 640 / SCALE,
-  height: 480 / SCALE,
+  width: 640,
+  height: 480,
   scene: [
     Boot, Preloader, Prototype
   ],
@@ -26,8 +26,8 @@ let config = {
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.BOTH,
-    width: 640 / SCALE,
-    height: 480 / SCALE,
+    width: 640,
+    height: 480,
   }
 };
 
