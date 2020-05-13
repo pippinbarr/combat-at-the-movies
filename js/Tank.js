@@ -6,12 +6,16 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     this.scene = scene;
     this.setFrame(0);
     this.setScale(SCALE);
-    this.maxSpeed = SCALE * 2;
+    this.maxSpeed = 150;
     this.speed = 0;
     this.rotationStep = 90 / 4;
+    this.rotationDirection = 0;
     this.moveAngle = 0;
     this.x = x;
     this.y = y;
+
+    this.body.setBounce(1.25);
+    this.body.setDrag(1000);
   }
 
   create() {
@@ -19,10 +23,14 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
   }
 
   update() {
-    this.x += this.speed * Math.cos(Phaser.Math.DegToRad(this.moveAngle));
-    this.y += this.speed * Math.sin(Phaser.Math.DegToRad(this.moveAngle));
+    // Make me immovable when I'm not moving
+    this.body.immovable = (this.body.velocity.x === 0 && this.body.velocity.y === 0);
 
-    // this.scene.physics.velocityFromRotation(Phaser.Math.DegToRad(this.moveAngle), this.speed, this.body.velocity);
+    if (this.scene.game.getFrame() % 12 !== 0) {
+      return;
+    }
+
+    this.scene.physics.velocityFromRotation(Phaser.Math.DegToRad(this.moveAngle), this.speed, this.body.velocity);
 
     if (this.rotationDirection != 0) {
       this.moveAngle += this.rotationDirection * this.rotationStep;
@@ -38,10 +46,10 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     }
   }
 
-  undo() {
-    this.x -= 2 * this.speed * Math.cos(Phaser.Math.DegToRad(this.moveAngle));
-    this.y -= 2 * this.speed * Math.sin(Phaser.Math.DegToRad(this.moveAngle));
+  undo(delta) {
+    console.log(delta);
+    this.body.x -= this.body.velocity.x / delta;
+    this.body.y -= this.body.velocity.y / delta;
   }
-
 
 }
