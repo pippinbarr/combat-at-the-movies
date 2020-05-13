@@ -74,3 +74,19 @@ My new plan: draw tiny little levels in Pixen, do pixel collision as with the ta
 This stuff is SO boring.
 
 It's probably a good data point showing that not every single thing that happens during development is actually of interest or really worth dwelling on. This was just a technical moment that led nowhere.
+
+# Dead ends and questions (Wednesday, 13 May 2020, 14:47PM)
+
+Just discarded a bunch of changes where I tried to make simple image-based collision stuff work and... it didn't. A frustrating time indeed.
+
+So let me ask me some questions then: does it need to be Combat? If so, does it need to be a close match to the Atari style at the level of things like collisions? Rotation?
+
+What would the game be like if the graphics were just literally the standard tank moving around, rotating per the standard approach in Phaser, etc.? And we just went from there. Not totally Atari, but in the spirit of it in terms of basic graphic restrictions and basic mechanics?
+
+Fundamentally: why does pixel perfect collision detection and the like even matter? It fucking doesn't, right? And if it doesn't matter, why not make the game the "easy" way, probably still with a tile-map involved, since that seems like a helpful way to draw scenes, but relying on Phaser's physics and velocities etc.? Try to lean into what the library gives me while making it "enough" like the original game to be a clear tribute.
+
+So that would mean standard collision detection for sure, which would mean applying a more standard velocity to the tank, which might eliminate the jerky style of motion which would be a shame, but probably not the end of the world??? Maybe you can stagger the updating of rendering or something weird?
+
+This all suggests that I should perhaps start a new branch, reimplement the game and see what happens?
+
+OKAY.
