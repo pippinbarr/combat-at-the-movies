@@ -64,3 +64,13 @@ But then on the other hand I've been really keen to get the game to at least app
 Is the point of this game that it's literally _Combat_, and therefore an Atari take on these things? Or is the point that it's move scene re-expressed using a tank and _Combat_ happens to be an iconic tank game that gives it some kind of grounding? And also provides constraints of other things like graphic and sound and so forth.
 
 I feel a little confused by the project right now. Can you tell?
+
+# Death to tilemaps (Wednesday, 13 May 2020, 11:55AM)
+
+It's not reflected in the codebase because I just discarded all the changes (thanks Git!), but I spent a good (bad) hour trying to use a tilemap as the basis for drawing levels in the game, to no real avail. It's probably some dumb little thing I'm doing, but in the end who cares.
+
+My new plan: draw tiny little levels in Pixen, do pixel collision as with the tanks, and hey presto.
+
+This stuff is SO boring.
+
+It's probably a good data point showing that not every single thing that happens during development is actually of interest or really worth dwelling on. This was just a technical moment that led nowhere.
