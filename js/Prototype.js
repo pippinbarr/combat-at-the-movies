@@ -35,6 +35,7 @@ let Prototype = new Phaser.Class({
     this.add.existing(this.enemy);
 
     this.physics.add.collider(this.player, walls);
+    this.physics.add.collider(this.enemy, walls);
 
     this.shootables = this.add.group();
     this.shootables.add(this.player);
@@ -59,6 +60,8 @@ let Prototype = new Phaser.Class({
   },
 
   handleInput: function() {
+    if (this.player.waiting) return;
+
     if (this.cursors.left.isDown) {
       this.player.rotationDirection = -1;
     }

@@ -13,6 +13,7 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     this.moveAngle = 0;
     this.x = x;
     this.y = y;
+    this.tintColor = tint;
     this.tint = tint;
 
     this.body.setBounce(1.25);
@@ -64,14 +65,15 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     if (this.bullet) return;
 
     this.bullet = this.scene.physics.add.sprite(this.x, this.y, `atlas`, `pixel.png`).setScale(4);
-    this.bullet.setTint(this.tint);
+    this.bullet.tint = this.tintColor;
     this.bullet.depth = -10;
     this.scene.physics.velocityFromRotation(Phaser.Math.DegToRad(this.moveAngle), this.bulletSpeed, this.bullet.body.velocity);
     this.scene.physics.add.overlap(this.bullet, shootables, (bullet, target) => {
       console.log(target);
       if (target === this) return;
       if (target instanceof Tank) {
-        target.die();
+        target.die(bullet);
+        this.wait();
         bullet.destroy();
         this.bullet = null;
       }
@@ -83,8 +85,24 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
 
   }
 
-  die() {
+  wait() {
+    this.waiting = true;
+    setTimeout(() => {
+      this.waiting = false;
+    }, 2000);
+  }
+
+  die(bullet) {
+    this.body.x += bullet.body.velocity.x / 10 + (Math.random() * 50);
+    this.body.y += bullet.body.velocity.y / 10 + (Math.random() * 50);
+    // this.body.velocity.x = bullet.body.velocity.x;
+    // this.body.velocity.y = bullet.body.velocity.y;
+
     this.dead = true;
+    setTimeout(() => {
+      this.dead = false;
+      this.rotationDirection = 0;
+    }, 2000)
   }
 
 }
