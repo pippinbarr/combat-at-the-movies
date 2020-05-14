@@ -34,6 +34,10 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
       return;
     }
 
+    if (this.waiting) {
+      return;
+    }
+
     // Make me immovable when I'm not moving
     this.body.immovable = (this.body.velocity.x === 0 && this.body.velocity.y === 0);
 

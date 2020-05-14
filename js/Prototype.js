@@ -60,7 +60,7 @@ let Prototype = new Phaser.Class({
   },
 
   handleInput: function() {
-    if (this.player.waiting) return;
+    if (this.player.waiting || this.player.dead) return;
 
     if (this.cursors.left.isDown) {
       this.player.rotationDirection = -1;
