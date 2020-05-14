@@ -1,4 +1,4 @@
-# Combats
+# Combat at the movies
 
 _..._
 
@@ -8,7 +8,7 @@ _..._
 
 #### [Play Online](https://pippinbarr.github.io/combats/) (desktop only)
 
-#### Read the [Press kit](https://github.com/pippinbarr/combats/blob/master/press/README.md) for press information
+#### Read the [Press kit](https://github.com/pippinbarr/combat-at-the-movies/blob/master/press/README.md) for press information
 #### Read the [Process documentation](https://github.com/pippinbarr/combats/blob/master/process/README.md) for process journal, to do list, and related work
 #### Read the [Commit History](https://github.com/pippinbarr/combats/commits/master) for step-by-step information about how the project was built
 #### Look at the [Code Repository](https://github.com/pippinbarr/combats) for source code etc.
