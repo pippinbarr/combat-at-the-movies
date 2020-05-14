@@ -10,7 +10,7 @@ let Preloader = new Phaser.Class({
 
   preload: function() {
     // Load the atlas
-    // this.load.multiatlas('atlas', 'assets/atlas/atlas.json', 'assets/atlas');
+    this.load.multiatlas('atlas', 'assets/atlas/atlas.json', 'assets/atlas');
 
     this.load.image(`prototype-tiles`, `assets/tilesets/prototype.png`)
     this.load.tilemapTiledJSON(`prototype-map`, `assets/tilemaps/prototype.json`);

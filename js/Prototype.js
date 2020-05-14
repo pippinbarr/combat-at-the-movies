@@ -24,8 +24,7 @@ let Prototype = new Phaser.Class({
     });
     walls.forEachTile((tile) => {
       tile.tint = 0xF1B275;
-    })
-
+    });
 
     this.player = new Tank(this, 100, 240, `tank`, 0xC04141);
     this.add.existing(this.player);
@@ -36,6 +35,11 @@ let Prototype = new Phaser.Class({
     this.add.existing(this.enemy);
 
     this.physics.add.collider(this.player, walls);
+
+    this.shootables = this.add.group();
+    this.shootables.add(this.player);
+    this.shootables.add(this.enemy);
+    this.shootables.add(walls)
 
     // const debugGraphics = this.add.graphics().setAlpha(0.75);
     // walls.renderDebug(debugGraphics, {
@@ -48,7 +52,6 @@ let Prototype = new Phaser.Class({
   update: function(time, delta) {
     this.handleInput();
 
-    // Only update the player every 12 frames (to get the rotation effect)
     this.player.update();
     this.enemy.update();
 
@@ -71,6 +74,10 @@ let Prototype = new Phaser.Class({
     }
     else {
       this.player.speed = 0;
+    }
+
+    if (this.cursors.space.isDown) {
+      this.player.shoot(this.shootables);
     }
   }
 });

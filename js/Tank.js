@@ -13,11 +13,13 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     this.moveAngle = 0;
     this.x = x;
     this.y = y;
+    this.tint = tint;
 
     this.body.setBounce(1.25);
     this.body.setDrag(1000);
 
-    this.setTint(tint);
+    this.bullet = null;
+    this.bulletSpeed = 800;
   }
 
   create() {
@@ -25,6 +27,12 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
   }
 
   update() {
+    if (this.dead) {
+      this.rotationDirection = 1;
+      this.updateFrame();
+      return;
+    }
+
     // Make me immovable when I'm not moving
     this.body.immovable = (this.body.velocity.x === 0 && this.body.velocity.y === 0);
 
@@ -36,22 +44,47 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
 
     if (this.rotationDirection != 0) {
       this.moveAngle += this.rotationDirection * this.rotationStep;
-      let frame = this.frame.name;
-      frame += this.rotationDirection;
-      if (frame < 0) {
-        frame = 15;
-      }
-      else if (frame > 15) {
-        frame = 0;
-      }
-      this.setFrame(frame);
+      this.updateFrame();
     }
   }
 
-  undo(delta) {
-    console.log(delta);
-    this.body.x -= this.body.velocity.x / delta;
-    this.body.y -= this.body.velocity.y / delta;
+  updateFrame() {
+    let frame = this.frame.name;
+    frame += this.rotationDirection;
+    if (frame < 0) {
+      frame = 15;
+    }
+    else if (frame > 15) {
+      frame = 0;
+    }
+    this.setFrame(frame);
+  }
+
+  shoot(shootables) {
+    if (this.bullet) return;
+
+    this.bullet = this.scene.physics.add.sprite(this.x, this.y, `atlas`, `pixel.png`).setScale(4);
+    this.bullet.setTint(this.tint);
+    this.bullet.depth = -10;
+    this.scene.physics.velocityFromRotation(Phaser.Math.DegToRad(this.moveAngle), this.bulletSpeed, this.bullet.body.velocity);
+    this.scene.physics.add.overlap(this.bullet, shootables, (bullet, target) => {
+      console.log(target);
+      if (target === this) return;
+      if (target instanceof Tank) {
+        target.die();
+        bullet.destroy();
+        this.bullet = null;
+      }
+      if (target.index === 1) {
+        bullet.destroy();
+        this.bullet = null;
+      }
+    });
+
+  }
+
+  die() {
+    this.dead = true;
   }
 
 }
