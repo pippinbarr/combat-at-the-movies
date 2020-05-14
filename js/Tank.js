@@ -1,6 +1,6 @@
 class Tank extends Phaser.Physics.Arcade.Sprite {
 
-  constructor(scene, x, y, texture) {
+  constructor(scene, x, y, texture, tint) {
     super(scene, x, y, texture)
     scene.physics.world.enableBody(this);
     this.scene = scene;
@@ -16,6 +16,8 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
 
     this.body.setBounce(1.25);
     this.body.setDrag(1000);
+
+    this.setTint(tint);
   }
 
   create() {
