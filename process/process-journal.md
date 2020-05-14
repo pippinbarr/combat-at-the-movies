@@ -90,3 +90,19 @@ So that would mean standard collision detection for sure, which would mean apply
 This all suggests that I should perhaps start a new branch, reimplement the game and see what happens?
 
 OKAY.
+
+# Tiled (Thursday, 14 May 2020, 12:00PM)
+
+OKAY WELL. I did what I said I would do in a new branch this morning and have already merged it feeling fairly successful. We have:
+
+- Atari tank image that rotates as per the game
+- Arcade physics movement that does manage to replicate the jerky movement of the tanks by setting a very high drag (can work on this, but nice to see I can have at least a simulacrum)
+- Arcade physics collisions, which means it ain't pixel perfect, but at least just works without any extra effort on my behalf
+- Tilemap-based level (created in Tiled) with collision working very nicely thanks
+- Atari colours applied to the tanks, walls, background
+
+The result is something that ACTUALLY LOOKS LIKE COMBAT, with the one significant difference being a lack of pixel perfect collisions. It's not impossible I could revisit this specific issue, I suppose, but I kiiiind of doubt I'm going to do that, as it's pretty strenuous and it's not THAT clear it's vital to what the game is "about".
+
+So frankly I'm kind of happy. I need the tanks to be able to shoot (each other? with scoring?), now, and then after that I think I can actually look at the titles of films I was thinking of and actually work out how they might fit this frame?
+
+Amazing... maybe I'm actually allowed to start working in a way that doesn't suck?
