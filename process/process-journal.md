@@ -106,3 +106,9 @@ The result is something that ACTUALLY LOOKS LIKE COMBAT, with the one significan
 So frankly I'm kind of happy. I need the tanks to be able to shoot (each other? with scoring?), now, and then after that I think I can actually look at the titles of films I was thinking of and actually work out how they might fit this frame?
 
 Amazing... maybe I'm actually allowed to start working in a way that doesn't suck?
+
+# The basics (Friday, 15 May 2020, 10:14AM)
+
+Well the basics are in now I think. Shooting now mostly works, including when you shoot and they teleport into a wall (it tunnels out in the same direction) or they go off the scren (it wraps). So I think we've now got a close enough framework to continue with.
+
+Next is some kind of text display, some experiments with producing sound a bit like the Atari voice playback thing, and then also obviously some honest-to-god design of the levels themselves. Phew. At which point we might actually find out whether this even works or not.
