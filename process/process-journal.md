@@ -30,7 +30,7 @@ Should they all be single player? Kind of weird given that COMBAT is two player,
 - Some Like it Hot (tanks in wigs? Pretty hard to do with the palette...)
 - __Blade Runner__ (AI tank that gives the speech when you kill it? While spinning!)
 - Burden of Dreams (pushing a boat together?)
-- __Godzilla__ (giant tank? You die.)
+- __Godzilla__ (giant tank? You die. You are Gozilla?)
 - __THX1138__ (tank in bright white environment with nothing else)
 - To Sir With Love (classroom of tanks and you have to shoot every student to get them to behave themselves?)
 - Night of the Living Dead (flee zombie tanks into a safe house?)
@@ -112,3 +112,13 @@ Amazing... maybe I'm actually allowed to start working in a way that doesn't suc
 Well the basics are in now I think. Shooting now mostly works, including when you shoot and they teleport into a wall (it tunnels out in the same direction) or they go off the scren (it wraps). So I think we've now got a close enough framework to continue with.
 
 Next is some kind of text display, some experiments with producing sound a bit like the Atari voice playback thing, and then also obviously some honest-to-god design of the levels themselves. Phew. At which point we might actually find out whether this even works or not.
+
+# Audiophile (Friday, 15 May 2020, 11:21AM)
+
+Spent some time in both Audacity and LMMS trying to work out some way to make my robot voice as it would potentially just obviate any need for text at all, as I'm not sure about text and matching resolutions. Combat itself doesn't display any text other than numbers, and I'd want to be potentially able to display things like "Rosebud" and "You talkin' to me?" etc. Especially for the longer phrases which help to ground the game in the movie, it would be a talk order potentially to display. I doubt it's impossible (possibly breaking it up or scrolling it?), but I like the idea of at least pursuing an audio version first, especially since actual speech is so important to films (usually - talkies and all that), and because it's funny that the Atari _did_ actually have this capacity in a super limited way.
+
+In the end I couldn't get anything going with various chains of filters (though LMMS was way better for experimentation because of its non-modifying effects stuff making experimentation faster). I found interesting distorted sounds, but non of them really sounded much like the robot-y stripped back sound from Atari. I guess it's not that it sounds like a robot but just insanely "low resolution"?
+
+In searching for tutorials (which mostly focus on echo and multiple samples with different pitches and tempos), I re-ran into the idea of a vocoder, which I didn't use the first time because I had a mono recording (stupid reason, but this is the way it goes when you're hurrying around looking for quick fixes - it takes forever). After all, a vocoder is kind of exactly a version of what I want - a voice encoder. And Kraftwerk used them. So after playing around with the parameters I absolutely don't understand in Audacity's vocoder, I got something that (at least for me saying "Rosebud" in an uninspiring way) did actually seem to produce something kind of nice. I also tried it on the actual audio from Bladerunner's "I've seen things" seen, but in the end that audio was too messy. It's likely that it's worth rerecording these texts with some kind of simple speech synthesis voice, or even me doing a monotone or something.
+
+So this did end up being a productive little session in the end, though it was extremely frustrating for much of the time. I think that, in keeping with the obvious limitations on Atari hardware, it would also make sense to keep audio quite short. So rather than have the entire "I've seen things" speech I'd rather just have the first sentence or something... or that and "time to die" before the death spin? Or not. But anyway, play around with that brevity.
