@@ -14,6 +14,8 @@ let Prototype = new Phaser.Class({
   create: function() {
     this.cameras.main.setBackgroundColor('#BEC86D');
 
+    this.physics.world.setBounds(0, 16 * 6, this.game.canvas.width, this.game.canvas.height - 16 * 6);
+
     const map = this.make.tilemap({
       key: "prototype-map"
     });
@@ -25,17 +27,30 @@ let Prototype = new Phaser.Class({
     walls.forEachTile((tile) => {
       tile.tint = 0xF1B275;
     });
+    console.log(walls);
 
     this.player = new Tank(this, 100, 240, `tank`, 0xC04141);
     this.add.existing(this.player);
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    this.enemy = new Tank(this, 200, 240, `tank`, 0x272AB0);
+    this.enemy = new Tank(this, 200, 220, `tank`, 0x272AB0);
     this.add.existing(this.enemy);
 
-    this.physics.add.collider(this.player, walls);
-    this.physics.add.collider(this.enemy, walls);
+    this.tanks = this.add.group();
+    this.tanks.add(this.player);
+    this.tanks.add(this.enemy);
+
+    this.physics.add.collider(this.tanks, walls);
+    this.physics.add.collider(this.tanks, this.tanks);
+    this.physics.add.overlap(this.tanks, walls, (a, b) => {
+      // To resolve being shot into a wall
+      if (b.index === 1) {
+        a.body.x += a.body.velocity.x / 100;
+        a.body.y += a.body.velocity.y / 100;
+      }
+    });
+
 
     this.shootables = this.add.group();
     this.shootables.add(this.player);
@@ -56,7 +71,7 @@ let Prototype = new Phaser.Class({
     this.player.update();
     this.enemy.update();
 
-    this.physics.collide(this.player, this.enemy);
+    this.physics.world.wrap(this.tanks);
   },
 
   handleInput: function() {
@@ -80,7 +95,32 @@ let Prototype = new Phaser.Class({
     }
 
     if (this.cursors.space.isDown) {
-      this.player.shoot(this.shootables);
+      let bullet = this.player.shoot();
+      if (!bullet) {
+        return;
+      }
+      this.physics.add.overlap(bullet, this.shootables, (bullet, target) => {
+        if (target === bullet.owner) {
+          return;
+        }
+        if (target instanceof Tank) {
+          target.body.velocity.x = bullet.body.velocity.x * 7;
+          target.body.velocity.y = bullet.body.velocity.y * 8;
+
+          target.dead = true;
+          setTimeout(() => {
+            target.dead = false;
+            target.rotationDirection = 0;
+          }, 2000);
+          bullet.owner.shooting = false;
+          bullet.destroy();
+          bullet.owner.wait();
+        }
+        else if (target.index === 1) {
+          bullet.owner.shooting = false;
+          bullet.destroy();
+        }
+      });
     }
   }
 });
