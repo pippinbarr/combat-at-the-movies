@@ -104,17 +104,7 @@ let Prototype = new Phaser.Class({
           return;
         }
         if (target instanceof Tank) {
-          target.body.velocity.x = bullet.body.velocity.x * 7;
-          target.body.velocity.y = bullet.body.velocity.y * 8;
-
-          target.dead = true;
-          setTimeout(() => {
-            target.dead = false;
-            target.rotationDirection = 0;
-          }, 2000);
-          bullet.owner.shooting = false;
-          bullet.destroy();
-          bullet.owner.wait();
+          target.die(bullet);
         }
         else if (target.index === 1) {
           bullet.owner.shooting = false;

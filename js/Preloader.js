@@ -20,6 +20,11 @@ let Preloader = new Phaser.Class({
       frameHeight: 8,
       endFrame: 15
     });
+
+    this.load.audio('idle', 'assets/sounds/idle.wav');
+    this.load.audio('drive', 'assets/sounds/drive.wav');
+    this.load.audio('shoot', 'assets/sounds/shoot.wav');
+    this.load.audio('die', 'assets/sounds/die.wav');
   },
 
   create: function() {
