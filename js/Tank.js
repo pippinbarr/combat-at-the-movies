@@ -23,8 +23,8 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     this.shooting = false;
     this.bulletSpeed = 800;
 
-    this.idleSFX = this.scene.sound.add('idle').setVolume(0.2).setLoop(true);
-    this.driveSFX = this.scene.sound.add('drive').setVolume(0.2).setLoop(true);
+    this.idleSFX = this.scene.sound.add('idle').setVolume(0.3).setLoop(true);
+    this.driveSFX = this.scene.sound.add('drive').setVolume(0.5).setLoop(true);
     this.shootSFX = this.scene.sound.add('shoot');
     this.dieSFX = this.scene.sound.add('die');
     this.idleSFX.play();
