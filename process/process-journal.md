@@ -122,3 +122,80 @@ In the end I couldn't get anything going with various chains of filters (though 
 In searching for tutorials (which mostly focus on echo and multiple samples with different pitches and tempos), I re-ran into the idea of a vocoder, which I didn't use the first time because I had a mono recording (stupid reason, but this is the way it goes when you're hurrying around looking for quick fixes - it takes forever). After all, a vocoder is kind of exactly a version of what I want - a voice encoder. And Kraftwerk used them. So after playing around with the parameters I absolutely don't understand in Audacity's vocoder, I got something that (at least for me saying "Rosebud" in an uninspiring way) did actually seem to produce something kind of nice. I also tried it on the actual audio from Bladerunner's "I've seen things" seen, but in the end that audio was too messy. It's likely that it's worth rerecording these texts with some kind of simple speech synthesis voice, or even me doing a monotone or something.
 
 So this did end up being a productive little session in the end, though it was extremely frustrating for much of the time. I think that, in keeping with the obvious limitations on Atari hardware, it would also make sense to keep audio quite short. So rather than have the entire "I've seen things" speech I'd rather just have the first sentence or something... or that and "time to die" before the death spin? Or not. But anyway, play around with that brevity.
+
+# Design; Other movies?; Materials? (Friday, 22 May 2020, 10:27AM)
+
+Okay well I think I've spent enough time fiddling with the base case of Combat and getting some of the little flourishes that will make this thing seem more or less like close-ish versions of the original game. Now there has to come a moment where I actually think about each of the movies and work out what I'm supposed to do for each one.
+
+## Designing
+
+### Citizen Kane
+
+The idea is to do the rosebud death scene because it's the most iconic (is that my criterion overall? I suppose it needs to be to at least some extent to overcome the potential that the scenes won't be all that recognizable otherwise!). In that scene he's lying down in bed, he whispers "rosebud" and then he dies and drops the glass globe that contains the little scene referring back to his childhood home. ([Here is the relevant clip](https://www.youtube.com/watch?v=BFSjHBVx-xk))
+
+So the two keys here are that, first, the tank should say Rosebud, either with text or, perhaps better, the hyper compressed voice that the Atari seems to have been able to do (and which I seem able to maybe approximate with Audacity's vocoder). And second, the tank should die immediately afterwards, which is represented by the violent spinning from the game. Comedy gold?
+
+How do you trigger that final reminiscents? I suppose you just use the "fire" button (which can double as "action" in some of these games). And I suppose you're stuck in place, so you can't navigate anywhere. How do I convey the idea that you're in bed in your giant mansion? Some kind of primitive mansion drawing with the player's tank at the centre of it?
+
+Do I need to think about the bauble? Could that be represented by shooting out a final bullet as you say rosebud? Or is it best left out because it'd be pretty unclear unless someone knows the movie well enough.
+
+(On a stupid note, could I make the entirety of Citizen Kane out of Combat? Recreate a version of each scene? Probably not.)
+
+### The Godfather
+
+I'm thinking of the tollbooth scene because it's quite a standout in terms of drama. ([Here's a clip of it](https://www.youtube.com/watch?v=sJU2cz9ytPQ).) So he gets caught behind another car (tank?) at the toll area, and then other people (tanks?) emerge and everyone shoots the shit out of his car, and then him as he emerges, including shooting him when he's dead.
+
+It seems obvious I'd have to identify the car and Sonny as one thing, so there wouldn't be the idea of actually getting out. But beyond this the player could drive down a road, get stopped behind another tank (or maybe just stopped by the toll arm? How do I explain that you can't shoot? I guess he doesn't appear to have a gun with him...). Then when you reach the right point, the tank in front rotates and other tanks come out from the edges of the screen, and they all shoot you.
+
+It's part of the scene that Sonny doesn't die immediately, so is the idea that your tank gets buffeted by the bullets at first, and then at some point it dies and spins? And a tank shoots it even then? How difficult is all that choreography going to be? Perhaps with tweens it's not so bad actually?
+
+### 2001: A Space Odyssey
+
+The monolith scene for this one. In essence we can just have our tank and then a bunch of other tanks shooting at a monolith in the centre of the scene? I'm wondering about the colors of the tanks - if the player tank is different to the others, it gives the idea that they're against each other? But actually isn't that what happens anyway now that I think about it? It starts of "peaceful", then the monolith kind of teaches them violence? I mean, it's very appropriate... let me check it out. ([Here's a clip](https://www.youtube.com/watch?v=9woRJ7-mD7Y).) So they wake up in the morning, it's there and they shout at it, they form a ring around it, then a couple touch it, ... and actually no violence erupts! Completely misremembered this scene? They just crowd around it, touch it a bit, and then that's it.
+
+Maybe that's fun though anyway. You're just one tank among many. The monolith is there, and you all kind of bump into it over and over and then at some point the scene ends? But the monolith is also ultimately about giving them the idea of a weapon, so it would be nice to think about some way that it connects to the tanks shooting? Maybe there's a "moment", the monolith disappears, and then you can all shoot? And they can all just shoot each other? Hehe.
+
+### Au Hasard Balthazar
+
+Given that the film is basically just about the fatalistic journey of a donkey, it would make sense to imagine this as Balthazar just showing up in a Combat level? So just a donkey instead of the other tank, and it just stands there not really doing anything. You can shoot it or not (I guess it spins?). How does the scene end if you don't shoot it? Just a timer (like the real game).
+
+### Taxi Driver
+
+I liked the idea that there would be a mirror you could drive your tank in front of, and if you shoot the mirror you'd have the sound effects from the movie? Just "You talkin' to me?" over and over again. That would be all. Does the overall apartment need to be there? Just a mirror? Will it be clear what it is? (To what extent to do many of these end up feeling like just triggering movie quotes?) Again, there's an appropriateness to a tank doing this routine, with its protruding gun and threat of violence? The idea that it's trying to "act tough" in a mirror is quite nice? Would you actually shoot at the mirror, or just trigger the sound? I guess it's just the sound because in the movie he doesn't shoot he just pretends he will, or menaces the reflection person with the gun. While admiring himself. I like the idea of the tank admiring itself. ([Here's a clip](https://www.youtube.com/watch?v=4e9CkhBb18E). There's reference there if I did want the apartment too, but I suspect it might end up just visually confusing...)
+
+### Blade Runner
+
+Well it's more sound stuff right? Ultimately the point is that you shoot the other (replicant) tank and it does the "I've scene things" speech. How can you tell it's dying? Could it give the speech while spinning? Or is it a better payoff if it says "time to die" and then spins? It feels like the spinning indicates that you're dead, not dying, given that at the end of the spin it immediately resets? ([Here's a clip](https://www.youtube.com/watch?v=NoAzpa1x7jU).) In the movie he rescues Harrison in a human act, then sits down and does the speech, then dies. He dies on his own, so there's no obvious reason for you to shoot him? In fact he's in pretty nice shape when he dies.
+
+This could be pretty confusing. I'm not sure how to represent the idea that one tank saves another (especially not from falling in a world with no height). And if it just kicks off with the speech and then he dies (spins), then what is that, really? Perhaps the scene just has too little activity for the player to really work?
+
+### THX1138
+
+I mean, this would literally just be a single player tank in a white world driving around endlessly until the round ends? (This makes me wonder if it makes sense to have a visual timer of the round so that people know it's going to end?) Given the whole "high brow" vibe of the other movies, I kind of wonder with this one fits the mould all that well, but it's a pleasingly iconic scene.
+
+## Other movies?
+
+In current excluding a couple of blockbusters (Indiana Jones, Star Wars), I'm aware my list is a lot shorter now. Especially if Blade Runner doesn't work either. There's also just no real unifying thematic across all the little scenes. Which I don't think has to matter, it could just be the project to make whatever seems fun - but it could also be plausible to pick scenes about death and violence (which are the two things that Combat is basically about) in order to highlight those elements and their lack of subtlety?
+
+Some other thoughts (without thinking hard about what would be the content of the game)
+- Tokyo Story (two tanks... doing something? Just looking at the scenery?)
+- Vertigo (going up the spiraling staris?)
+- The Searchers (I haven't seen it, but it's such a fit I wonder if there's a chance to include some scene that's unlikely?)
+- The Passion of Joan of Arc (take as sacrificial victim, in black and white, tight close-up?)
+- Breathless (maybe driving along with another tank following/side-by-side and little cuts?)
+- L'Avventura (maybe driving around an island shape unable to find your opponent?)
+- Rashomon (four cameras, with different effects/orientations on them?)
+- Some Like It Hot (two pink tanks? ha ha?)
+
+The key is that I think it's interesting to represent unlikely movies (and perhaps for that reason looking at classic "great movies" is good because they give us a canon) specifically because of the awkward fit. It can't be the case, though, that every time the punchline is just "oh x shot y" or similar. It needs to leverage different parts of Combat (movement, spinning, voice, walls, shooting) and ideally even reveal something in the game or make available some element that's not usually there.
+
+## Materials?
+
+- Non-player tanks (as in some number of tanks and their behaviours)
+- New sprites (should probably keep somewhat to a minimum (e.g. Balthazar)
+- Level design (the shapes drawn with the simple wall tiles, including invisible tiles)
+- Tank colors
+- Voices and sound effects (though should be sparing?)
+- Text possibly
+- Movement (including parameters like speed etc.? Best not to tamper too much)
+- Shooting / perform action (can have custom actions like speaking, but again not too much)
