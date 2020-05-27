@@ -25,6 +25,7 @@ let Preloader = new Phaser.Class({
     this.load.audio('drive', 'assets/sounds/drive.wav');
     this.load.audio('shoot', 'assets/sounds/shoot.wav');
     this.load.audio('die', 'assets/sounds/die.wav');
+    this.load.audio('rosebud', 'assets/sounds/rosebud.wav');
   },
 
   create: function() {

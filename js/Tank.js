@@ -103,6 +103,8 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
 
   die(bullet) {
     this.dieSFX.play();
+    this.driveSFX.stop();
+    this.idleSFX.stop();
     this.dead = true;
 
     if (bullet) {

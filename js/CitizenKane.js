@@ -19,13 +19,13 @@ class CitizenKane extends GameScene {
   handleInput() {
     if (this.player.waiting || this.player.dead) return;
 
-    if (this.cursors.space.isDown) {
-      let bullet = this.player.shoot();
-      if (!bullet) {
-        return;
-      }
+    if (this.cursors.space.isDown && !this.player.shooting) {
+      this.sound.play('rosebud');
 
-      this.player.die();
+      setTimeout(() => {
+        let bullet = this.player.shoot();
+        this.player.die();
+      }, 3000);
 
     }
   }
