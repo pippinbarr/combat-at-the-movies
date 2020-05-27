@@ -103,19 +103,20 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
 
   die(bullet) {
     this.dieSFX.play();
-
-    this.body.velocity.x = bullet.body.velocity.x * 7;
-    this.body.velocity.y = bullet.body.velocity.y * 8;
-
     this.dead = true;
-    setTimeout(() => {
-      this.dead = false;
-      this.rotationDirection = 0;
-    }, 2000);
-    bullet.owner.shooting = false;
-    bullet.destroy();
-    bullet.owner.wait();
 
+    if (bullet) {
+      setTimeout(() => {
+        this.dead = false;
+        this.rotationDirection = 0;
+      }, 2000);
+
+      this.body.velocity.x = bullet.body.velocity.x * 7;
+      this.body.velocity.y = bullet.body.velocity.y * 8;
+      bullet.owner.shooting = false;
+      bullet.destroy();
+      bullet.owner.wait();
+    }
   }
 
   wait() {
