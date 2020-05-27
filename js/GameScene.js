@@ -1,41 +1,37 @@
-let Prototype = new Phaser.Class({
+const PLAYER_ROTATION_STEP = 90 / 4;
+const PLAYER_SPEED = 5;
 
-  Extends: Phaser.Scene,
+class GameScene extends Phaser.Scene {
 
-  initialize: function Prototype() {
-    Phaser.Scene.call(this, {
-      key: 'prototype'
-    });
-  },
+  constructor(config) {
+    super(config);
+    this.key = config.key;
+  }
 
-  create: function() {
-    this.cameras.main.setBackgroundColor('#BEC86D');
+  create(bgColor, tileColor, playerColor) {
+    this.cameras.main.setBackgroundColor(bgColor);
 
     this.physics.world.setBounds(0, 16 * 6, this.game.canvas.width, this.game.canvas.height - 16 * 6);
 
     const map = this.make.tilemap({
-      key: "prototype-map"
+      key: `${this.key}-map`
     });
-    const tileset = map.addTilesetImage("prototype", "prototype-tiles");
+    const tileset = map.addTilesetImage(`${this.key}-tileset`, `tileset`);
     const walls = map.createDynamicLayer("walls", tileset, 0, 0);
     walls.setCollisionByProperty({
       collides: true
     });
     walls.forEachTile((tile) => {
-      tile.tint = 0xF1B275;
+      tile.tint = tileColor;
     });
 
-    this.player = new Tank(this, 100, 240, `tank`, 0xC04141);
+    this.player = new Tank(this, 100, 240, `tank`, playerColor);
     this.add.existing(this.player);
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    // this.enemy = new Tank(this, 200, 220, `tank`, 0x272AB0);
-    // this.add.existing(this.enemy);
-
     this.tanks = this.add.group();
     this.tanks.add(this.player);
-    // this.tanks.add(this.enemy);
 
     this.physics.add.collider(this.tanks, walls);
     this.physics.add.collider(this.tanks, this.tanks);
@@ -47,10 +43,8 @@ let Prototype = new Phaser.Class({
       }
     });
 
-
     this.shootables = this.add.group();
     this.shootables.add(this.player);
-    // this.shootables.add(this.enemy);
     this.shootables.add(walls)
 
     // const debugGraphics = this.add.graphics().setAlpha(0.75);
@@ -59,18 +53,17 @@ let Prototype = new Phaser.Class({
     //   collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
     //   faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
     // });
-  },
+  }
 
-  update: function(time, delta) {
+  update(time, delta) {
     this.handleInput();
 
     this.player.update();
-    // this.enemy.update();
 
     this.physics.world.wrap(this.tanks);
-  },
+  }
 
-  handleInput: function() {
+  handleInput() {
     if (this.player.waiting || this.player.dead) return;
 
     if (this.cursors.left.isDown) {
@@ -109,4 +102,4 @@ let Prototype = new Phaser.Class({
       });
     }
   }
-});
+}

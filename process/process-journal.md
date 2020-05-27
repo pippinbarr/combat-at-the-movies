@@ -135,7 +135,7 @@ The idea is to do the rosebud death scene because it's the most iconic (is that 
 
 So the two keys here are that, first, the tank should say Rosebud, either with text or, perhaps better, the hyper compressed voice that the Atari seems to have been able to do (and which I seem able to maybe approximate with Audacity's vocoder). And second, the tank should die immediately afterwards, which is represented by the violent spinning from the game. Comedy gold?
 
-How do you trigger that final reminiscents? I suppose you just use the "fire" button (which can double as "action" in some of these games). And I suppose you're stuck in place, so you can't navigate anywhere. How do I convey the idea that you're in bed in your giant mansion? Some kind of primitive mansion drawing with the player's tank at the centre of it?
+How do you trigger that final reminiscence? I suppose you just use the "fire" button (which can double as "action" in some of these games). And I suppose you're stuck in place, so you can't navigate anywhere. How do I convey the idea that you're in bed in your giant mansion? Some kind of primitive mansion drawing with the player's tank at the centre of it?
 
 Do I need to think about the bauble? Could that be represented by shooting out a final bullet as you say rosebud? Or is it best left out because it'd be pretty unclear unless someone knows the movie well enough.
 
