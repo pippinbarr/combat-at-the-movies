@@ -181,7 +181,7 @@ Some other thoughts (without thinking hard about what would be the content of th
 - Tokyo Story (two tanks... doing something? Just looking at the scenery?)
 - Vertigo (going up the spiraling staris?)
 - The Searchers (I haven't seen it, but it's such a fit I wonder if there's a chance to include some scene that's unlikely?)
-- The Passion of Joan of Arc (take as sacrificial victim, in black and white, tight close-up?)
+- The Passion of Joan of Arc (tank as sacrificial victim, in black and white, tight close-up?)
 - Breathless (maybe driving along with another tank following/side-by-side and little cuts?)
 - L'Avventura (maybe driving around an island shape unable to find your opponent?)
 - Rashomon (four cameras, with different effects/orientations on them?)

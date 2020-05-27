@@ -34,12 +34,12 @@ let Prototype = new Phaser.Class({
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    this.enemy = new Tank(this, 200, 220, `tank`, 0x272AB0);
-    this.add.existing(this.enemy);
+    // this.enemy = new Tank(this, 200, 220, `tank`, 0x272AB0);
+    // this.add.existing(this.enemy);
 
     this.tanks = this.add.group();
     this.tanks.add(this.player);
-    this.tanks.add(this.enemy);
+    // this.tanks.add(this.enemy);
 
     this.physics.add.collider(this.tanks, walls);
     this.physics.add.collider(this.tanks, this.tanks);
@@ -54,7 +54,7 @@ let Prototype = new Phaser.Class({
 
     this.shootables = this.add.group();
     this.shootables.add(this.player);
-    this.shootables.add(this.enemy);
+    // this.shootables.add(this.enemy);
     this.shootables.add(walls)
 
     // const debugGraphics = this.add.graphics().setAlpha(0.75);
@@ -69,7 +69,7 @@ let Prototype = new Phaser.Class({
     this.handleInput();
 
     this.player.update();
-    this.enemy.update();
+    // this.enemy.update();
 
     this.physics.world.wrap(this.tanks);
   },

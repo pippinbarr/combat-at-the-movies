@@ -1,4 +1,4 @@
-# Prototype
+# Combat (as in, the base)
 
 - ~~Get basic tanks up and moving~~
 - ~~Get a level working with collision etc.~~
@@ -8,8 +8,9 @@
 - ~~Deal with teleporting into a wall?~~
 - ~~__POINTLESS__ Add controls to the other tank so it's actually two player? Or is this pointless because that won't actually happen ever in the game?~~
 - ~~__I DID AND I DID__ Do I really need to implement this level of detail of Combat if I'm not making Combat?~~
+- ~~Basic sounds (movement, shooting, death)~~
 
-- Basic sounds (movement, shooting, death)
+- Improve sounds
 
 # Citizen Kane (Rosebud)
 
