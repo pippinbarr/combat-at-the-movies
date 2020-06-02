@@ -8,7 +8,11 @@ class GameScene extends Phaser.Scene {
     this.key = config.key;
   }
 
-  create(bgColor, tileColor, playerColor) {
+  create({
+    bgColor,
+    tileColor,
+    playerColor
+  }) {
     this.cameras.main.setBackgroundColor(bgColor);
 
     this.physics.world.setBounds(0, 16 * 6, this.game.canvas.width, this.game.canvas.height - 16 * 6);

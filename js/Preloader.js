@@ -14,6 +14,7 @@ let Preloader = new Phaser.Class({
 
     this.load.image(`tileset`, `assets/tilesets/tileset.png`)
     this.load.tilemapTiledJSON(`citizenkane-map`, `assets/tilemaps/citizenkane.json`);
+    this.load.tilemapTiledJSON(`lavventura-map`, `assets/tilemaps/lavventura.json`);
 
     this.load.spritesheet('tank', 'assets/spritesheets/tank-spritesheet.png', {
       frameWidth: 8,

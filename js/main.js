@@ -1,5 +1,5 @@
 const DEBUG = false;
-const START_SCENE = "citizenkane";
+const START_SCENE = "lavventura";
 const SCALE = 5;
 
 let config = {
@@ -7,7 +7,7 @@ let config = {
   width: 640,
   height: 480,
   scene: [
-    Boot, Preloader, CitizenKane
+    Boot, Preloader, CitizenKane, Lavventura
   ],
   render: {
     antialias: false,
