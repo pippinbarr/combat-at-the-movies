@@ -14,11 +14,29 @@
 
 # Citizen Kane (Rosebud)
 
+- ~~Get basic version working (tank dies on shooting, castle)~~
+- Uh... make it better???
+
+# L'Avventura (Island)
+
+- ~~Create the island and put the tank on it~~
+- Probably need a timer somewhere for this fruitless search to end
+
 # The Godfather (Tollbridge)
 
 # 2001: A Space Odyssey (Monolith)
 
 # Au Hasard Balthazar (Donkey)
+
+# Rashomon
+
+- ~~Create basic idea of four cameras looking at the same scene~~
+- ~~Point cameras at different locations~~
+- ~~Give cameras different ignores~~
+- Give cameras different background colors? Tints? Other perceptual differences?
+- Add an enemy tank (does it need an AI?)
+- Consider what the tiles need to look like to recreate the basic murder scene (or rather at least one of them)
+- Do we need dividers between the cameras so it's more obvious?
 
 # Taxi Driver (Mirror)
 

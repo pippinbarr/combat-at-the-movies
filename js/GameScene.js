@@ -21,11 +21,11 @@ class GameScene extends Phaser.Scene {
       key: `${this.key}-map`
     });
     const tileset = map.addTilesetImage(`${this.key}-tileset`, `tileset`);
-    const walls = map.createDynamicLayer("walls", tileset, 0, 0);
-    walls.setCollisionByProperty({
+    this.walls = map.createDynamicLayer("walls", tileset, 0, 0);
+    this.walls.setCollisionByProperty({
       collides: true
     });
-    walls.forEachTile((tile) => {
+    this.walls.forEachTile((tile) => {
       tile.tint = tileColor;
     });
 
@@ -37,9 +37,9 @@ class GameScene extends Phaser.Scene {
     this.tanks = this.add.group();
     this.tanks.add(this.player);
 
-    this.physics.add.collider(this.tanks, walls);
+    this.physics.add.collider(this.tanks, this.walls);
     this.physics.add.collider(this.tanks, this.tanks);
-    this.physics.add.overlap(this.tanks, walls, (a, b) => {
+    this.physics.add.overlap(this.tanks, this.walls, (a, b) => {
       // To resolve being shot into a wall
       if (b.index === 1) {
         a.body.x += a.body.velocity.x / 100;
@@ -49,7 +49,7 @@ class GameScene extends Phaser.Scene {
 
     this.shootables = this.add.group();
     this.shootables.add(this.player);
-    this.shootables.add(walls)
+    this.shootables.add(this.walls)
 
     // const debugGraphics = this.add.graphics().setAlpha(0.75);
     // walls.renderDebug(debugGraphics, {

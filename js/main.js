@@ -1,13 +1,14 @@
 const DEBUG = false;
-const START_SCENE = "lavventura";
+const START_SCENE = "rashomon";
 const SCALE = 5;
 
 let config = {
   type: Phaser.AUTO,
   width: 640,
   height: 480,
+  backgroundColor: "#ff0000",
   scene: [
-    Boot, Preloader, CitizenKane, Lavventura
+    Boot, Preloader, CitizenKane, Lavventura, Rashomon
   ],
   render: {
     antialias: false,

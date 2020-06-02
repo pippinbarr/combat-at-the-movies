@@ -184,7 +184,7 @@ Some other thoughts (without thinking hard about what would be the content of th
 - The Passion of Joan of Arc (tank as sacrificial victim, in black and white, tight close-up?)
 - Breathless (maybe driving along with another tank following/side-by-side and little cuts?)
 - L'Avventura (maybe driving around an island shape unable to find your opponent?)
-- Rashomon (four cameras, with different effects/orientations on them?)
+- Rashomon (four cameras, with different effects/orientations on them? Different invisible things?)
 - Some Like It Hot (two pink tanks? ha ha?)
 
 The key is that I think it's interesting to represent unlikely movies (and perhaps for that reason looking at classic "great movies" is good because they give us a canon) specifically because of the awkward fit. It can't be the case, though, that every time the punchline is just "oh x shot y" or similar. It needs to leverage different parts of Combat (movement, spinning, voice, walls, shooting) and ideally even reveal something in the game or make available some element that's not usually there.
