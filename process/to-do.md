@@ -11,6 +11,7 @@
 - ~~Basic sounds (movement, shooting, death)~~
 
 - Improve sounds
+- Add some score stuff by default
 
 # Citizen Kane (Rosebud)
 
@@ -33,10 +34,12 @@
 - ~~Create basic idea of four cameras looking at the same scene~~
 - ~~Point cameras at different locations~~
 - ~~Give cameras different ignores~~
-- Give cameras different background colors? Tints? Other perceptual differences?
-- Add an enemy tank (does it need an AI?)
-- Consider what the tiles need to look like to recreate the basic murder scene (or rather at least one of them)
-- Do we need dividers between the cameras so it's more obvious?
+- ~~Do we need dividers between the cameras so it's more obvious?~~
+- ~~Add an enemy tank (does it need an AI? Yes.)~~
+- ~~__NO THIS IS OVERKILL__ Give cameras different background colors? Tints? Other perceptual differences?~~
+- ~~__IT'S FUNNIER IF IT'S THE ICONIC COMBAT LEVEL__ Consider what the tiles need to look like to recreate the basic murder scene (or rather at least one of them)~~
+
+- Enemy tank AI... (oh boy - could just wander around aimlessly and shoot if you're around which would be relatively close to the Woodcutter's story - clumsy fighting)
 
 # Taxi Driver (Mirror)
 
