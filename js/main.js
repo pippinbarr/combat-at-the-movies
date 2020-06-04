@@ -1,5 +1,5 @@
 const DEBUG = false;
-const START_SCENE = "rashomon";
+const START_SCENE = "auhasardbalthazar";
 const SCALE = 5;
 
 let config = {
@@ -8,7 +8,7 @@ let config = {
   height: 480,
   backgroundColor: "#ff0000",
   scene: [
-    Boot, Preloader, CitizenKane, Lavventura, Rashomon
+    Boot, Preloader, CitizenKane, Lavventura, Rashomon, AuHasardBalthazar
   ],
   render: {
     antialias: false,

@@ -12,10 +12,13 @@ let Preloader = new Phaser.Class({
     // Load the atlas
     this.load.multiatlas('atlas', 'assets/atlas/atlas.json', 'assets/atlas');
 
-    this.load.image(`tileset`, `assets/tilesets/tileset.png`)
+    this.load.image(`tileset`, `assets/tilesets/tileset.png`);
+
+    this.load.image(`balthazar`, `assets/spritesheets/balthazar.png`)
     this.load.tilemapTiledJSON(`citizenkane-map`, `assets/tilemaps/citizenkane.json`);
     this.load.tilemapTiledJSON(`lavventura-map`, `assets/tilemaps/lavventura.json`);
     this.load.tilemapTiledJSON(`rashomon-map`, `assets/tilemaps/rashomon.json`);
+    this.load.tilemapTiledJSON(`auhasardbalthazar-map`, `assets/tilemaps/auhasardbalthazar.json`);
 
     this.load.spritesheet('tank', 'assets/spritesheets/tank-spritesheet.png', {
       frameWidth: 8,
