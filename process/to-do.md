@@ -13,10 +13,16 @@
 - Improve sounds
 - Add some score stuff by default
 
+# Meta
+
+- Contemplate two-player idea for all games? Player 2 as sled? Player 2 as missing woman? Player 2 as Balthazar?
+
 # Citizen Kane (Rosebud)
 
 - ~~Get basic version working (tank dies on shooting, castle)~~
-- Uh... make it better???
+- Consider adding a timer (not too long?) that leads to death
+- Consider adding points per "rosebud"
+- Draw the castle from the movie properly
 
 # L'Avventura (Island)
 

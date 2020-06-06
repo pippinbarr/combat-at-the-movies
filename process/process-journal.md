@@ -199,3 +199,55 @@ The key is that I think it's interesting to represent unlikely movies (and perha
 - Text possibly
 - Movement (including parameters like speed etc.? Best not to tamper too much)
 - Shooting / perform action (can have custom actions like speaking, but again not too much)
+
+---
+
+# Looking at the design and development work so far (Friday, 5 June 2020, 13:40PM)
+
+Having now actually made a bit of headway into the game I can probably actually say a few things about what it's been like and what I think might be interesting about the process.
+
+I've now put together versions of Citizen Kane, L'Avventura, Rashomon, and Au Hasard Balthazar. I'd originally been assuming that the majority of the work would be about the specific relationship between a tank and its actions and the potential of the scene, and that has been important, but it's been nice to run into other elements as well.
+
+## Citizen Kane
+
+This has generally been the one I've had the clearest bead on from the beginning, though I'm not too sure it's the "best" of the ideas. It's just punchy and amusing. It does leverage the core idea of death so central to Combat, and in particular the visual and audio representations of death (most compellingly the spinning). I think there's something to the idea that you press your shooting button to die instead of to kill, though I don't know that it makes sense in the context of Citizen Kane to say that he chose to die in that moment?
+
+An alternative would be to say that the objective of this game is to say Rosebud before you die? To "realize" or recall the importance of Rosebud before death takes you? In which case I would just have a timer runner (visible or not?) and if you hit the action button you say Rosebud and then die, perhaps you get one point for saying it.
+
+I actually quite enjoy the bullet that is fired by the Kane Tank flying off screen as it genuinely does end up mirroring the bauble/globe from the movie for me. It's a little thing, but I think it's fun that there's that correspondence, and it does make me think a bit about the underlying Atari implementation of the missiles and how the missile sprite is used for different purposes in different Atari games (the ball, the bullet, something I can't remember in Adventure, etc.).
+
+So anyway maybe I rethink the timer idea - since a timer is part of the original game, and it perhaps gets more accurately at the idea of death taking you when it will. Would it be funny/fun if you could say "rosebud" multiple times and kind of build up points with that growing force of memory? Perhaps so.
+
+I do think even in this ultra simple idea there's something to it.
+
+## L'Avventura
+
+This was a latecomer to the thoughts, spurred on by wanting something more like a "great movies" list rather than just "movies I can think of". I also think it's good to maintain some consistency in the list so I could make other games looking at specific genres or more popular movies and so forth.
+
+The core point in L'Avventura is that the guy is searching for the missing woman fruitlessly. It's actually been a long while since I saw it (and perhaps I should rewatch), but I think the central representation of the tank on an island looking around is solid. The timer would be present here again (and perhaps it needs to always be present really, given it's a major part of how Combat works), to signify the end of the search.
+
+I'm starting to wonder whether I need little titles at the end of the game telling you the outcome beyond just the points total. "You didn't find her" or similar. Which is what would always happen.
+
+I contemplated having an invisible and unfindable tank also on the island, but I don't think that really makes sense.
+
+I think there's a decent poignancy to the idea of one Combat tank looking for another, presumably to fight to the death (perhaps mirroring things about the relationship in L'Avventura? Does he even want to find her, really?). As an image I think it's a pretty strong one on loneliness, futility, nobody to kill, and so on. Just realizing it probably does make sense for the tank to be able to shoot, a way to express frustration? Reaching out?
+
+I guess you'd never score any points.
+
+Should these things also have titles at the beginning telling you what you're meant to actually do? (I mean, Atari games wouldn't normally print instructions to the screen would they? I'll have to check up on that a bit. I do like the idea of producing a proper little manual, but it might be overkill and too much work for little old me?)
+
+## Rashomon
+
+Here's an example of one that ended up being as much about the API of Phaser as Combat itself. I think this is a fairly "obvious" idea in terms of representing multiple versions of the same story by having multiple cameras simultaneously. It would have been possible, too, to present four separate minigames, each of which would present the idea of combat in a slightly different way, but I think that the four cameras probably does a better job or being a bit confusing, showing the idea of perspectives and so on. I like that this enabled me to recognize that Combat itself essentially has this idea of multiple "perspectives" in that it presents multiple game modes you can cycle through. I've leaned on the idea of differing kinds of visibility in particular (walls, tanks) to that end. It would be harder (maybe vaguely impossible) to create the same kinds of mechanical differences (e.g. bending bullets or not, bouncing bullets or not) based on the camera.
+
+In the end this should probably be a relatively playable game, reminding me of Bernie's game I can't remember the name of right now (the platformer with the jumbled up views). I'll need an AI tank I suppose, to make this fun, but I can probably get away with largely random behaviour as it's not really the point (I suppose I could make it two player, but then it raises the question of the various other one player versions. Does one player get to be the sled? The nurse? in Citizen Kane? The missing woman in L'Avventura? Maybe.)
+
+It's appropriate that Rashomon is about an act of violence obviously, perhaps it could be too on the nose, but it's fun to draw a multi-camera tank game into comparison with one of the greatest movies ever made etc. etc.
+
+## Au Hasard Balthazar
+
+Bit of a one-liner, but actually one with some teeth I think. You simply have Balthazar the donkey there instead of another tank. If two player then I suppose the other player controls the donkey, if not then I think it's the player as tank and the donkey maybe just wanders around or stays put. You could shoot the donkey (if you're a prick) but you wouldn't get points for that (or for anything? Random points for the "au hasard"?). I think there's something good about pitting the tank against the donkey (or the potential for it to be "against" anyway). It has pathos, it's that classic story of "choosing not to shoot" that videogames leverage from time to time. I like the idea that it could be peaceful.
+
+## So far
+
+Well I think it's going slowly, but perhaps a little better than anticipated. I'm finding relationships between Combat and movies. Yadda yadda (lost the thread on this because I wrote the majority of this entry while waiting for my emergency passport, and now it's the next day and things have been full on). So whatever it says above, let's say that's what I have to say.
