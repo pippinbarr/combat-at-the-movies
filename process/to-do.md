@@ -27,6 +27,7 @@
 # L'Avventura (Island)
 
 - ~~Create the island and put the tank on it~~
+
 - Probably need a timer somewhere for this fruitless search to end
 
 # The Godfather (Tollbridge)
@@ -34,6 +35,11 @@
 # 2001: A Space Odyssey (Monolith)
 
 # Au Hasard Balthazar (Donkey)
+
+- ~~Draw the rotations frame by frame~~
+- ~~Fix the broken walls~~
+
+- Timer?
 
 # Rashomon
 

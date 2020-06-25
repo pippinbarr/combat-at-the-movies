@@ -14,7 +14,6 @@ let Preloader = new Phaser.Class({
 
     this.load.image(`tileset`, `assets/tilesets/tileset.png`);
 
-    this.load.image(`balthazar`, `assets/spritesheets/balthazar.png`)
     this.load.tilemapTiledJSON(`citizenkane-map`, `assets/tilemaps/citizenkane.json`);
     this.load.tilemapTiledJSON(`lavventura-map`, `assets/tilemaps/lavventura.json`);
     this.load.tilemapTiledJSON(`rashomon-map`, `assets/tilemaps/rashomon.json`);
@@ -25,6 +24,12 @@ let Preloader = new Phaser.Class({
       frameHeight: 8,
       endFrame: 15
     });
+    this.load.spritesheet('balthazar', 'assets/spritesheets/balthazar-spritesheet.png', {
+      frameWidth: 8,
+      frameHeight: 8,
+      endFrame: 15
+    });
+
 
     this.load.audio('idle', 'assets/sounds/idle.wav');
     this.load.audio('drive', 'assets/sounds/drive.wav');

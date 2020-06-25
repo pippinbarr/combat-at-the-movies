@@ -24,6 +24,18 @@ class AuHasardBalthazar extends GameScene {
 
   update(time, delta) {
     super.update(time, delta);
+
+    if (this.balthazar.dead) {
+      let frame = this.balthazar.frame.name;
+      frame += 1;
+      if (frame < 0) {
+        frame = 15;
+      }
+      else if (frame > 15) {
+        frame = 0;
+      }
+      this.balthazar.setFrame(frame);
+    }
   }
 
   shoot() {
@@ -39,15 +51,7 @@ class AuHasardBalthazar extends GameScene {
     });
     this.physics.add.overlap(bullet, this.balthazar, (bullet, target) => {
       bullet.destroy();
-      let tween = this.tweens.add({
-        targets: this.balthazar,
-        angle: "+=360",
-        ease: "Linear",
-        duration: 100,
-        repeat: -1
-      })
+      this.balthazar.dead = true;
     });
-
-
   }
 }
