@@ -78,6 +78,7 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
   updateFrame() {
     let frame = this.frame.name;
     frame += this.rotationDirection;
+
     if (frame < 0) {
       frame = 15;
     }
