@@ -6,11 +6,7 @@ class TaxiDriver extends GameScene {
   }
 
   create() {
-    super.create({
-      bgColor: 0xffffff,
-      tileColor: 0x000000,
-      playerColor: 0x445566
-    });
+    super.create({});
 
     let width = this.game.canvas.width;
     let height = this.game.canvas.height;
@@ -22,14 +18,14 @@ class TaxiDriver extends GameScene {
     this.player.updateFrame();
 
     // Create the mirror tank (shame it can't work through camera trickery)
-    this.mirrorTank = new Tank(this, width / 2, height / 2 - 100, `tank`, 0x445566);
+    this.mirrorTank = new Tank(this, width / 2, height / 2 - 100, `tank`, 0xC04141);
     this.mirrorTank.setFlipY(true);
     this.add.existing(this.mirrorTank);
     this.cameras.main.ignore(this.mirrorTank);
 
     // Create camera for mirror...
     let mirror = this.cameras.add(16 * 18, 16 * 8, 16 * 4, 16 * 6)
-      .setBackgroundColor(0xffffff)
+      .setBackgroundColor(0xBEC86D)
       .centerOn(width / 2, height / 2 - 100)
       .ignore(this.walls)
 

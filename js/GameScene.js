@@ -9,9 +9,9 @@ class GameScene extends Phaser.Scene {
   }
 
   create({
-    bgColor,
-    tileColor,
-    playerColor
+    bgColor = 0xBEC86D,
+    tileColor = 0xF1B275,
+    playerColor = 0xC04141
   }) {
     this.cameras.main.setBackgroundColor(bgColor);
 
