@@ -10,8 +10,8 @@ class Rashomon extends GameScene {
 
     super.create({
       bgColor: bgColor,
-      tileColor: 0xF1B275,
-      playerColor: 0xC04141
+      // tileColor: 0xF1B275,
+      // playerColor: 0xC04141
     });
     this.player.x = this.game.canvas.width / 10;
     this.player.y = this.game.canvas.height / 2 + 24;

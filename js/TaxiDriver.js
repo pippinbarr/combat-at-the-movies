@@ -18,10 +18,10 @@ class TaxiDriver extends GameScene {
     this.player.updateFrame();
 
     // Create the mirror tank (shame it can't work through camera trickery)
-    this.mirrorTank = new Tank(this, width / 2, height / 2 - 100, `tank`, 0xC04141);
-    this.mirrorTank.setFlipY(true);
-    this.add.existing(this.mirrorTank);
-    this.cameras.main.ignore(this.mirrorTank);
+    this.enemy = new Tank(this, width / 2, height / 2 - 100, `tank`, 0xC04141);
+    this.enemy.setFlipY(true);
+    this.add.existing(this.enemy);
+    this.cameras.main.ignore(this.enemy);
 
     // Create camera for mirror...
     let mirror = this.cameras.add(16 * 18, 16 * 8, 16 * 4, 16 * 6)
@@ -33,10 +33,10 @@ class TaxiDriver extends GameScene {
 
   update(time, delta) {
     super.update(time, delta);
-    this.mirrorTank.setFrame(this.player.frame.name);
-    this.mirrorTank.x = this.player.x;
+    this.enemy.setFrame(this.player.frame.name);
+    this.enemy.x = this.player.x;
     let dy = this.game.canvas.height / 2 - this.player.y;
-    this.mirrorTank.y = this.game.canvas.height / 2 + dy;
+    this.enemy.y = this.game.canvas.height / 2 + dy;
   }
 
   shoot() {

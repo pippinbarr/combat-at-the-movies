@@ -7,9 +7,9 @@ class CitizenKane extends GameScene {
 
   create() {
     super.create({
-      bgColor: 0xFF0000,
-      tileColor: 0x00ff00,
-      playerColor: 0xFFFFFF
+      // bgColor: 0xFF0000,
+      // tileColor: 0x00ff00,
+      // playerColor: 0xFFFFFF
     });
     this.player.x = this.game.canvas.width / 2;
     this.player.y = 3 * this.game.canvas.height / 4;

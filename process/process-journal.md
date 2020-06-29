@@ -251,3 +251,19 @@ Bit of a one-liner, but actually one with some teeth I think. You simply have Ba
 ## So far
 
 Well I think it's going slowly, but perhaps a little better than anticipated. I'm finding relationships between Combat and movies. Yadda yadda (lost the thread on this because I wrote the majority of this entry while waiting for my emergency passport, and now it's the next day and things have been full on). So whatever it says above, let's say that's what I have to say.
+
+---
+
+# Hi; my evil twin (Monday, 29 June 2020, 17:14PM)
+
+## Hi
+
+Been a while obviously. Quite a lot has been going on in our lives in the last few weeks, notably emergency travel to Aotearoa, 14 days in managed isolation at the Auckland Novotel, and then family time in Wellington.
+
+I'm finding it pretty hard to get back in the saddle to be honest, but I've at least chipped away a bit and got a couple of small pieces put in place, including a very basic Taxi Driver with a mirror.
+
+## My evil twin
+
+One somewhat interesting thing about the mirror is that I wasn't able to just create a mirroring camera (the flipY property of the camera in Phaser didn't appear to do anything), and that meant I had to create an actual second tank that mirrors the movements of the player's tank, and then train a different camera on that tank to create the appearance of a mirror.
+
+In one way it's disappointing because it's not a proper mirror, arguably, or at least the metaphor doesn't extend down into the engine itself. On the other hand, having the other tank "really there" gels with the traditional structure of Combat having two tanks (and frankly of the Atari having its memory organized that way etc.), and in this case is especially apt as the scene literally is him pretending to face off against an imagined enemy. So there's something there which I do find pleasing in the end, beyond the base level idea that there's something fun about seeing a tank threatening itself in the mirror without actually doing anything about it...
