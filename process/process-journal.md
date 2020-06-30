@@ -30,7 +30,7 @@ Should they all be single player? Kind of weird given that COMBAT is two player,
 - Some Like it Hot (tanks in wigs? Pretty hard to do with the palette...)
 - __Blade Runner__ (AI tank that gives the speech when you kill it? While spinning!)
 - Burden of Dreams (pushing a boat together?)
-- __Godzilla__ (giant tank? You die. You are Gozilla?)
+- __Godzilla__ (giant tank? You die. You are Godzilla?)
 - __THX1138__ (tank in bright white environment with nothing else)
 - To Sir With Love (classroom of tanks and you have to shoot every student to get them to behave themselves?)
 - Night of the Living Dead (flee zombie tanks into a safe house?)

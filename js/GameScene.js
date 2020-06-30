@@ -31,6 +31,7 @@ class GameScene extends Phaser.Scene {
 
     this.player = new Tank(this, 100, 240, `tank`, playerColor);
     this.add.existing(this.player);
+    this.player.setCollideWorldBounds(true)
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
