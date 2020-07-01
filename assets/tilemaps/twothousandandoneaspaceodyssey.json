@@ -1,4 +1,12 @@
 { "compressionlevel":-1,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"json",
+         "target":"twothousandandoneaspaceodyssey.json"
+        }
+    },
  "height":30,
  "infinite":false,
  "layers":[
@@ -24,6 +32,12 @@
          "id":2,
          "name":"monolith",
          "opacity":1,
+         "properties":[
+                {
+                 "name":"collides",
+                 "type":"bool",
+                 "value":true
+                }],
          "type":"tilelayer",
          "visible":true,
          "width":40,

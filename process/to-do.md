@@ -40,6 +40,13 @@
 
 # 2001: A Space Odyssey (Monolith)
 
+- ~~Basic scene with a monolith available~~
+
+- Add a whole bunch of tanks that randomly move?
+- Monolith appears
+- Monolith disappears (hopefully they all bump into it a bit)
+- Tanks can shoot now and they all shoot each other? (Not quite right since they actually attack a rival gang... maybe the rival gang appears and our tanks kill them all? A river? Something something? Watch the film)
+
 # Au Hasard Balthazar (Donkey)
 
 - ~~Draw the rotations frame by frame~~

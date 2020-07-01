@@ -19,6 +19,7 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
     this.monolith.forEachTile((tile) => {
       tile.tint = 0x000000;
     });
+    this.physics.add.collider(this.tanks, this.monolith);
 
 
     this.player.x = this.game.canvas.width / 10;
