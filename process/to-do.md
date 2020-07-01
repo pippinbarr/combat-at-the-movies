@@ -32,6 +32,12 @@
 
 # The Godfather (Tollbridge)
 
+- ~~Create basic scene~~
+- ~~Enemy tanks at the toll area that shoot you~~
+
+- Some kind of ending
+- Points???
+
 # 2001: A Space Odyssey (Monolith)
 
 # Au Hasard Balthazar (Donkey)
