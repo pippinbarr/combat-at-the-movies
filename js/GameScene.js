@@ -17,11 +17,11 @@ class GameScene extends Phaser.Scene {
 
     this.physics.world.setBounds(0, 16 * 6, this.game.canvas.width, this.game.canvas.height - 16 * 6);
 
-    const map = this.make.tilemap({
+    this.map = this.make.tilemap({
       key: `${this.key}-map`
     });
-    const tileset = map.addTilesetImage(`${this.key}-tileset`, `tileset`);
-    this.walls = map.createDynamicLayer("walls", tileset, 0, 0);
+    this.tileset = this.map.addTilesetImage(`${this.key}-tileset`, `tileset`);
+    this.walls = this.map.createDynamicLayer("walls", this.tileset, 0, 0);
     this.walls.setCollisionByProperty({
       collides: true
     });

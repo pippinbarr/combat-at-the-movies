@@ -23,7 +23,7 @@ Should they all be single player? Kind of weird given that COMBAT is two player,
 - __The Godfather__ (toll bridge scene)
 - Vertigo?
 - __2001__ (monolith? Just shoot at it like an angry monkey? Perhaps alongside other tanks)
-- Breatheless (new wave cuts?)
+- Breathless (new wave cuts?)
 - __Au hasard Balthazar__ (just a donkey in the ring instead of another tank?)
 - Stalker (something about the zone?)
 - __Taxi Driver__ (looking into a mirror? Could deliver the lines if you shoot into the mirror)
