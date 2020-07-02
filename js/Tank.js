@@ -22,6 +22,7 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
 
     this.shooting = false;
     this.bulletSpeed = 800;
+    this.dead = false;
 
     this.idleSFX = this.scene.sound.add('idle').setVolume(0.3).setLoop(true);
     this.driveSFX = this.scene.sound.add('drive').setVolume(1).setLoop(true);
@@ -107,7 +108,6 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     this.driveSFX.stop();
     this.idleSFX.stop();
     this.dead = true;
-
     if (bullet) {
       setTimeout(() => {
         this.dead = false;
@@ -116,6 +116,7 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
 
       this.body.velocity.x = bullet.body.velocity.x * 7;
       this.body.velocity.y = bullet.body.velocity.y * 8;
+
       bullet.owner.shooting = false;
       bullet.destroy();
       bullet.owner.wait();

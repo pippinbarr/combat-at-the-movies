@@ -12,6 +12,7 @@
 
 - Improve sounds
 - Add some score stuff by default
+- Expiry of bullet by distance/time?
 
 # Meta
 
@@ -57,6 +58,9 @@
 - Player shoots opponent and that's all she wrote
 - Instruction: EVOLVE
 - Winning: something...
+- Sound for non-firing (ape sound? Too silly...)
+- Music pre-monolith to announce its arrival?
+- AI for the other tank? How to guarantee it stays on its side (so it can't touch the monolith)?
 
 # Au Hasard Balthazar (Donkey)
 
