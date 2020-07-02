@@ -13,14 +13,13 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
     });
 
     this.monolith = this.map.createDynamicLayer("monolith", this.tileset, 0, 0);
-    this.monolith.setCollisionByProperty({
-      collides: true
-    });
+
     this.monolith.forEachTile((tile) => {
       tile.tint = 0x000000;
     });
     this.physics.add.collider(this.tanks, this.monolith);
 
+    // this.setMonolithActive(true);
 
     this.player.x = this.game.canvas.width / 10;
     this.player.y = this.game.canvas.height / 2 + 24;
@@ -54,6 +53,13 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
     //   bottomEnemy.visible = false;
     //
     // }
+  }
+
+  setMonolithActive(active) {
+    this.monolith.visible = active;
+    this.monolith.setCollisionByProperty({
+      collides: active
+    });
   }
 
   update(time, delta) {

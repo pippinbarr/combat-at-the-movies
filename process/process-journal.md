@@ -267,3 +267,51 @@ I'm finding it pretty hard to get back in the saddle to be honest, but I've at l
 One somewhat interesting thing about the mirror is that I wasn't able to just create a mirroring camera (the flipY property of the camera in Phaser didn't appear to do anything), and that meant I had to create an actual second tank that mirrors the movements of the player's tank, and then train a different camera on that tank to create the appearance of a mirror.
 
 In one way it's disappointing because it's not a proper mirror, arguably, or at least the metaphor doesn't extend down into the engine itself. On the other hand, having the other tank "really there" gels with the traditional structure of Combat having two tanks (and frankly of the Atari having its memory organized that way etc.), and in this case is especially apt as the scene literally is him pretending to face off against an imagined enemy. So there's something there which I do find pleasing in the end, beyond the base level idea that there's something fun about seeing a tank threatening itself in the mirror without actually doing anything about it...
+
+---
+
+# Where are we now?; 2001 thoughts (Thursday, 2 July 2020, 12:00PM)
+
+## Where are we now?
+
+So I have eight movies in different states of completion and satisfaction:
+
+- _Citizen Kane_ basically makes sense to me in terms of the mechanics of it (say Rosebud and die). It has a nice reversal of the shooting mechanic (maybe I could even have the bullet fired by the tank kill it by overriding the default shoot() function for some underlying cuteness). It's pretty basic obviously, but a lot of them are and I'm not trying for heartbreaking works of staggering genius right? The main thing I think I should watch out for is not having too much exact repetition - each one should ideally not just represent a different movie but a different idea within the confines of Combat. I wonder if there could be something more intentional here, or if the player will even understand what happened because it'll be so sudden? But we'll try it out on some people.
+  - Possible instruction: REMEMBER
+  - Possible end text: YOU DIED
+- _L'Avventura_ works well but needs the timer to end it as there's no actual way to do anything. It occurs to me now that the fire button could have the sound effect of calling the woman's name (Anna). That reminds me of that sequence in Heavy Rain where you lose the kid for a bit ("Jason! Jason? Jason! Jason?! Jason!"), which is a nice call-across (for me). This one uses the basic mechanic of navigation. It might be strengthened if you received an instruction.
+  - Possible instruction: FIND ANNA
+  - Possible end text: YOU DIDN'T FIND ANNA
+- _Rashomon_ works in terms of the base concept, with the specific mechanic using multiple cameras in Phaser to represent the classical multiple viewpoints of the original movie, including differences in perception between cameras (they are literally able to see some things and not others). The combat of two tanks also reflects the core conflict in the movie too, so that all works well. It needs either AI or a two-player mode for it to fully function (I suppose a bad AI will work okay).
+  - Possible instruction: FIGHT
+  - Possible end text: (Overlaid texts with different interpretations? Randomized? Vague? WHAT HAPPENED?)
+- _Some Like It Hot_ is pretty stupid, probably the closest to a complete throw away gag in the set, but that makes it seem kind of reasonable? Will people get it? I mean, will they get any of it really for that matter. I find myself wondering if the two tanks ought to be fighting each other, or just running away from a different set of tanks? But I think that's too confusing, I think there's a purity to the pink tanks that gets at the dumbness of the two men dressing as women? Or is it TOO DUMB???
+  - Possible instruction: What? BE A WOMAN?
+  - Possible end text: What? Barely makes sense... hmmm..
+- _Taxi Driver_ works only to the extent that there's a functional "mirror". As I've said before, I think I like that the mirror image is actually another tank called "enemy" in the code itself. That at least partly gets at the imagination on display in the movie scene, where he pictures his own reflection as the person he's threatening (though also loses the idea that he's threatening himself at some level too of course, which is less ideal, and less authentic to the film). Clearly a tank is a great vehicle for this movie with its built-in gun, and the idea of a tank threatening itself in a mirror and never firing is quite a pleasing one in the context of videogame violence.
+  - Possible instruction: YOU TALKIN' TO ME?
+  - Possible end text: YOU DIDN'T SEE ANYONE ELSE HERE (or something like that? YOU'RE READY?)
+- _The Godfather_ is pretty functional. The toll road scene is perhaps a little less famous than some other scenes in the film which vaguely concerns me, but it also just leap to mind as the most violent sequence in the picture and thus fits the tank model well. The other good thing is that the protagonist in the scene (Sonny) is helpless and is murdered, which is not so common in games. So the mechanical thing here is being shot mercilessly by an overwhelming opposition in a very unfair way, which is good. I mean it's not "good", but it works well I think, and is distinct.
+  - Possible instruction: DRIVE THROUGH THE TOLL
+  - Possible end text: YOU DIED? THEY GOT YOU?
+- _2001: A Space Odyssey_ is not very far advanced beyond the imagery, but the imagery itself looks really nice? The fact that the monolith is black despite that not being in the official palette makes it stand out quite well indeed. I'm not 100% on the remaining design work, but it seems like to reflect the movie it would have to be: multiple tanks drive around (including the player) but can't shoot, the monolith appears for a while, then disappears, then the tanks can shoot and massacre each other (or per the movie and book, a different set of tanks?). There are a bunch of questions to explore here.
+  - Possible instruction: Well they're just a bunch of apes... SURVIVE?
+  - Possible end text: Something from the book/movie? What is the point here, that violence takes over? That combat becomes asymmetric?
+
+Phew, that's a lot. So it's clear I need to think through 2001 further, but for the rest I think we're quite far advanced?
+
+## 2001 thoughts
+
+Looking at the movie summary of the appropriate sequence:
+
+> In the prehistoric African veldt, a tribe of hominids are driven away from their water hole by a rival tribe. Later, they awaken to find an alien monolith has appeared before them. Seemingly influenced by the monolith, they discover how to use a bone as a weapon and return to drive their rivals away.
+
+So a plausible setup is that we have the player's tanks on one side of the screen (matching colours), or even just the player alone, and then the enemy tanks on the other side guarding a watering hole? If I want to be that literal? I mean that at least gets at the idea that one side dominates the other prior to the monolith?
+
+Then the monolith appears and afterwards the player side (either them alone or all their cronies) gain the ability to shoot and thus kill the enemy? This works with or without the watering hole obviously. Could develop a level where a single enemy tank blocks some specific way out or a clearly valuable zone (watering hole doesn't make sense, but maybe there's some kind of symbol of a flag or a coin or something?). Then the monolith comes, the player approach is (they would have to touch it I think), gains the ability to shoot, kills the enemy tank, and takes the flag?
+
+In which case it could say CAPTURE THE FLAG at the start, which is semi-classic combat style play (if not Atari Combat play), and you can't accomplish it until the monolith grants you the ability to use your weapon.
+
+Although I think it would be visually fun to have multiple tanks all wandering around like apes, it's not super practical for me to implement, and may not actually be more effective conceptually that sticking with the Atari two tank thing (not to mention that it's kind of bullshit to have more than one tank in the Atari context - which throws The Godfather a bit into question too... should it just be one tank that blindsides you in fact?)
+
+Okay I think that's the "correct direction" for right now.

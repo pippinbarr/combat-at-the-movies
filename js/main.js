@@ -8,7 +8,16 @@ let config = {
   height: 480,
   backgroundColor: "#ff0000",
   scene: [
-    Boot, Preloader, CitizenKane, Lavventura, Rashomon, AuHasardBalthazar, TaxiDriver, SomeLikeItHot, TheGodfather, TwoThousandAndOneASpaceOdyssey
+    Boot,
+    Preloader,
+    CitizenKane,
+    Lavventura,
+    Rashomon,
+    AuHasardBalthazar,
+    TaxiDriver,
+    SomeLikeItHot,
+    TheGodfather,
+    TwoThousandAndOneASpaceOdyssey,
   ],
   render: {
     antialias: false,

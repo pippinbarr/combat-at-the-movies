@@ -15,44 +15,59 @@
 
 # Meta
 
-- Contemplate two-player idea for all games? Player 2 as sled? Player 2 as missing woman? Player 2 as Balthazar?
+- ~~__NO__ Contemplate two-player idea for all games? Player 2 as sled? Player 2 as missing woman? Player 2 as Balthazar?~~
 
 # Citizen Kane (Rosebud)
 
 - ~~Get basic version working (tank dies on shooting, castle)~~
-- Consider adding a timer (not too long?) that leads to death
-- Consider adding points per "rosebud"
-- Draw the castle from the movie properly
+
+- Add a timer (you failed to remember?)
+- 1 POINT for Rosebud
+- Draw the castle from the movie "properly"
+- Instruction: REMEMBER
+- Endings: YOU REMEMBERED, YOU DIDN'T REMEMBER
 
 # L'Avventura (Island)
 
 - ~~Create the island and put the tank on it~~
 
-- Probably need a timer somewhere for this fruitless search to end
+- Add a timer for ending
+- Add calling out her name for shooting (could even keep the bullet?)
+- Instruction: FIND ANNA
+- Ending: YOU DIDN'T FIND ANNA
 
 # The Godfather (Tollbridge)
 
 - ~~Create basic scene~~
 - ~~Enemy tanks at the toll area that shoot you~~
 
-- Some kind of ending
-- Points???
+- Add a timer for an ending
+- Instruction: PASS THROUGH THE TOLL STATION
+- Time ending: YOU DIDN'T GO THROUGH THE TOLL STATION
+- Death ending: YOU WERE MURDERED BY THE X GANG?
 
 # 2001: A Space Odyssey (Monolith)
 
 - ~~Basic scene with a monolith available~~
+- ~~__NO__ Add a whole bunch of tanks that randomly move?~~
 
-- Add a whole bunch of tanks that randomly move?
+- Player and other tank in empty screen
 - Monolith appears
-- Monolith disappears (hopefully they all bump into it a bit)
-- Tanks can shoot now and they all shoot each other? (Not quite right since they actually attack a rival gang... maybe the rival gang appears and our tanks kill them all? A river? Something something? Watch the film)
+- Player touches monolith (music cue?) disappears and player can shoot
+- Player shoots opponent and that's all she wrote
+- Instruction: EVOLVE
+- Winning: something...
 
 # Au Hasard Balthazar (Donkey)
 
 - ~~Draw the rotations frame by frame~~
 - ~~Fix the broken walls~~
 
-- Timer?
+- Timer
+- Make Balthazar wander around
+- Instruction: Ummmm
+- Kill Balthazar ending: YOU KILLED BALTHAZAR
+- Timer ending: ?
 
 # Rashomon
 
@@ -64,20 +79,26 @@
 - ~~__NO THIS IS OVERKILL__ Give cameras different background colors? Tints? Other perceptual differences?~~
 - ~~__IT'S FUNNIER IF IT'S THE ICONIC COMBAT LEVEL__ Consider what the tiles need to look like to recreate the basic murder scene (or rather at least one of them)~~
 
-- Enemy tank AI... (oh boy - could just wander around aimlessly and shoot if you're around which would be relatively close to the Woodcutter's story - clumsy fighting)
+- Basic Enemy tank AI (oh boy - could just wander around aimlessly and shoot if you're around which would be relatively close to the Woodcutter's story - clumsy fighting)
+- Instruction: FIGHT?
+- Lose ending: ...
+- Win ending: ...
+- Time ending: ...
+- Endings could all be ambiguous? WAIT THAT'S NOT WHAT HAPPENED?
 
 # Taxi Driver (Mirror)
 
-# Blade Runner (Time to die)
+- Implement "you talkin to me" on shoot at mirror tank (invisible bullet?)
+- Point per you talkin to me
+- Timer for ending?
+- Instruction: PREPARE YOURSELF
+- Ending: YOU'RE READY (or maybe not if you have 0 points?)
 
-# Godzilla
-- Should I replace this as not arthouse enough? Though it's on criterion, so...
+# Some Like It Hot (Pink Tanks)
 
-# THX1138 (White space)
-- Should I replace this as not arthouse enough? Though it's on criterion, so...
+- ~~Pink tanks~~
 
-# Indiana Jones
-- Should I replace this as not arthouse enough?
-
-# Star Wars
-- Should I replace this as not arthouse enough?
+- Enemy AI? Or not?
+- Shooting and winning etc. Just standard combat actually
+- Instruction: ???
+- Endings: ???
