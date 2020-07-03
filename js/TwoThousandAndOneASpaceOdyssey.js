@@ -28,7 +28,7 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
     this.player.y = this.game.canvas.height / 2 + 24;
     this.player.canShoot = false;
 
-    this.enemy = new Tank(this, 100, 240, `tank`, 0x272AB0);
+    this.enemy = new AITank(this, 100, 240, `tank`, 0x272AB0);
     this.add.existing(this.enemy);
     this.enemy.x = this.game.canvas.width - this.game.canvas.width / 10;
     this.enemy.y = this.game.canvas.height / 2 + 24;

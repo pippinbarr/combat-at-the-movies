@@ -14,28 +14,40 @@ class AuHasardBalthazar extends GameScene {
     this.player.x = this.game.canvas.width / 10;
     this.player.y = this.game.canvas.height / 2 + 24;
 
-    this.balthazar = this.physics.add.sprite(0, 0, 'balthazar')
-      .setPosition(this.game.canvas.width - this.game.canvas.width / 10, this.game.canvas.height / 2 + 24)
-      // .setPosition(this.game.canvas.width / 10, this.game.canvas.height / 2 + 24)
-      .setScale(SCALE)
-      .setFlip(-1, 0)
-      .setTint(0x6e4926);
+    this.balthazar = new AITank(this, 100, 240, `tank`, 0x6e4926);
+    this.add.existing(this.balthazar);
+    this.balthazar.x = this.game.canvas.width - this.game.canvas.width / 10;
+    this.balthazar.y = this.game.canvas.height / 2 + 24;
+    this.balthazar.setTexture('balthazar');
+    this.balthazar.setFrame(8);
+    this.balthazar.moveAngle = 180;
+
+
+    this.tanks.add(this.balthazar);
+
+    // this.balthazar = this.physics.add.sprite(0, 0, 'balthazar')
+    //   .setPosition(this.game.canvas.width - this.game.canvas.width / 10, this.game.canvas.height / 2 + 24)
+    //   // .setPosition(this.game.canvas.width / 10, this.game.canvas.height / 2 + 24)
+    //   .setScale(SCALE)
+    //   .setFlip(-1, 0)
+    //   .setTint(0x6e4926);
   }
 
   update(time, delta) {
     super.update(time, delta);
 
-    if (this.balthazar.dead) {
-      let frame = this.balthazar.frame.name;
-      frame += 1;
-      if (frame < 0) {
-        frame = 15;
-      }
-      else if (frame > 15) {
-        frame = 0;
-      }
-      this.balthazar.setFrame(frame);
-    }
+    this.balthazar.update();
+    // if (this.balthazar.dead) {
+    //   let frame = this.balthazar.frame.name;
+    //   frame += 1;
+    //   if (frame < 0) {
+    //     frame = 15;
+    //   }
+    //   else if (frame > 15) {
+    //     frame = 0;
+    //   }
+    //   this.balthazar.setFrame(frame);
+    // }
   }
 
   shoot() {

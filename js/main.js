@@ -1,5 +1,5 @@
 const DEBUG = false;
-const START_SCENE = "twothousandandoneaspaceodyssey";
+const START_SCENE = "rashomon";
 const SCALE = 5;
 
 let config = {

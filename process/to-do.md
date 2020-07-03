@@ -9,10 +9,13 @@
 - ~~__POINTLESS__ Add controls to the other tank so it's actually two player? Or is this pointless because that won't actually happen ever in the game?~~
 - ~~__I DID AND I DID__ Do I really need to implement this level of detail of Combat if I'm not making Combat?~~
 - ~~Basic sounds (movement, shooting, death)~~
+- ~~Basic AI tank~~
 
 - Improve sounds
 - Add some score stuff by default
 - Expiry of bullet by distance/time?
+- Better AI tank?
+
 
 # Meta
 
@@ -66,9 +69,9 @@
 
 - ~~Draw the rotations frame by frame~~
 - ~~Fix the broken walls~~
+- ~~Make Balthazar wander around~~
 
 - Timer
-- Make Balthazar wander around
 - Instruction: Ummmm
 - Kill Balthazar ending: YOU KILLED BALTHAZAR
 - Timer ending: ?
@@ -101,8 +104,8 @@
 # Some Like It Hot (Pink Tanks)
 
 - ~~Pink tanks~~
+- ~~Enemy AI? Or not?~~
 
-- Enemy AI? Or not?
 - Shooting and winning etc. Just standard combat actually
 - Instruction: ???
 - Endings: ???
