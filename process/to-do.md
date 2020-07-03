@@ -37,6 +37,7 @@
 
 - Add a timer for ending
 - Add calling out her name for shooting (could even keep the bullet?)
+- Bullet could be the word ANNA?
 - Instruction: FIND ANNA
 - Ending: YOU DIDN'T FIND ANNA
 
@@ -45,6 +46,7 @@
 - ~~Create basic scene~~
 - ~~Enemy tanks at the toll area that shoot you~~
 
+- Reduce to a single tank surprise-killing you since we might like to keep to the Atari sprite limit?
 - Add a timer for an ending
 - Instruction: PASS THROUGH THE TOLL STATION
 - Time ending: YOU DIDN'T GO THROUGH THE TOLL STATION
@@ -54,16 +56,16 @@
 
 - ~~Basic scene with a monolith available~~
 - ~~__NO__ Add a whole bunch of tanks that randomly move?~~
+- ~~Player and other tank in empty screen~~
 
-- Player and other tank in empty screen
-- Monolith appears
+- Monolith appears after a delay
 - Player touches monolith (music cue?) disappears and player can shoot
 - Player shoots opponent and that's all she wrote
 - Instruction: EVOLVE
 - Winning: something...
-- Sound for non-firing (ape sound? Too silly...)
+- Sound for non-firing (maybe just a click)
 - Music pre-monolith to announce its arrival?
-- AI for the other tank? How to guarantee it stays on its side (so it can't touch the monolith)?
+- Make AI tank stay on its side
 
 # Au Hasard Balthazar (Donkey)
 
@@ -86,7 +88,7 @@
 - ~~__NO THIS IS OVERKILL__ Give cameras different background colors? Tints? Other perceptual differences?~~
 - ~~__IT'S FUNNIER IF IT'S THE ICONIC COMBAT LEVEL__ Consider what the tiles need to look like to recreate the basic murder scene (or rather at least one of them)~~
 
-- Basic Enemy tank AI (oh boy - could just wander around aimlessly and shoot if you're around which would be relatively close to the Woodcutter's story - clumsy fighting)
+- Add shooting for AI Tank
 - Instruction: FIGHT?
 - Lose ending: ...
 - Win ending: ...
@@ -107,5 +109,5 @@
 - ~~Enemy AI? Or not?~~
 
 - Shooting and winning etc. Just standard combat actually
-- Instruction: ???
+- Instruction: BE A WOMAN
 - Endings: ???
