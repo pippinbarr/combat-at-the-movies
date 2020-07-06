@@ -111,3 +111,16 @@
 - Shooting and winning etc. Just standard combat actually
 - Instruction: BE A WOMAN
 - Endings: ???
+
+# La Jetée
+
+- Basic scenario
+
+# Beau Travail
+
+- Basic scenario (will it be possible to make it look like the scene in Beau Travail without animation of some kind?)
+
+# The Conversation
+
+- I suppose at least set up a level with two AI tanks to create the audio and see what it sounds like completely without graphics.
+- Think about whether there's a way to make a Gene Hackman tank and what that would look like

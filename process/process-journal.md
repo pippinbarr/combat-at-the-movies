@@ -315,3 +315,18 @@ In which case it could say CAPTURE THE FLAG at the start, which is semi-classic 
 Although I think it would be visually fun to have multiple tanks all wandering around like apes, it's not super practical for me to implement, and may not actually be more effective conceptually that sticking with the Atari two tank thing (not to mention that it's kind of bullshit to have more than one tank in the Atari context - which throws The Godfather a bit into question too... should it just be one tank that blindsides you in fact?)
 
 Okay I think that's the "correct direction" for right now.
+
+---
+
+# Two more needed! (Monday, 6 July 2020, 13:41PM)
+
+I still need two more films to have a kind of "top ten" list vibe, which makes the most sense for films I think? I've been looking through the BFI top 100 list...
+
+So...
+
+- _La Jetée_ is an interesting possibility. The film style of still images could be quite an interesting idea, could just massively slow it down perhaps? I wonder if you could control two tanks at the same time, a little one (the child on the jetee) and a larger one which is chased and killed on the jetee? I think it could be would worth trying at least? Black and white palette too.
+- _Blade Runner_ some version of the Voight-Kampff test would be quite interesting? How would that work in the context of combat though? One tank testing another tank? It feels a bit like it might be quite static? Think this may not work.
+- _Beau Travail_'s classic dancing scene at the end could be amazing? A dancing tank...
+- _The French Connection_ could just be the sound of the game without the game? Monitoring it with some kind of animation? Or just your tank sitting in a room listening? How would you show what is happening? I quite like it in principle... LISTEN
+
+So if I'm picking the ones to pursue it's _La Jetée_, _Beau Travail_ and _The French Connection_, all of which have kind of potentially interesting ways of engaging with the original mechanics (duplication, dancing, and listening respectively). I guess I just try making all of them and see where it leads me.
