@@ -17,3 +17,22 @@ In keeping with the above, I'm definitely interested in making work that interro
 ## Recognition
 
 In all the games I think it's (probably?) important that you can also just make these scenes recognizable without prompting? Or not? Actually as I write that I'm not sure how realistic that is. It may be the case that they all need a title before they actually work and to help the idea land faster rather than spending time feeling confused.
+
+---
+
+# Why 2 (Monday, 6 July 2020, 13:07PM)
+
+Well I've been working on this for a little while now, what do I think it's for?
+
+It definitely feels like there's an interesting symbiosis and tension between the film and the game that continues to seem generative in terms of thinking. I think the majority of the thinking I've done has been around the nature of Combat (the game) and combat (the approach to game design, the mechanic), which is presumably fitting to the extent this is probably meant to be an interrogation of game design more than anything else.
+
+So I suppose we have "contradictions" (ala Activity Theory) where there are poor fits between the mechanics/nature of Combat and the nature of the scene, but mostly I think there are more poignant elements where light is thrown onto the game mechanics. I suspect what's happening in all the films thus far is either that
+
+1. Violence is improper in the context and so comes across as lame in the way that I think videogame violence actually is. This is highlighted in Balthazar, for instance, where there's an innocent animal in your sights (and this itself is in keeping with some of the cruelty Balthazar experiences in the film). Violence as the one approach available and its insufficiency in more human/emotional contexts.
+1. Violence is approached in a different way by the film itself and this throws into relief how unsubtle and unsophisticated the violence of the game itself tends to be. We see that in Taxi Driver, say, where the violent impulse is directed at "yourself" (though it explodes outward in the film itself, and that could be something to explore down the line?); or in The Godfather, where the violence is directed toward you and you're helpfless in the face of it.
+
+So I think in a lot of ways the drawing of the films into the world of Combat is about the potential to portray more sophsiticated understandings on this fundamental building block of videogame play. Combat is especially good for this because it is _so_ pure in its portrayal of mindless violence.
+
+It's also notable how absent skill is in all these games, though - for better or worse? In none of the games do you need to be good at anything, you just need to be present. It may mean that the "play" of each game is really much more intellectual than anything to do with input. Many of the games involve navigation at best, for instance.
+
+So perhaps "poignant failure" isn't quite right - it's something to do with the introduction of more sophisticated models of violence or simple representations of slices of life that aren't violent and how the game model can react to that.
