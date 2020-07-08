@@ -114,13 +114,23 @@
 
 # La Jetée
 
-- Basic scenario
+- Basic scenario of the pier, the player, an enemy tank shooting another tank with the player looking on, and maybe a reprise except this time you are the tank being shot?
+- Or a version where you control both the on-looker tank and the tank being pursued and shot? (Maybe a baby-size tank?)
+- Is this one too complicated to live?
 
 # Beau Travail
 
-- Basic scenario (will it be possible to make it look like the scene in Beau Travail without animation of some kind?)
+- Create two layers that can alternate for a disco feel, diagonal square shapes
+- Mirror tank behind the mirror (same as for Taxi Driver - and interesting that there's that correspondence between the movies and then the games)
+- Maybe speed up/slow down the rate of movement as with his dancing
+- Particle effects from the tank's gun as a cigarette? or not that important and potentially distracting
+- Let the tank reverse for this one instance?
+- DANCE / THE CREDITS ROLL
 
 # The Conversation
 
 - I suppose at least set up a level with two AI tanks to create the audio and see what it sounds like completely without graphics.
-- Think about whether there's a way to make a Gene Hackman tank and what that would look like
+- In the movie it's a murder in the hotel room, so you could have audio of movement for a while and eventually a shot and a death sound
+- Think about whether there's a way to make a Gene Hackman tank and what that would look like - don't seem to have a reference for what him listening in the hotel room looks like
+- Starting approximation might just be the hotel room and the sound from the next room playing?
+- LISTEN THROUGH THE WALL
