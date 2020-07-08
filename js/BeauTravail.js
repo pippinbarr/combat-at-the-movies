@@ -8,6 +8,18 @@ class BeauTravail extends GameScene {
   create() {
     super.create({});
 
+    this.walls.visible = true;
+
+    this.walls2 = this.map.createDynamicLayer("walls2", this.tileset, 0, 0);
+    this.walls2.setCollisionByProperty({
+      collides: true
+    });
+    this.walls2.forEachTile((tile) => {
+      tile.tint = 0xF1B275;
+    });
+    this.walls2.visible = false;
+
+
     let width = this.game.canvas.width;
     let height = this.game.canvas.height;
 
@@ -32,6 +44,21 @@ class BeauTravail extends GameScene {
     this.enemy.x = this.player.x;
     let dy = this.game.canvas.height / 2 + 45 - this.player.y;
     this.enemy.y = this.game.canvas.height / 2 + dy;
+
+    if (this.game.getFrame() % 30 === 0) {
+      this.walls.visible = !this.walls.visible;
+      this.walls2.visible = !this.walls2.visible;
+    }
+
+  }
+
+  handleInput() {
+    super.handleInput();
+
+    // Add reversing just this once for expressivity
+    if (this.cursors.down.isDown) {
+      this.player.speed = -this.player.maxSpeed;
+    }
   }
 
   shoot() {
