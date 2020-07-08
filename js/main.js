@@ -1,5 +1,5 @@
 const DEBUG = false;
-const START_SCENE = "rashomon";
+const START_SCENE = "beautravail";
 const SCALE = 5;
 
 let config = {
@@ -18,6 +18,7 @@ let config = {
     SomeLikeItHot,
     TheGodfather,
     TwoThousandAndOneASpaceOdyssey,
+    BeauTravail
   ],
   render: {
     antialias: false,

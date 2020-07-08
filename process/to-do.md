@@ -120,10 +120,13 @@
 
 # Beau Travail
 
-- Create two layers that can alternate for a disco feel, diagonal square shapes
-- Mirror tank behind the mirror (same as for Taxi Driver - and interesting that there's that correspondence between the movies and then the games)
+- ~~__THAT SEEMS DISTRACTING__ Particle effects from the tank's gun as a cigarette? or not that important and potentially distracting~~
+- ~~Basic scene~~
+- ~~Mirror tank behind the mirror (same as for Taxi Driver - and interesting that there's that correspondence between the movies and then the games)~~
+
+- Create second layer that can alternate for a disco feel?
 - Maybe speed up/slow down the rate of movement as with his dancing
-- Particle effects from the tank's gun as a cigarette? or not that important and potentially distracting
+
 - Let the tank reverse for this one instance?
 - DANCE / THE CREDITS ROLL
 
