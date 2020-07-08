@@ -330,3 +330,9 @@ So...
 - _The French Connection_ could just be the sound of the game without the game? Monitoring it with some kind of animation? Or just your tank sitting in a room listening? How would you show what is happening? I quite like it in principle... LISTEN
 
 So if I'm picking the ones to pursue it's _La Jetée_, _Beau Travail_ and _The French Connection_, all of which have kind of potentially interesting ways of engaging with the original mechanics (duplication, dancing, and listening respectively). I guess I just try making all of them and see where it leads me.
+
+---
+
+# Shooters (Wednesday, 8 July 2020, 15:11PM)
+
+Just popping for a very small note that popped into my head while working on Beau Travail, which is the frequency with which I'm finding myself overriding the `shoot()` function so that it doesn't do anything, essentially disarming the tanks. This is true in at least three of the games/films, and in all the other cases the act of shooting tends to be significant if taken (perhaps with the weird exception of Some Like It Hot, which comes across more as a gag about the movie than a representation of the movie or a scene from it). 
