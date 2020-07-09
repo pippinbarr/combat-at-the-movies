@@ -133,9 +133,12 @@
 
 # The Conversation
 
-- I suppose at least set up a level with two AI tanks to create the audio and see what it sounds like completely without graphics.
+- ~~I suppose at least set up a level with two AI tanks to create the audio and see what it sounds like completely without graphics.~~
+- ~~__THIS IS WORKING I THINK WITH A TANK OUTSIDE THE GAME AREA BOUNDS__ Think about whether there's a way to make a Gene Hackman tank and what that would look like - don't seem to have a reference for what him listening in the hotel room looks like~~
+- ~~__NO, IT'S TOO SPECIFIC AND DOESN'T GEL, BETTER IF IT'S MORE CONCEPTUALLY ABOUT LISTENING TO A COMBAT MATCH__ Starting approximation might just be the hotel room and the sound from the next room playing?~~
+- ~~__SOLVED BY HAVING IT BE A STANDARD COMBAT ARENA__ A problem: in the film he doesn't hear the murder, he sees it through the frosted/obscure window~~
+- ~~__YES! AND THIS WORKS WELL WITH THE INVISIBLE TANK VARIANTS__ Tank could be at the top of the screen outside the play area which is occluded???~~
+
 - In the movie it's a murder in the hotel room, so you could have audio of movement for a while and eventually a shot and a death sound
-- Think about whether there's a way to make a Gene Hackman tank and what that would look like - don't seem to have a reference for what him listening in the hotel room looks like
-- Starting approximation might just be the hotel room and the sound from the next room playing?
-- A problem: in the film he doesn't hear the murder, he sees it through the frosted/obscure window
 - LISTEN THROUGH THE WALL
+- WHO KILLED WHO?

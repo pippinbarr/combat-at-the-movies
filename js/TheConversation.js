@@ -1,0 +1,59 @@
+class TheConversation extends GameScene {
+  constructor() {
+    super({
+      key: "theconversation"
+    });
+  }
+
+  create() {
+    super.create({});
+
+    let width = this.game.canvas.width;
+    let height = this.game.canvas.height;
+
+    this.outer = this.map.createDynamicLayer("outer", this.tileset, 0, 0);
+    this.outer.forEachTile((tile) => {
+      tile.tint = 0xF1B275;
+    });
+
+    this.walls.visible = false;
+
+    this.player.x = this.game.canvas.width / 10;
+    this.player.y = 10;
+
+    this.enemy1 = new AITank(this, 100, 240, `tank`, 0x272AB0);
+    this.add.existing(this.enemy1);
+    this.enemy1.x = this.game.canvas.width - this.game.canvas.width / 10;
+    this.enemy1.y = this.game.canvas.height / 2 + 24;
+    this.enemy1.setFrame(8);
+    this.enemy1.moveAngle = 180;
+
+    this.tanks.add(this.enemy1);
+    this.shootables.add(this.enemy1);
+
+    this.enemy2 = new AITank(this, 100, 240, `tank`, 0xC04141);
+    this.add.existing(this.enemy2);
+    this.enemy2.x = this.game.canvas.width / 10;
+    this.enemy2.y = this.game.canvas.height / 2 + 24;
+
+    this.tanks.add(this.enemy2);
+    this.shootables.add(this.enemy2);
+
+    this.enemy1.visible = false;
+    this.enemy2.visible = false;
+
+  }
+
+  update(time, delta) {
+    console.log(this.player.y);
+
+    super.update(time, delta);
+    this.enemy1.update();
+    this.enemy2.update();
+
+  }
+
+  shoot() {
+
+  }
+}

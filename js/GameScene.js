@@ -15,7 +15,7 @@ class GameScene extends Phaser.Scene {
   }) {
     this.cameras.main.setBackgroundColor(bgColor);
 
-    this.physics.world.setBounds(0, 16 * 6, this.game.canvas.width, this.game.canvas.height - 16 * 6);
+    this.physics.world.setBounds(0, 0, this.game.canvas.width, this.game.canvas.height);
 
     this.map = this.make.tilemap({
       key: `${this.key}-map`
@@ -61,11 +61,13 @@ class GameScene extends Phaser.Scene {
   }
 
   update(time, delta) {
+
     this.handleInput();
 
     this.player.update();
 
-    this.physics.world.wrap(this.tanks);
+    // this.physics.world.wrap(this.tanks);
+
   }
 
   handleInput() {

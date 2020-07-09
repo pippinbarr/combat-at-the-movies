@@ -64,6 +64,7 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     // Make me immovable when I'm not moving
     this.body.immovable = (this.body.velocity.x === 0 && this.body.velocity.y === 0);
 
+
     if (this.scene.game.getFrame() % 12 !== 0) {
       return;
     }
@@ -74,6 +75,7 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
       this.moveAngle += this.rotationDirection * this.rotationStep;
       this.updateFrame();
     }
+
   }
 
   updateFrame() {

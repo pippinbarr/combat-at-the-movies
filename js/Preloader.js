@@ -23,6 +23,7 @@ let Preloader = new Phaser.Class({
     this.load.tilemapTiledJSON(`thegodfather-map`, `assets/tilemaps/thegodfather.json`);
     this.load.tilemapTiledJSON(`twothousandandoneaspaceodyssey-map`, `assets/tilemaps/twothousandandoneaspaceodyssey.json`);
     this.load.tilemapTiledJSON(`beautravail-map`, `assets/tilemaps/beautravail.json`);
+    this.load.tilemapTiledJSON(`theconversation-map`, `assets/tilemaps/theconversation.json`);
 
     this.load.spritesheet('tank', 'assets/spritesheets/tank-spritesheet.png', {
       frameWidth: 8,

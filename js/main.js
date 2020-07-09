@@ -1,5 +1,5 @@
 const DEBUG = false;
-const START_SCENE = "beautravail";
+const START_SCENE = "theconversation";
 const SCALE = 5;
 
 let config = {
@@ -18,7 +18,8 @@ let config = {
     SomeLikeItHot,
     TheGodfather,
     TwoThousandAndOneASpaceOdyssey,
-    BeauTravail
+    BeauTravail,
+    TheConversation
   ],
   render: {
     antialias: false,
