@@ -10,12 +10,11 @@
 - ~~__I DID AND I DID__ Do I really need to implement this level of detail of Combat if I'm not making Combat?~~
 - ~~Basic sounds (movement, shooting, death)~~
 - ~~Basic AI tank~~
+- ~~Add some score stuff by default~~
 
 - Improve sounds
-- Add some score stuff by default
 - Expiry of bullet by distance/time?
 - Better AI tank?
-
 
 # Meta
 
@@ -112,11 +111,11 @@
 - Instruction: BE A WOMAN
 - Endings: ???
 
-# La Jetée
+# ~~La Jetée~~
 
 - Basic scenario of the pier, the player, an enemy tank shooting another tank with the player looking on, and maybe a reprise except this time you are the tank being shot?
 - Or a version where you control both the on-looker tank and the tank being pursued and shot? (Maybe a baby-size tank?)
-- Is this one too complicated to live?
+- __YES__ Is this one too complicated to live?
 - Maybe it's simpler to have a first scene where you're observing a tank shoot another tank, and then a second scene where you're the tank being shot? (They wouldn't be identical scenes of course, which is bad for time travel.)
 
 # Beau Travail

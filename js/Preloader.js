@@ -9,9 +9,6 @@ let Preloader = new Phaser.Class({
   },
 
   preload: function() {
-    // Load the atlas
-    this.load.multiatlas('atlas', 'assets/atlas/atlas.json', 'assets/atlas');
-
     this.load.image(`tileset`, `assets/tilesets/tileset.png`);
 
     this.load.tilemapTiledJSON(`citizenkane-map`, `assets/tilemaps/citizenkane.json`);
@@ -36,15 +33,23 @@ let Preloader = new Phaser.Class({
       endFrame: 15
     });
 
-
     this.load.audio('idle', 'assets/sounds/idle.wav');
     this.load.audio('drive', 'assets/sounds/drive.wav');
     this.load.audio('shoot', 'assets/sounds/shoot.wav');
     this.load.audio('die', 'assets/sounds/die.wav');
+
     this.load.audio('rosebud', 'assets/sounds/rosebud.wav');
   },
 
   create: function() {
+    // Absolutely hideous hack to avoid this font-loading problem: display invisible text in preloader for
+    // a tiny amount of time before going to the menu, which seems to fix it.
+    let style = {
+      fontFamily: 'Square',
+    };
+    let title = this.add.text(0, 0, "123456", style);
+    title.visible = false;
+
     setTimeout(() => {
       console.log(`Starting ${START_SCENE}`);
       this.scene.start(START_SCENE);

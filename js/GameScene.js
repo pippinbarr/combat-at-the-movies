@@ -50,7 +50,19 @@ class GameScene extends Phaser.Scene {
 
     this.shootables = this.add.group();
     this.shootables.add(this.player);
-    this.shootables.add(this.walls)
+    this.shootables.add(this.walls);
+
+    this.playerScore = this.add.text(this.game.canvas.width / 5, 0, "0", {
+      fontFamily: 'Square',
+      fontSize: "48px",
+      color: "#C04141"
+    }).setOrigin(1, 0);
+
+    this.enemyScore = this.add.text(this.game.canvas.width - this.game.canvas.width / 5, 0, "0", {
+      fontFamily: 'Square',
+      fontSize: "48px",
+      color: "#272AB0"
+    });
 
     // const debugGraphics = this.add.graphics().setAlpha(0.75);
     // walls.renderDebug(debugGraphics, {

@@ -45,12 +45,9 @@ class TheConversation extends GameScene {
   }
 
   update(time, delta) {
-    console.log(this.player.y);
-
     super.update(time, delta);
     this.enemy1.update();
     this.enemy2.update();
-
   }
 
   shoot() {
