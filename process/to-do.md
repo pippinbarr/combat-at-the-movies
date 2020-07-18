@@ -14,7 +14,7 @@
 
 - Improve sounds
 - Expiry of bullet by distance/time?
-- Better AI tank?
+- Better AI tank? Maybe only as in: it tries not to just ram walls indefinitely?
 
 # Meta
 

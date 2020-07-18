@@ -16,8 +16,6 @@ class TheConversation extends GameScene {
       tile.tint = 0xF1B275;
     });
 
-    this.walls.visible = false;
-
     this.player.x = this.game.canvas.width / 10;
     this.player.y = 10;
 
@@ -39,8 +37,9 @@ class TheConversation extends GameScene {
     this.tanks.add(this.enemy2);
     this.shootables.add(this.enemy2);
 
-    this.enemy1.visible = false;
-    this.enemy2.visible = false;
+    // this.walls.visible = false;
+    // this.enemy1.visible = false;
+    // this.enemy2.visible = false;
 
   }
 

@@ -133,4 +133,9 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
       this.waiting = false;
     }, 2000);
   }
+
+  hit(object) {
+    // Ran into an object
+    console.log(`${this.tintColor}: Bump.`);
+  }
 }

@@ -38,13 +38,18 @@ class GameScene extends Phaser.Scene {
     this.tanks = this.add.group();
     this.tanks.add(this.player);
 
-    this.physics.add.collider(this.tanks, this.walls);
-    this.physics.add.collider(this.tanks, this.tanks);
-    this.physics.add.overlap(this.tanks, this.walls, (a, b) => {
+    this.physics.add.collider(this.tanks, this.walls, (tank, wall) => {
+      tank.hit(wall);
+    });
+    this.physics.add.collider(this.tanks, this.tanks, (tank1, tank2) => {
+      tank1.hit(tank2);
+      tank2.hit(tank1);
+    });
+    this.physics.add.overlap(this.tanks, this.walls, (tank, wall) => {
       // To resolve being shot into a wall
-      if (b.index === 1) {
-        a.body.x += a.body.velocity.x / 100;
-        a.body.y += a.body.velocity.y / 100;
+      if (wall.index === 1) {
+        tank.body.x += tank.body.velocity.x / 100;
+        tank.body.y += tank.body.velocity.y / 100;
       }
     });
 
