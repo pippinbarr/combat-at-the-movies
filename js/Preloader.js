@@ -9,6 +9,8 @@ let Preloader = new Phaser.Class({
   },
 
   preload: function() {
+    this.load.atlas('atlas', 'assets/atlas/atlas.png', 'assets/atlas/atlas.json', Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
+
     this.load.image(`tileset`, `assets/tilesets/tileset.png`);
 
     this.load.tilemapTiledJSON(`citizenkane-map`, `assets/tilemaps/citizenkane.json`);

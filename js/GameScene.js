@@ -108,26 +108,7 @@ class GameScene extends Phaser.Scene {
     }
 
     if (this.cursors.space.isDown) {
-      this.shoot();
+      this.player.shoot();
     }
-  }
-
-  shoot() {
-    let bullet = this.player.shoot();
-    if (!bullet) {
-      return;
-    }
-    this.physics.add.overlap(bullet, this.shootables, (bullet, target) => {
-      if (target === bullet.owner) {
-        return;
-      }
-      if (target instanceof Tank) {
-        target.die(bullet);
-      }
-      else if (target.index === 1) {
-        bullet.owner.shooting = false;
-        bullet.destroy();
-      }
-    });
   }
 }

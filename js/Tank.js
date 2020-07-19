@@ -104,7 +104,25 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     bullet.depth = -10;
     bullet.owner = this;
     this.scene.physics.velocityFromRotation(Phaser.Math.DegToRad(this.moveAngle), this.bulletSpeed, bullet.body.velocity);
-    return bullet;
+
+    if (!bullet) {
+      return;
+    }
+
+    this.scene.physics.add.overlap(bullet, shootables, (bullet, target) => {
+      if (target === bullet.owner) {
+        return;
+      }
+      if (target instanceof Tank) {
+        if (!target.dead) {
+          target.die(bullet);
+        }
+      }
+      else if (target.index === 1) {
+        bullet.owner.shooting = false;
+        bullet.destroy();
+      }
+    });
   }
 
   die(bullet) {

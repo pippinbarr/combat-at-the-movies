@@ -29,10 +29,12 @@ class TheConversation extends GameScene {
     this.tanks.add(this.enemy1);
     this.shootables.add(this.enemy1);
 
-    this.enemy2 = new AITank(this, 100, 240, `tank`, 0xC04141);
+    this.enemy2 = new AITank(this, 100, 240, `tank`, 0xC04141, this.enemy1);
     this.add.existing(this.enemy2);
     this.enemy2.x = this.game.canvas.width / 10;
     this.enemy2.y = this.game.canvas.height / 2 + 24;
+
+    this.enemy1.enemy = this.enemy2;
 
     this.tanks.add(this.enemy2);
     this.shootables.add(this.enemy2);
@@ -47,6 +49,11 @@ class TheConversation extends GameScene {
     super.update(time, delta);
     this.enemy1.update();
     this.enemy2.update();
+
+    if (Phaser.Math.Distance.Between(this.enemy1.x, this.enemy1.y, this.enemy2.x, this.enemy2.y) < 400) {
+      this.enemy1.shoot(this.shootables);
+      this.enemy2.shoot(this.shootables);
+    }
   }
 
   shoot() {
