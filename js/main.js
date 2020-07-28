@@ -1,5 +1,5 @@
 const DEBUG = false;
-const START_SCENE = "citizenkane";
+const START_SCENE = "menu";
 const SCALE = 5;
 
 let config = {
@@ -19,7 +19,8 @@ let config = {
     TheGodfather,
     TwoThousandAndOneASpaceOdyssey,
     BeauTravail,
-    TheConversation
+    TheConversation,
+    Menu
   ],
   render: {
     antialias: false,

@@ -16,6 +16,11 @@
 - Improve sounds
 - Expiry of bullet by distance/time?
 
+# Menu
+
+- Create a basic menu so you can at least load different levels for testing stuff out
+- Make an actually good menu (what does a good menu look like?)
+
 # Meta
 
 - ~~__NO__ Contemplate two-player idea for all games? Player 2 as sled? Player 2 as missing woman? Player 2 as Balthazar?~~
