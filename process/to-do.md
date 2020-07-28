@@ -30,6 +30,7 @@
 - ~~Instruction: REMEMBER~~
 
 - Better audio?
+- Wiggling as Kane tank for some more agency?
 
 
 # L'Avventura (Island)

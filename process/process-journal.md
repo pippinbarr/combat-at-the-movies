@@ -344,3 +344,28 @@ Just popping for a very small note that popped into my head while working on Bea
 I'm scrambling back into this saddle. Importantly, I've decided to make this game and its ideas the subject of a journal paper for /arts/ and a grant application, meaning I need to get my head back into it, feel like it's a good idea again, and generally improve and think about What It All Means.
 
 Probably the best way to do this is to restate my intentions, which I can probably do in the _why_ document, and to just get some more work done on the damn thing.
+
+---
+
+# Citizen Kaned (Tuesday, 28 July 2020, 15:58PM)
+
+Mostly anyway.
+
+It was good to actually work specifically on making a scene come together rather than my recent focus on the AI Tank which was boring and dissatisfying because writing a bad AI is just not a fun activity I suspect. Working on Citizen Kane made me think a bit more about a few things, which helps, and here are something I did/thought
+
+__Redrew the symbolic castle__ I had with a sort of loose attempt at the "actual" Xanadu from the movie. I was initially concerned about the resolution fo the tilemap in combination with the complexity of Xanadu, but in the end I think it perhaps works out, looking like a sprawling structure of some kind, and it's not inaccurate to the movie. A key here is that question of whether you're going for the spirit (in which case a symbolic castle is fine) or the actual thing (in which case it's "important" to have the proper castle represented, albeit within the confines of the tilemap's resolution and color palette). Both options have their merits and I think it's interesting that in the end I was able to (more or less subconsciously) split the movies about 50/50 between authentic and spirit. Both are worthwhile experimental modes. Funny that it comes up everywhere, from the overall design approach to the visual aesthetics and so forth.
+
+__Added point scoring when you remember Rosebud (by shooting)__. Now you shoot, it "fires off the memory" (ha ha!) and you say "Rooooosssseeebuuuuud" and then get a point for remembering. I guess that's justifiable if only in that you accurately recreated the scene, but perhaps there's also a kind of victory for Kane-tank himself in remembering? The mechanical fact of scoring a point is one of the few things we can leverage out of the Combat set of rules and representations, so it's nice to use it wherever possible.
+
+__Added instruction screens with text__. Added that to the whole game of course, but implemented it specifically for Citizen Kane for right now. The instruction is just "REMEMBER", which
+is nice because it contains no "spoilers" about Rosebud? I like that it's ambiguous and pairs so poorly with the shooting mechanic? (Other than synapses firing? Ha!) I should really think/check whether we should interpret Kane saying "Rosebud" as him remembering Rosebud or something else - there might be a better word. Whatever the word is, it gets straight to the heart of this project of representing more complex ideas in Combat. While of course, of course falling prey to just the same kinds of stupidities games suffer from when they have "Press X to pay respects" or similar, right? The fact you shoot and die, however, is what I think makes this worthwhile (as opposed to a cutscene or lame animation without consequence).
+
+__Added game over screen with text__. Uses the same code unsurprisingly. The game over when you remember is "YOU REMEMBERED ROSEBUD". Originally I'd thought it would just be "YOU REMEMBERED", but it actually typing it in I added ROSEBUD both for the blank comedy of it, but also because it actually solves the potential problem of players not having their audio on. It makes the game more playable, and I should probably think about whether there are ways to do similar signaling elsewhere - though perhaps Kane is the only one that relies so directly on a specific audio file? Well Taxi Driver too.
+
+__Added failure timer__ if you spend too long without shooting. Then YOU DIDN'T REMEMBER ROSEBUD (funny to remember Rosebud in the failure message). Definitely like that there's a fail state.
+
+A couple of extra thoughts to go on with...
+
+__Should you be able to move a bit?__ Currently all you can do is shoot, should you be able to thrash a little bit in your bed maybe? Just back and forth? In the movie he looks pretty damn incapacitated, but maybe just a wiggle between the three adjacent frames?
+
+__A Combat tank looks like a sled?__ I mean, it does. Is there some weird possibility of leveraging that? Having the enemy tank appear as if it's rosebud? Could it be hit by the bullet and also die (to emulate it being burned?). Or does that get too weird and abstract? Where would the Rosebud tank be? Why does Kane-tank then also look like a sled by implication? Suspect this doesn't work.
