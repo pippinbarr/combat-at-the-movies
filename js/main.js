@@ -1,5 +1,5 @@
 const DEBUG = false;
-const START_SCENE = "theconversation";
+const START_SCENE = "citizenkane";
 const SCALE = 5;
 
 let config = {

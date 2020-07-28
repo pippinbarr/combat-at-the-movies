@@ -23,12 +23,14 @@
 # Citizen Kane (Rosebud)
 
 - ~~Get basic version working (tank dies on shooting, castle)~~
+- ~~Add a timer (you failed to remember?)~~
+- ~~1 POINT for Rosebud~~
+- ~~Draw the castle from the movie "properly"~~
+- ~~Endings: YOU REMEMBERED, YOU DIDN'T REMEMBER~~
+- ~~Instruction: REMEMBER~~
 
-- Add a timer (you failed to remember?)
-- 1 POINT for Rosebud
-- Draw the castle from the movie "properly"
-- Instruction: REMEMBER
-- Endings: YOU REMEMBERED, YOU DIDN'T REMEMBER
+- Better audio?
+
 
 # L'Avventura (Island)
 

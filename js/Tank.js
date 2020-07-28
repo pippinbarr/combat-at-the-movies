@@ -131,10 +131,11 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     this.idleSFX.stop();
     this.dead = true;
     if (bullet) {
-      setTimeout(() => {
-        this.dead = false;
-        this.rotationDirection = 0;
-      }, 2000);
+      // This is here to reset death, but that's not relevant in any of the games
+      // setTimeout(() => {
+      //   this.dead = false;
+      //   this.rotationDirection = 0;
+      // }, 2000);
 
       this.body.velocity.x = bullet.body.velocity.x * 7;
       this.body.velocity.y = bullet.body.velocity.y * 8;
@@ -147,13 +148,13 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
 
   wait() {
     this.waiting = true;
-    setTimeout(() => {
-      this.waiting = false;
-    }, 2000);
+    // Wait forever
+    // setTimeout(() => {
+    //   this.waiting = false;
+    // }, 2000);
   }
 
   hit(object) {
     // Ran into an object
-    console.log(`${this.tintColor}: Bump.`);
   }
 }

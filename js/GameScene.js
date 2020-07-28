@@ -75,16 +75,31 @@ class GameScene extends Phaser.Scene {
     //   collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
     //   faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
     // });
+
+    console.log("Uh?")
+    this.black = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'pixel.png')
+      .setTint(0x000000)
+      .setScale(this.game.canvas.width, this.game.canvas.height);
+    this.black.visible = false;
+
+    this.interstitialText = this.add.text(this.game.canvas.width / 2, this.game.canvas.height / 2, "TEXT", {
+      fontFamily: "Square",
+      fontSize: "24px",
+      color: "#C04141"
+    });
+    this.interstitialText.setOrigin(0.5, 0.5);
+    this.interstitialText.visible = false;
+
   }
 
   update(time, delta) {
+    if (this.black.visible) return;
 
     this.handleInput();
 
     this.player.update();
 
     // this.physics.world.wrap(this.tanks);
-
   }
 
   handleInput() {
@@ -110,5 +125,26 @@ class GameScene extends Phaser.Scene {
     if (this.cursors.space.isDown) {
       this.player.shoot();
     }
+  }
+
+  showInstruction(text) {
+    // What to do when the game ends: display the text and then go back to the menu
+    this.black.visible = true;
+    this.interstitialText.visible = true;
+    this.interstitialText.text = text;
+    setTimeout(() => {
+      this.black.visible = false;
+      this.interstitialText.visible = false;
+    }, 2000);
+  }
+
+  showGameOver(text) {
+    // What to do when the game ends: display the text and then go back to the menu
+    this.black.visible = true;
+    this.interstitialText.visible = true;
+    this.interstitialText.text = text;
+    setTimeout(() => {
+      this.scene.start(START_SCENE);
+    }, 2000);
   }
 }
