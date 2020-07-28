@@ -335,4 +335,12 @@ So if I'm picking the ones to pursue it's _La Jetée_, _Beau Travail_ and _The F
 
 # Shooters (Wednesday, 8 July 2020, 15:11PM)
 
-Just popping for a very small note that popped into my head while working on Beau Travail, which is the frequency with which I'm finding myself overriding the `shoot()` function so that it doesn't do anything, essentially disarming the tanks. This is true in at least three of the games/films, and in all the other cases the act of shooting tends to be significant if taken (perhaps with the weird exception of Some Like It Hot, which comes across more as a gag about the movie than a representation of the movie or a scene from it). 
+Just popping for a very small note that popped into my head while working on Beau Travail, which is the frequency with which I'm finding myself overriding the `shoot()` function so that it doesn't do anything, essentially disarming the tanks. This is true in at least three of the games/films, and in all the other cases the act of shooting tends to be significant if taken (perhaps with the weird exception of Some Like It Hot, which comes across more as a gag about the movie than a representation of the movie or a scene from it).
+
+---
+
+# Return of the guy (Tuesday, 28 July 2020, 14:46PM)
+
+I'm scrambling back into this saddle. Importantly, I've decided to make this game and its ideas the subject of a journal paper for /arts/ and a grant application, meaning I need to get my head back into it, feel like it's a good idea again, and generally improve and think about What It All Means.
+
+Probably the best way to do this is to restate my intentions, which I can probably do in the _why_ document, and to just get some more work done on the damn thing.
