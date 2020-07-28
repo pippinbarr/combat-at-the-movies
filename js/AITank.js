@@ -3,6 +3,7 @@ class AITank extends Tank {
   constructor(scene, x, y, texture, tint, enemy) {
     super(scene, x, y, texture, tint);
 
+    this.hitDX = 0;
     this.enemy = enemy;
   }
 
@@ -11,7 +12,7 @@ class AITank extends Tank {
   }
 
   update() {
-    if (this.hitDX) {
+    if (this.hitDX !== 0) {
       this.avoidanceMovement();
     }
     else {
@@ -25,23 +26,23 @@ class AITank extends Tank {
     if (this.avoidTimer) return;
 
     this.rotationDirection = Math.random() < 0.5 ? -1 : 1;
-    // this.rotationDirection = -1;
     this.speed = this.maxSpeed;
 
     this.avoidTimer = setTimeout(() => {
       this.rotationDirection = 0;
       this.avoidTimer = setTimeout(() => {
         this.avoidTimer = undefined;
-      }, 2000);
+        this.hitDX = 0;
+      }, 1000);
     }, 1000);
   }
 
   randomMovement() {
     let turn = Math.random();
-    if (turn < 0.1) {
+    if (turn < 0.01) {
       this.rotationDirection = -1;
     }
-    else if (turn < 0.2) {
+    else if (turn < 0.02) {
       this.rotationDirection = 1;
     }
     else {
