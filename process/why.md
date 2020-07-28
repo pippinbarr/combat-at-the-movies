@@ -36,3 +36,35 @@ So I think in a lot of ways the drawing of the films into the world of Combat is
 It's also notable how absent skill is in all these games, though - for better or worse? In none of the games do you need to be good at anything, you just need to be present. It may mean that the "play" of each game is really much more intellectual than anything to do with input. Many of the games involve navigation at best, for instance.
 
 So perhaps "poignant failure" isn't quite right - it's something to do with the introduction of more sophisticated models of violence or simple representations of slices of life that aren't violent and how the game model can react to that.
+
+---
+
+# Why 3 (Tuesday, 28 July 2020, 14:54PM)
+
+Writing this while trying to jump back into the project in the context of wanting to write about it for an article and to make it the basis of a grant application.
+
+So.
+
+- This is a project about adapting films into the language/aesthetics of a specific videogame.
+
+- More specifically, it's a game about adapting films into the formal qualities of Atari's _Combat_, a extremely simple videogame and arguably one of the Ur games, especially since it represents a very distilled form of videogame violence in the form of two tanks shooting each other in a world.
+
+- More specifically, the films in question are generally highly recognizable works of cinema that feature on the BFI's top 100 films of all time list. Art films, in other words. Films likely to contain unusual or interesting approaches to cinema and storytelling and action and more.
+
+- More specifically, rather than adapting entire films and their narratives and aesthetics, the project involves either adapting specific, iconic scenes (to make them most recognizable) or the "spirit" of the film (for similar reasons).
+
+- This project is important and worthwhile in at least two ways.
+
+- One, the films provide unusual prompts for videogame design which might lead to novel effects, perhaps particularly affectively, in the resulting game scenes. To the extent that videogames remain largely on a very conventional track of experiences, great cinema might be a way to productively derail them.
+
+- Two, Combat provides a rigid framework of rules, aesthetics, and mechanics that simultaneously hinders the ability to represent the films and aids in restricting the level of decision-making that must be made. The tension between film and Combat can be a productive one, in that it demands unusual lateral thinking about how to solve design problems - the materials (Combat's rules etc.) are highly specific, the conversation is interesting.
+
+- We can see benefits to at least two and perhaps three fields.
+
+- Game design benefits through provocation - integrating classic/great cinematic ideas into videogame contexts is a way to general novel experiences, something the industry at large is interested in but perhaps struggles to act on due to fear. One possible outcome of the project is the generation of design activities or exercises or pedagogy that use this basis of adaptation to generate novel designs (not necessarily taking a form of adaptations themselves).
+
+- Game design studies benefits through new and specific objects of study - game design processes and outcomes based on adaptation have a specificity and coherence that may allow those researchers interested in the design activity itself to zero in on aspects of interest.
+
+- Cinema itself could conceivably benefit from realizations about cinematic approaches when they are incorporated into a videogame context as these new and unusual juxtapositions could equally inspire different filmic approaches as videogame design approaches.
+
+Convinced yet?
