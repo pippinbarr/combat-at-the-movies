@@ -123,6 +123,8 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
         bullet.destroy();
       }
     });
+
+    return bullet;
   }
 
   die(bullet) {

@@ -15,45 +15,32 @@ class TheGodfather extends GameScene {
     this.player.y = this.game.canvas.height / 2 + 24;
     this.player.hits = 0;
 
-    this.enemies = this.add.group();
-    const numTanksInRow = 4;
-    const upperY = 190;
-    const lowerY = this.game.canvas.height - upperY;
-    const startX = 180;
-    const width = 150;
-    const spacing = width / numTanksInRow;
-    for (let i = 0; i < numTanksInRow; i++) {
-      let topEnemy = new Tank(this, startX + i * spacing, upperY - Math.random() * 20, `tank`, 0x272AB0);
-      topEnemy.moveAngle = 90;
-      topEnemy.setFrame(4);
-      topEnemy.updateFrame();
-      topEnemy.direction = 1;
-      this.add.existing(topEnemy);
-      this.enemies.add(topEnemy);
+    this.enemy = new Tank(this, 100, 240, `tank`, 0x272AB0);
+    this.enemy.x = 260;
+    this.enemy.y = 350;
+    this.enemy.setFrame(12);
+    this.enemy.moveAngle = 270;
+    this.enemy.visible = false;
 
-      let bottomEnemy = new Tank(this, startX + i * spacing, lowerY + Math.random() * 20, `tank`, 0x272AB0);
-      bottomEnemy.moveAngle = 270;
-      bottomEnemy.setFrame(12);
-      bottomEnemy.updateFrame();
-      bottomEnemy.direction = -1;
-      this.add.existing(bottomEnemy);
-      this.enemies.add(bottomEnemy);
-
-      topEnemy.visible = false;
-      bottomEnemy.visible = false;
-
-    }
+    this.tanks.add(this.enemy);
+    this.add.existing(this.enemy);
 
     this.shooting = false;
+
+    this.showInstruction("PASS THROUGH THE TOLL PLAZA");
+
+    this.timeout = setTimeout(() => {
+      this.showGameOver("YOU DIDN'T PASS THROUGH THE TOLL PLAZA");
+    }, 20000);
   }
 
   update(time, delta) {
     super.update(time, delta);
 
-    if (this.player.x > 240 && !this.shooting) {
-      this.enemies.children.each((enemy) => {
-        enemy.visible = true;
-      });
+    if (this.black.visible) return;
+
+    if (this.player.x > 250 && !this.shooting) {
+      this.enemy.visible = true;
       this.shooting = true;
     }
 
@@ -64,41 +51,46 @@ class TheGodfather extends GameScene {
   }
 
   handleShooting() {
-    this.enemies.children.each((enemy) => {
-      // If the player's already dead then no need to shoot them
-      if (this.player.dead) return;
+    // If the player's already dead then no need to shoot them
+    if (this.player.dead) return;
 
-      // Otherwise, shoot...
-      let bullet = enemy.shoot();
+    // Otherwise, shoot...
+    let bullet = this.enemy.shoot();
 
-      // And if you hit something...
-      this.physics.add.overlap(bullet, this.shootables, (bullet, target) => {
-        // If it's yourself, then don't worry
-        if (target === bullet.owner) {
-          return;
+    // And if you hit something...
+    this.physics.add.overlap(bullet, this.player, (bullet, target) => {
+      // If it's yourself, then don't worry
+      if (target === bullet.owner) {
+        return;
+      }
+      // If it's the player, then they got shot
+      if (target === this.player && !this.player.dead) {
+        this.player.body.velocity.x = bullet.body.velocity.x;
+        this.player.body.velocity.y = bullet.body.velocity.y;
+        bullet.owner.shooting = false;
+        bullet.destroy();
+        this.player.hits++;
+        if (this.player.hits > 3) {
+          this.player.dieSFX.play();
+          this.player.driveSFX.stop();
+          this.player.idleSFX.stop();
+          this.player.dead = true;
+
+          clearTimeout(this.timeout);
+          this.memoryTimer = setTimeout(() => {
+            this.showGameOver("YOU WERE MURDERED BY BARZINI'S PEOPLE");
+          }, 5000);
         }
-        // If it's the player, then they got shot
-        if (target === this.player && !this.player.dead) {
-          this.player.body.velocity.x = bullet.body.velocity.x;
-          this.player.body.velocity.y = bullet.body.velocity.y;
-          bullet.owner.shooting = false;
-          bullet.destroy();
-          this.player.hits++;
-          if (this.player.hits > 50) {
-            this.player.dieSFX.play();
-            this.player.driveSFX.stop();
-            this.player.idleSFX.stop();
-            this.player.dead = true;
-          }
-        }
-        // If it's a wall, end of bullet
-        else if (target.index === 1) {
-          bullet.owner.shooting = false;
-          bullet.destroy();
-        }
-      });
+      }
+      // If it's a wall, end of bullet
+      else if (target.index === 1) {
+        bullet.owner.shooting = false;
+        bullet.destroy();
+      }
+
       // Update
-      enemy.update();
+      this.enemy.update();
+
     });
 
   }

@@ -81,6 +81,7 @@ class GameScene extends Phaser.Scene {
       .setTint(0x000000)
       .setScale(this.game.canvas.width, this.game.canvas.height);
     this.black.visible = false;
+    this.black.depth = 10000;
 
     this.interstitialText = this.add.text(this.game.canvas.width / 2, this.game.canvas.height / 2, "TEXT", {
       fontFamily: "Square",
@@ -89,6 +90,7 @@ class GameScene extends Phaser.Scene {
     });
     this.interstitialText.setOrigin(0.5, 0.5);
     this.interstitialText.visible = false;
+    this.interstitialText.depth = 10001;
 
   }
 

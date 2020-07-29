@@ -53,12 +53,11 @@
 
 - ~~Create basic scene~~
 - ~~Enemy tanks at the toll area that shoot you~~
-
-- Reduce to a single tank surprise-killing you since we might like to keep to the Atari sprite limit?
-- Add a timer for an ending
-- Instruction: PASS THROUGH THE TOLL STATION
-- Time ending: YOU DIDN'T GO THROUGH THE TOLL STATION
-- Death ending: YOU WERE MURDERED BY THE X GANG?
+- ~~__YES THIS SEEMS MORE LEGITIMATE TO THE HARDWARE RESTRICTION?__ Reduce to a single tank surprise-killing you since we might like to keep to the Atari sprite limit?~~
+- ~~Add a timer for an ending~~
+- ~~Instruction: PASS THROUGH THE TOLL STATION~~
+- ~~Time ending: YOU DIDN'T GO THROUGH THE TOLL STATION~~
+- ~~__BARZINI__ Death ending: YOU WERE MURDERED BY THE X GANG?~~
 
 # 2001: A Space Odyssey (Monolith)
 
