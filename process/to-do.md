@@ -42,13 +42,12 @@
 # L'Avventura (Island)
 
 - ~~Create the island and put the tank on it~~
-
-- Add a timer for ending
-- Add calling out her name for shooting (could even keep the bullet?)
-- Bullet could be the word ANNA?
-- Or perhaps no shooting no calling? The instruction kind of does the work here? (Only do the audio if I'm wanting to reference Heavy Rain?)
-- Instruction: FIND ANNA
-- Ending: YOU DIDN'T FIND ANNA
+- ~~Add a timer for ending~~
+- ~~__NO__ Add calling out her name for shooting (could even keep the bullet?)~~
+- ~~__NO__ Bullet could be the word ANNA?~~
+- ~~__YEAH__ Or perhaps no shooting no calling? The instruction kind of does the work here? (Only do the audio if I'm wanting to reference Heavy Rain?)~~
+- ~~Instruction: FIND ANNA~~
+- ~~Ending: YOU DIDN'T FIND ANNA~~
 
 # The Godfather (Tollbridge)
 

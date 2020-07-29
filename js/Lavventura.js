@@ -13,6 +13,12 @@ class Lavventura extends GameScene {
     });
     this.player.x = this.game.canvas.width / 2;
     this.player.y = this.game.canvas.height / 2;
+
+    this.showInstruction("FIND ANNA");
+
+    setTimeout(() => {
+      this.showGameOver("YOU DIDN'T FIND ANNA");
+    }, 20000)
   }
 
   update(time, delta) {
