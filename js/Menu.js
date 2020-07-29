@@ -22,46 +22,52 @@ class Menu extends Phaser.Scene {
 
     this.games = [{
       key: "citizenkane",
-      title: "CITIZEN KANE"
+      title: "CITIZEN <K>ANE",
+      menuKey: "K"
     }, {
       key: "beautravail",
-      title: "BEAU TRAVAIL"
+      title: "<B>EAU TRAVAIL",
+      menuKey: "B"
     }, {
       key: "auhasardbalthazar",
-      title: "AU HASARD BALTHAZAR"
+      title: "<A>U HASARD BALTHAZAR",
+      menuKey: "A"
     }, {
       key: "lavventura",
-      title: "L'AVVENTURA"
+      title: "<L>'AVVENTURA",
+      menuKey: "L"
     }, {
       key: "rashomon",
-      title: "RASHOMON"
+      title: "<R>ASHOMON",
+      menuKey: "R"
     }, {
       key: "somelikeithot",
-      title: "SOME LIKE IT HOT"
+      title: "<S>OME LIKE IT HOT",
+      menuKey: "S"
     }, {
       key: "taxidriver",
-      title: "TAXI DRIVER"
+      title: "<T>AXI DRIVER",
+      menuKey: "T"
     }, {
       key: "theconversation",
-      title: "THE CONVERSATION"
+      title: "THE <C>ONVERSATION",
+      menuKey: "C"
     }, {
       key: "thegodfather",
-      title: "THE GODFATHER"
+      title: "THE <G>ODFATHER",
+      menuKey: "G"
     }, {
       key: "twothousandandoneaspaceodyssey",
-      title: "2001: A SPACE ODYSSEY"
+      title: "<2>001: A SPACE ODYSSEY",
+      menuKey: "TWO"
     }, ]
 
-    this.numberCodes = [
-      "ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE"
-    ];
 
     this.gameStrings = "\n";
     for (let i = 0; i < this.games.length; i++) {
       let game = this.games[i];
-      this.gameStrings += i + " - " + game.title + "\n";
-      this.input.keyboard.on(`keydown-${this.numberCodes[i]}`, (e) => {
-        console.log("???")
+      this.gameStrings += game.title + "\n";
+      this.input.keyboard.on(`keydown-${game.menuKey}`, (e) => {
         this.scene.start(game.key);
       });
     }

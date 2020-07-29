@@ -18,7 +18,8 @@
 
 # Menu
 
-- Create a basic menu so you can at least load different levels for testing stuff out
+- ~~Create a basic menu so you can at least load different levels for testing stuff out~~
+
 - Make an actually good menu (what does a good menu look like?)
 
 # Meta
@@ -45,6 +46,7 @@
 - Add a timer for ending
 - Add calling out her name for shooting (could even keep the bullet?)
 - Bullet could be the word ANNA?
+- Or perhaps no shooting no calling? The instruction kind of does the work here? (Only do the audio if I'm wanting to reference Heavy Rain?)
 - Instruction: FIND ANNA
 - Ending: YOU DIDN'T FIND ANNA
 
