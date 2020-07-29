@@ -77,7 +77,7 @@ class TheGodfather extends GameScene {
           this.player.dead = true;
 
           clearTimeout(this.timeout);
-          this.memoryTimer = setTimeout(() => {
+          this.gameOverTimer = setTimeout(() => {
             this.showGameOver("YOU WERE MURDERED BY BARZINI'S PEOPLE");
           }, 5000);
         }

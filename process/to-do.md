@@ -66,24 +66,29 @@
 - ~~Player and other tank in empty screen~~
 
 - Monolith appears after a delay
-- Player touches monolith (music cue?) disappears and player can shoot
+- Player touches monolith then it disappears and player can shoot
 - Player shoots opponent and that's all she wrote
 - Instruction: EVOLVE
-- Winning: something...
+- Winning: something...?
+- Timeout: should that happen? YOU DIDN'T TOUCH THE MONOLITH? YOU DIDN'T WIN AT EVOLUTION???
 - Sound for non-firing (maybe just a click)
 - Music pre-monolith to announce its arrival?
-- Make AI tank stay on its side
+- Visible dividing line as the river? (Collides for both tanks)
+- Make AI tank stay on its side (see previous)
 
 # Au Hasard Balthazar (Donkey)
 
 - ~~Draw the rotations frame by frame~~
 - ~~Fix the broken walls~~
 - ~~Make Balthazar wander around~~
+- ~~Timer~~
+- ~~__BALTHAZAR IS JUST A DONKEY__ Instruction: Ummmm~~
+- ~~Kill Balthazar ending: YOU KILLED BALTHAZAR~~
+- ~~__LIFE GOES ON__ Timer ending: ?~~
 
-- Timer
-- Instruction: Ummmm
-- Kill Balthazar ending: YOU KILLED BALTHAZAR
-- Timer ending: ?
+- Improve instruction and timer endings?
+- Change Balthazar to not go upside down?
+- Alter movement code to use pure random movement?
 
 # Rashomon
 

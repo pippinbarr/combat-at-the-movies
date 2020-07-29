@@ -25,16 +25,17 @@ class AuHasardBalthazar extends GameScene {
 
     this.tanks.add(this.balthazar);
 
-    // this.balthazar = this.physics.add.sprite(0, 0, 'balthazar')
-    //   .setPosition(this.game.canvas.width - this.game.canvas.width / 10, this.game.canvas.height / 2 + 24)
-    //   // .setPosition(this.game.canvas.width / 10, this.game.canvas.height / 2 + 24)
-    //   .setScale(SCALE)
-    //   .setFlip(-1, 0)
-    //   .setTint(0x6e4926);
+    this.showInstruction("BALTHAZAR IS JUST A DONKEY");
+
+    this.timeout = setTimeout(() => {
+      this.showGameOver("LIFE GOES ON");
+    }, 30000);
   }
 
   update(time, delta) {
     super.update(time, delta);
+
+    if (this.black.visible) return;
 
     this.balthazar.update();
     // if (this.balthazar.dead) {
@@ -63,7 +64,11 @@ class AuHasardBalthazar extends GameScene {
     });
     this.physics.add.overlap(bullet, this.balthazar, (bullet, target) => {
       bullet.destroy();
-      this.balthazar.dead = true;
+      this.balthazar.die();
+      clearTimeout(this.timeout);
+      this.gameOverTimer = setTimeout(() => {
+        this.showGameOver("YOU KILLED BALTHAZAR");
+      }, 5000);
     });
   }
 }

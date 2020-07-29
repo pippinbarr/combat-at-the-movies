@@ -125,8 +125,12 @@ class GameScene extends Phaser.Scene {
     }
 
     if (this.cursors.space.isDown) {
-      this.player.shoot();
+      this.shoot();
     }
+  }
+
+  sboot() {
+    this.player.shoot();
   }
 
   showInstruction(text) {
