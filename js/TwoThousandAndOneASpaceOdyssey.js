@@ -12,18 +12,6 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
       // playerColor: 0xC04141
     });
 
-    this.monolith = this.map.createDynamicLayer("monolith", this.tileset, 0, 0);
-
-    this.monolith.forEachTile((tile) => {
-      tile.tint = 0x000000;
-    });
-    this.monolith.touches = 0;
-    this.monolith.collider = this.physics.add.collider(this.tanks, this.monolith, (tank, monolith) => {
-      this.monolithTouch(tank, monolith);
-    });
-
-    this.setMonolithActive(true);
-
     this.player.x = this.game.canvas.width / 10;
     this.player.y = this.game.canvas.height / 2 + 24;
     this.player.canShoot = false;
@@ -36,6 +24,46 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
     this.enemy.moveAngle = 180;
     this.tanks.add(this.enemy);
     this.shootables.add(this.enemy);
+
+    this.monolith = this.map.createDynamicLayer("monolith", this.tileset, 0, 0);
+
+    this.monolith.forEachTile((tile) => {
+      tile.tint = 0x000000;
+    });
+    this.monolith.touches = 0;
+    this.monolith.collider = this.physics.add.collider(this.tanks, this.monolith, (tank, monolith) => {
+      this.monolithTouch(tank, monolith);
+    });
+
+    this.setMonolithActive(false);
+
+    this.enemyBlocker = this.map.createDynamicLayer("enemy_blocker", this.tileset, 0, 0);
+    this.enemyBlocker.setCollisionByProperty({
+      collides: true
+    });
+    this.enemyBlocker.visible = false;
+    this.physics.add.collider(this.enemy, this.enemyBlocker, (tank, wall) => {
+      tank.hit(wall);
+    });
+
+    this.showInstruction("EVOLVE");
+
+    this.timeout = setTimeout(() => {
+      this.showGameOver("YOU DIDN'T EVOLVE");
+    }, 30000);
+
+    setTimeout(() => {
+      this.setMonolithActive(true);
+      let dx = 155 - this.player.x;
+      let dy = 210 - this.player.y;
+
+      console.log(dx, dy, this.monolith.width / 2, this.monolith.height / 2);
+
+      if (Math.abs(dx) < this.monolith.width / 2 && Math.abs(dy) < this.monolith.height / 2) {
+        this.player.x = 155;
+        this.player.y = 300;
+      }
+    }, 6000);
   }
 
   setMonolithActive(active) {
@@ -50,7 +78,7 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
 
   monolithTouch(tank, monolith) {
     if (tank === this.player) {
-      if (this.monolith.touches < 10) {
+      if (this.monolith.touches < 1) {
         this.monolith.touches++;
       }
       else {
@@ -66,8 +94,30 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
   }
 
   shoot() {
-    if (this.player.canShoot) {
-      super.shoot();
-    }
+    if (!this.player.canShoot) return;
+
+    let bullet = this.player.shoot(this.walls);
+
+    this.physics.add.overlap(bullet, this.enemy, (bullet, target) => {
+      if (target === bullet.owner) {
+        return;
+      }
+      if (target instanceof Tank) {
+        if (!target.dead) {
+          target.die(bullet);
+
+          clearTimeout(this.timeout);
+          this.gameOverTimer = setTimeout(() => {
+            this.showGameOver("YOU EVOLVED");
+          }, 5000);
+
+        }
+      }
+      else if (target.index === 1) {
+        bullet.owner.shooting = false;
+        bullet.destroy();
+      }
+    });
+
   }
 }

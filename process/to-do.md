@@ -37,6 +37,7 @@
 
 - Better audio?
 - Wiggling as Kane tank for some more agency?
+- Restore the idea that time runs out and you die, rather than hitting shoot to die
 
 
 # L'Avventura (Island)
@@ -64,17 +65,20 @@
 - ~~Basic scene with a monolith available~~
 - ~~__NO__ Add a whole bunch of tanks that randomly move?~~
 - ~~Player and other tank in empty screen~~
+- ~~Monolith appears after a delay~~
+- ~~Player touches monolith then it disappears and player can shoot~~
+- ~~Player can't get stuck behind the monolith~~
+- ~~Player shoots opponent and that's all she wrote~~
+- ~~Instruction: EVOLVE~~
+- ~~__YOU EVOLVED__ Winning: something...?~~
+- ~~__YOU DIDN'T EVOLVE__ Timeout: should that happen? YOU DIDN'T TOUCH THE MONOLITH? YOU DIDN'T WIN AT EVOLUTION???~~
+- ~~__INVISIBLE IN THE END, METAPHOR METAPHOR__ Visible dividing line as the river? (Collides for enemy tank?)~~
+- ~~Make AI tank stay on its side (see previous)~~
 
-- Monolith appears after a delay
-- Player touches monolith then it disappears and player can shoot
-- Player shoots opponent and that's all she wrote
-- Instruction: EVOLVE
-- Winning: something...?
-- Timeout: should that happen? YOU DIDN'T TOUCH THE MONOLITH? YOU DIDN'T WIN AT EVOLUTION???
-- Sound for non-firing (maybe just a click)
+- Sound for non-firing (maybe just a click?)
 - Music pre-monolith to announce its arrival?
-- Visible dividing line as the river? (Collides for both tanks)
-- Make AI tank stay on its side (see previous)
+- Make the monolith a standard sprite, jesus christ.
+
 
 # Au Hasard Balthazar (Donkey)
 

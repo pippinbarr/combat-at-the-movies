@@ -129,7 +129,7 @@ class GameScene extends Phaser.Scene {
     }
   }
 
-  sboot() {
+  shoot() {
     this.player.shoot();
   }
 
