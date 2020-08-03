@@ -130,7 +130,7 @@ class GameScene extends Phaser.Scene {
   }
 
   shoot() {
-    this.player.shoot();
+    this.player.shoot(this.shootables);
   }
 
   showInstruction(text) {

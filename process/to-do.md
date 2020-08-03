@@ -103,13 +103,12 @@
 - ~~Add an enemy tank (does it need an AI? Yes.)~~
 - ~~__NO THIS IS OVERKILL__ Give cameras different background colors? Tints? Other perceptual differences?~~
 - ~~__IT'S FUNNIER IF IT'S THE ICONIC COMBAT LEVEL__ Consider what the tiles need to look like to recreate the basic murder scene (or rather at least one of them)~~
-
-- Add shooting for AI Tank
-- Instruction: FIGHT?
-- Lose ending: ...
-- Win ending: ...
-- Time ending: ...
-- Endings could all be ambiguous? WAIT THAT'S NOT WHAT HAPPENED?
+- ~~Add shooting for AI Tank~~
+- ~~Instruction: FIGHT?~~
+- ~~Lose ending: ...~~
+- ~~Win ending: ...~~
+- ~~__NO__ Time ending: ...~~
+- ~~__EXACTLY__ Endings could all be ambiguous? WAIT THAT'S NOT WHAT HAPPENED?~~
 
 # Taxi Driver (Mirror)
 
