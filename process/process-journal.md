@@ -369,3 +369,32 @@ A couple of extra thoughts to go on with...
 __Should you be able to move a bit?__ Currently all you can do is shoot, should you be able to thrash a little bit in your bed maybe? Just back and forth? In the movie he looks pretty damn incapacitated, but maybe just a wiggle between the three adjacent frames?
 
 __A Combat tank looks like a sled?__ I mean, it does. Is there some weird possibility of leveraging that? Having the enemy tank appear as if it's rosebud? Could it be hit by the bullet and also die (to emulate it being burned?). Or does that get too weird and abstract? Where would the Rosebud tank be? Why does Kane-tank then also look like a sled by implication? Suspect this doesn't work.
+
+---
+
+# First draft? Violence stocktake (Wednesday, 5 August 2020, 17:13PM)
+
+## First draft?
+
+With today's push I feel like I probably have a "first draft" of the entire game in the sense that it has a menu, a flow, and versions of every subgame I'm envisaging including.
+
+By and large I find the total package pretty satisfying, barring a few obvious fixes that are going to be needed here and there. Some Like It Hot continues to be a bit of a lame duck, but I'm holding onto it just as a teasing kind of thing about men-as-women trivialization.
+
+Some of the ideas that I assumed would be satisfying, like saying "you talkin to me?" into the mirror as a tank do indeed feel satisfying. In fact it was kind of only in playing that that I realized the game serves almost as a kind of prelude to a regular match of Combat, one tank psyching itself out to go and be violent. There's something good in that.
+
+## Violence stocktake
+
+In terms of "commentary" on violence then we get
+
+- Au hasard Balthazar - the presumed inability of a player not to act violently when it's a possible action
+- Beau Travail - a tank post-the moment of violence, in heaven or hell or wherever you go, dancing (a pleasingly non-violent activity)
+- Citizen Kane - being subjected to death of old age rather than a violent death
+- L'Avventura - a tough sell, I feel like there's violence/menace to the actual movie, the violence of bad relationships?
+- Rashomon - about the perception of violence, stories about violence
+- Some Like it Hot - not really about violence, though using the same "trick" to make Combat be about women fighting instead of tanks or something
+- Taxi Driver - about the prelude to violence, the psychology of a violent man
+- The Conversation - about being adjacent to violence, paying attention to violence
+- The Godfather - about being the helpless subject of violence
+- 2001 - about unequal violence, violence as evolutionary necessity
+
+So you know what? Not really too bad at all. In all these cases the violence is spotlighted by Combat, and Combat is softened/complicated by the films.
