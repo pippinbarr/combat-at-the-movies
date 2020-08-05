@@ -147,10 +147,11 @@
 - ~~__NO, IT'S TOO SPECIFIC AND DOESN'T GEL, BETTER IF IT'S MORE CONCEPTUALLY ABOUT LISTENING TO A COMBAT MATCH__ Starting approximation might just be the hotel room and the sound from the next room playing?~~
 - ~~__SOLVED BY HAVING IT BE A STANDARD COMBAT ARENA__ A problem: in the film he doesn't hear the murder, he sees it through the frosted/obscure window~~
 - ~~__YES! AND THIS WORKS WELL WITH THE INVISIBLE TANK VARIANTS__ Tank could be at the top of the screen outside the play area which is occluded???~~
-
-- In the movie it's a murder in the hotel room, so you could have audio of movement for a while and eventually a shot and a death sound
-- LISTEN THROUGH THE WALL
-- WHO KILLED WHO?
+- ~~__PRETTY MUCH__ In the movie it's a murder in the hotel room, so you could have audio of movement for a while and eventually a shot and a death sound~~
+- ~~LISTEN THROUGH THE WALL~~
+- ~~__MURDER!__ WHO KILLED WHO?~~
+- ~~__SO NO__ Should the play area be filled in so you can't see an implied space? (But that's not how Combat works with invisible mode...)~~
+- ~~__YUP, AND FIXED__ Tank audio carries on (probably across all games)~~
 
 ---
 

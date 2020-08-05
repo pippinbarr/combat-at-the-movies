@@ -91,10 +91,12 @@ class GameScene extends Phaser.Scene {
     this.interstitialText.visible = false;
     this.interstitialText.depth = 10001;
 
+    this.sound.setMute(true);
   }
 
   update(time, delta) {
     if (this.black.visible) return;
+    if (!this.playing) return;
 
     this.handleInput();
 
@@ -140,7 +142,9 @@ class GameScene extends Phaser.Scene {
     setTimeout(() => {
       this.black.visible = false;
       this.interstitialText.visible = false;
-      callback();
+      this.playing = true;
+      this.sound.setMute(false);
+      if (callback) callback();
     }, 2000);
   }
 
@@ -149,6 +153,7 @@ class GameScene extends Phaser.Scene {
     this.black.visible = true;
     this.interstitialText.visible = true;
     this.interstitialText.text = text;
+    this.sound.removeAll();
     setTimeout(() => {
       this.scene.start(START_SCENE);
     }, 2000);

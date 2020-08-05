@@ -39,20 +39,38 @@ class TheConversation extends GameScene {
     this.tanks.add(this.enemy2);
     this.shootables.add(this.enemy2);
 
-    // this.walls.visible = false;
-    // this.enemy1.visible = false;
-    // this.enemy2.visible = false;
+    this.walls.visible = false;
+    this.enemy1.visible = false;
+    this.enemy2.visible = false;
+
+    this.showInstruction("LISTEN THROUGH THE WALL", () => {
+
+    });
+
+    this.events.addListener("DEATH", (tank) => {
+      if (this.gameOverTimer) return;
+      this.events.removeListener("DEATH");
+      this.gameOverTimer = setTimeout(() => {
+        this.gameOverTimer = undefined;
+        this.showGameOver("MURDER!");
+      }, 5000);
+    });
 
   }
 
   update(time, delta) {
+    if (!this.playing) return;
+
     super.update(time, delta);
     this.enemy1.update();
     this.enemy2.update();
 
     if (Phaser.Math.Distance.Between(this.enemy1.x, this.enemy1.y, this.enemy2.x, this.enemy2.y) < 400) {
-      this.enemy1.shoot(this.shootables);
-      this.enemy2.shoot(this.shootables);
+      let bullet1 = this.enemy1.shoot(this.shootables);
+      let bullet2 = this.enemy2.shoot(this.shootables);
+
+      if (bullet1) bullet1.visible = false;
+      if (bullet2) bullet2.visible = false;
     }
   }
 

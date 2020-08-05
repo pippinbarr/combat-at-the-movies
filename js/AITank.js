@@ -64,4 +64,8 @@ class AITank extends Tank {
     this.hitDX = this.x - (object.pixelX ? object.pixelX : object.x);
     this.hitDY = this.y - (object.pixelY ? object.pixelY : object.y);
   }
+
+  shoot(shootables) {
+    if (Math.random() < 0.02) return super.shoot(shootables);
+  }
 }
