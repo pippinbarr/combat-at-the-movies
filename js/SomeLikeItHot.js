@@ -27,14 +27,26 @@ class SomeLikeItHot extends GameScene {
 
     this.tanks.add(this.enemy);
     this.shootables.add(this.enemy);
+
+    this.showInstruction("HIJINKS ENSUE");
+
+    this.events.addListener("DEATH", (tank) => {
+      if (this.gameOverTimer) return;
+      this.events.removeListener("DEATH");
+      this.gameOverTimer = setTimeout(() => {
+        this.gameOverTimer = undefined;
+        this.showGameOver("I THOUGHT WE WERE FRIENDS...");
+      }, 5000);
+    });
   }
 
   update(time, delta) {
     super.update(time, delta);
     this.enemy.update();
+
+    if (!this.enemy.dead && Phaser.Math.Distance.Between(this.enemy.x, this.enemy.y, this.player.x, this.player.y) < 400) {
+      this.enemy.shoot(this.shootables);
+    }
   }
 
-  shoot() {
-
-  }
 }

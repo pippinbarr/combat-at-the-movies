@@ -63,6 +63,7 @@ class Rashomon extends GameScene {
 
     this.events.addListener("DEATH", (tank) => {
       if (this.gameOverTimer) return;
+      this.events.removeListener("DEATH");
       this.gameOverTimer = setTimeout(() => {
         this.camera1.visible = false;
         this.camera2.visible = false;

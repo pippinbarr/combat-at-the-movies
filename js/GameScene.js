@@ -76,7 +76,6 @@ class GameScene extends Phaser.Scene {
     //   faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
     // });
 
-    console.log("Uh?")
     this.black = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'pixel.png')
       .setTint(0x000000)
       .setScale(this.game.canvas.width, this.game.canvas.height);

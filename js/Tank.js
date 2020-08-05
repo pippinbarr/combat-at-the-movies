@@ -132,6 +132,7 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     this.driveSFX.stop();
     this.idleSFX.stop();
     this.dead = true;
+
     if (bullet) {
       // This is here to reset death, but that's not relevant in any of the games
       // setTimeout(() => {
@@ -147,6 +148,7 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
       bullet.owner.wait();
     }
 
+    console.log("Emitting DEATH event.");
     this.scene.events.emit("DEATH", this);
   }
 

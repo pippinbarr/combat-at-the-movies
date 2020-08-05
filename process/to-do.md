@@ -122,17 +122,10 @@
 
 - ~~Pink tanks~~
 - ~~Enemy AI? Or not?~~
-
-- Shooting and winning etc. Just standard combat actually
-- Instruction: BE A WOMAN
-- Endings: ???
-
-# ~~La Jetée~~
-
-- Basic scenario of the pier, the player, an enemy tank shooting another tank with the player looking on, and maybe a reprise except this time you are the tank being shot?
-- Or a version where you control both the on-looker tank and the tank being pursued and shot? (Maybe a baby-size tank?)
-- __YES__ Is this one too complicated to live?
-- Maybe it's simpler to have a first scene where you're observing a tank shoot another tank, and then a second scene where you're the tank being shot? (They wouldn't be identical scenes of course, which is bad for time travel.)
+- ~~Shooting and winning etc. Just standard combat actually~~
+- ~~HIJINKS ENSUE__ Instruction: BE A WOMAN~~
+- ~~Some bugs in there with the game not always ending on death (of player?)~~
+- ~~__I THOUGHT WE WERE FRIENDS... Endings: ??? This is a challenge~~
 
 # Beau Travail
 
@@ -157,3 +150,12 @@
 - In the movie it's a murder in the hotel room, so you could have audio of movement for a while and eventually a shot and a death sound
 - LISTEN THROUGH THE WALL
 - WHO KILLED WHO?
+
+---
+
+# ~~La Jetée~~
+
+- Basic scenario of the pier, the player, an enemy tank shooting another tank with the player looking on, and maybe a reprise except this time you are the tank being shot?
+- Or a version where you control both the on-looker tank and the tank being pursued and shot? (Maybe a baby-size tank?)
+- __YES__ Is this one too complicated to live?
+- Maybe it's simpler to have a first scene where you're observing a tank shoot another tank, and then a second scene where you're the tank being shot? (They wouldn't be identical scenes of course, which is bad for time travel.)
