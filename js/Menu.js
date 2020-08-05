@@ -80,8 +80,38 @@ class Menu extends Phaser.Scene {
     });
     this.gamesText.setOrigin(0.5, 0);
 
+    this.instructionsText = this.add.text(170, this.gamesText.y + this.gamesText.height + 100, `
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      PRESS MATCHING KEY TO PLAY GAME
+      ALL GAMES PLAYED WITH ARROW KEYS AND SPACE
+      `, {
+      fontFamily: "Square",
+      fontSize: "18px",
+      color: "#F1B275",
+      lineSpacing: 1
+    });
+    this.instructionsText.setOrigin(0, 0);
+
+
     this.tweenIn = this.add.tween({
-      targets: [this.titleText, this.gamesText],
+      targets: [this.titleText, this.gamesText, this.instructionsText],
       y: this.game.canvas.height / 8,
       duration: 1000,
       repeat: 0,
