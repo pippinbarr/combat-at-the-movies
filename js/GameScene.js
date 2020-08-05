@@ -132,7 +132,7 @@ class GameScene extends Phaser.Scene {
     this.player.shoot(this.shootables);
   }
 
-  showInstruction(text) {
+  showInstruction(text, callback) {
     // What to do when the game ends: display the text and then go back to the menu
     this.black.visible = true;
     this.interstitialText.visible = true;
@@ -140,6 +140,7 @@ class GameScene extends Phaser.Scene {
     setTimeout(() => {
       this.black.visible = false;
       this.interstitialText.visible = false;
+      callback();
     }, 2000);
   }
 

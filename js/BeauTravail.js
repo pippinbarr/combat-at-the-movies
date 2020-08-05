@@ -34,6 +34,17 @@ class BeauTravail extends GameScene {
     this.enemy.setFlipY(true);
     this.enemy.depth = -100;
     this.add.existing(this.enemy);
+
+    this.music = this.sound.add('rhythm-of-the-night');
+    this.music.loop = true;
+
+    this.showInstruction("DANCE", () => {
+      this.music.play();
+    });
+
+    setTimeout(() => {
+      this.showGameOver("THE CREDITS ROLL");
+    }, 30000);
   }
 
   update(time, delta) {

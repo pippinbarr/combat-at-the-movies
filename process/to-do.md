@@ -134,10 +134,11 @@
 - ~~Mirror tank behind the mirror (same as for Taxi Driver - and interesting that there's that correspondence between the movies and then the games)~~
 - ~~Create second layer that can alternate for a disco feel?~~
 - ~~Let the tank reverse for this one instance?~~
+- ~~Add a music loop (MIDI? Sample?)~~
+- ~~DANCE / THE CREDITS ROLL~~
+- ~~__TOO DISTRACTING I THINK__ Maybe speed up/slow down the rate of movement as with his dancing?~~
 
-- Add a music loop (MIDI? Sample?)
-- Maybe speed up/slow down the rate of movement as with his dancing
-- DANCE / THE CREDITS ROLL
+- Look into music maintenance (it might keep playing?)
 
 # The Conversation
 

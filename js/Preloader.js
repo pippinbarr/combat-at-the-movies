@@ -41,6 +41,7 @@ let Preloader = new Phaser.Class({
     this.load.audio('die', 'assets/sounds/die.wav');
 
     this.load.audio('rosebud', 'assets/sounds/rosebud.wav');
+    this.load.audio('rhythm-of-the-night', 'assets/sounds/rhythm-of-the-night.mp3');
   },
 
   create: function() {
