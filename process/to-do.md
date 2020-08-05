@@ -112,11 +112,13 @@
 
 # Taxi Driver (Mirror)
 
-- Implement "you talkin to me" on shoot at mirror tank (invisible bullet?)
-- Point per you talkin to me
-- Timer for ending?
-- Instruction: PREPARE YOURSELF
-- Ending: YOU'RE READY (or maybe not if you have 0 points?)
+- ~~Implement "you talkin to me" on shoot at mirror tank (invisible bullet?)~~
+- ~~Point per you talkin to me~~
+- ~~Timer for ending?~~
+- ~~Instruction: PREPARE YOURSELF~~
+- ~~Ending: YOU'RE READY (or maybe not if you have 0 points?)~~
+
+- Should I restrict when you can say the words? Could it literally be as "simple" as making it a bullet-based thing? Or should I restrict to being in the mirror zone? Or that plus facing the mirror?
 
 # Some Like It Hot (Pink Tanks)
 
@@ -137,8 +139,7 @@
 - ~~Add a music loop (MIDI? Sample?)~~
 - ~~DANCE / THE CREDITS ROLL~~
 - ~~__TOO DISTRACTING I THINK__ Maybe speed up/slow down the rate of movement as with his dancing?~~
-
-- Look into music maintenance (it might keep playing?)
+- ~~Look into music maintenance (it might keep playing?)~~
 
 # The Conversation
 

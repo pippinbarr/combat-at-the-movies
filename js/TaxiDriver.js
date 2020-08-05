@@ -29,10 +29,23 @@ class TaxiDriver extends GameScene {
       .centerOn(width / 2, height / 2 - 100)
       .ignore(this.walls)
 
+    this.talkinSFX = this.sound.add('you-talkin-to-me');
+
+    this.showInstruction("PREPARE");
+
+    this.timeout = setTimeout(() => {
+      if (this.player.score >= 3) {
+        this.showGameOver("YOU'RE READY");
+      }
+      else {
+        this.showGameOver("YOU'RE NOT READY");
+      }
+    }, 20000);
   }
 
   update(time, delta) {
     super.update(time, delta);
+
     this.enemy.setFrame(this.player.frame.name);
     this.enemy.x = this.player.x;
     let dy = this.game.canvas.height / 2 - this.player.y;
@@ -40,6 +53,11 @@ class TaxiDriver extends GameScene {
   }
 
   shoot() {
-
+    if (this.talkinSFX.isPlaying) return;
+    this.talkinSFX.play();
+    this.talkinSFX.once('complete', () => {
+      this.player.score++;
+      this.playerScore.text = this.player.score;
+    })
   }
 }
