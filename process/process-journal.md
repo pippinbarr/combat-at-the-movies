@@ -398,3 +398,22 @@ In terms of "commentary" on violence then we get
 - 2001 - about unequal violence, violence as evolutionary necessity
 
 So you know what? Not really too bad at all. In all these cases the violence is spotlighted by Combat, and Combat is softened/complicated by the films.
+
+---
+
+# J+M response (Thursday, 6 August 2020, 9:50AM)
+
+Overnight I got responses to the game from both Jim and Mary (my parents if you're reading this and you aren't me, but you probably are me, hi!).
+
+So, the bad news is that the game did not come across well for either of them. I've sent a follow-up email, but the key issue appears to have been to do with a lack of agency and thus anything that happened seeming kind of random. At least some of this appears to be a lack of understanding of how to drive the tank. Although the menu system does lay out the controls (arrow keys and space), that clearly wasn't enough. Further, not every game even lets you move in the first place (Citizen Kane is actually the only one now I think about it). Further, your movement is not always very relevant in other games (The Conversation, Taxi Driver at present). And even when it's relevant it might not really be acknowledged by the system in any particular way (e.g. "dancing" is just dancing, it's not something where you get points for it).
+
+Now, a lack of feeling major agency isn't a huge issue in terms of getting the ideas behind the various games, but it is a bit disappointing just in terms of wanting the game to feel fun/amusing/interesting rather than frustrating/boring/opaque.
+
+There are a few bits and pieces I will do and could do that would mitigate some of this, but not the major issue of the games themselves just being low-agency/low-feedback in the first place...
+
+- Sound cues for some of the levels will be a thing, that may help things seem a bit more meant
+- Could add points cues in some places, such as points for dancing in Beau Travail, perhaps
+- Could add significantly more detailed instructions
+- Could add instructions per game that specify how each game works, rather than the kind of cutesy little instructions I have at the moment (this would be more in keeping with Atari instructions, frankly, maybe I could even go over-board and explain the shit out of each game?)
+
+So there are a few options here that might offer solace. Mostly I probably just need to get the damn thing finished and move on though!!
