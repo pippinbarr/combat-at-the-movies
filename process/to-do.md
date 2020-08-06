@@ -12,8 +12,8 @@
 - ~~Basic AI tank~~
 - ~~Add some score stuff by default~~
 - ~~Better AI tank? Maybe only as in: it tries not to just ram walls indefinitely?~~
+- ~~Improve sounds~~
 
-- Improve sounds
 - Expiry of bullet by distance/time?
 
 # Menu
@@ -22,6 +22,7 @@
 
 - Make an actually good menu (what does a good menu look like?)
 - Maybe move to a menu where you select with a cursor instead of letters because they're pretty gross-looking?
+- Could it look like an Atari instruction booklet?
 
 # Meta
 
@@ -88,10 +89,9 @@
 - ~~__BALTHAZAR IS JUST A DONKEY__ Instruction: Ummmm~~
 - ~~Kill Balthazar ending: YOU KILLED BALTHAZAR~~
 - ~~__LIFE GOES ON__ Timer ending: ?~~
-
-- Improve instruction and timer endings?
-- Change Balthazar to not go upside down?
-- Alter movement code to use pure random movement?
+- ~~__NOT REALLY VERY MEANINGFUL?__ Alter movement code to use pure random movement?~~
+- ~~__PART OF A LARGER ISSUE I NEED TO LOOK AT__ Improve instructions and timer endings?~~
+- ~~Change Balthazar to not go upside down?~~
 
 # Rashomon
 

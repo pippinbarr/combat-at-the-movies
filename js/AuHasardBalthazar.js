@@ -29,7 +29,7 @@ class AuHasardBalthazar extends GameScene {
 
     this.timeout = setTimeout(() => {
       this.showGameOver("LIFE GOES ON");
-    }, 30000);
+    }, 20000);
   }
 
   update(time, delta) {
@@ -39,6 +39,17 @@ class AuHasardBalthazar extends GameScene {
     if (!this.playing) return;
 
     this.balthazar.update();
+    this.balthazar.setFrame(0);
+    let angle = this.balthazar.moveAngle;
+    angle = angle % 360;
+    if (angle < 0) angle = angle + 360;
+    if (angle > 90 && angle < 270) {
+      this.balthazar.setFlip(true, false);
+    }
+    else {
+      this.balthazar.setFlip(false, false);
+    }
+
     // if (this.balthazar.dead) {
     //   let frame = this.balthazar.frame.name;
     //   frame += 1;
