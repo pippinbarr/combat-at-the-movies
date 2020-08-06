@@ -38,10 +38,12 @@ let Preloader = new Phaser.Class({
     this.load.audio('idle', 'assets/sounds/idle.wav');
     this.load.audio('drive', 'assets/sounds/drive.wav');
     this.load.audio('shoot', 'assets/sounds/shoot.wav');
+    this.load.audio('click', 'assets/sounds/click.wav');
     this.load.audio('die', 'assets/sounds/die.wav');
 
     this.load.audio('you-talkin-to-me', 'assets/sounds/you-talkin-to-me.wav');
     this.load.audio('rosebud', 'assets/sounds/rosebud.wav');
+    this.load.audio('sunrise', 'assets/sounds/sunrise.wav');
     this.load.audio('rhythm-of-the-night', 'assets/sounds/rhythm-of-the-night.mp3');
   },
 

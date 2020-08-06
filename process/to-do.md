@@ -75,11 +75,9 @@
 - ~~__YOU DIDN'T EVOLVE__ Timeout: should that happen? YOU DIDN'T TOUCH THE MONOLITH? YOU DIDN'T WIN AT EVOLUTION???~~
 - ~~__INVISIBLE IN THE END, METAPHOR METAPHOR__ Visible dividing line as the river? (Collides for enemy tank?)~~
 - ~~Make AI tank stay on its side (see previous)~~
-
-- Sound for non-firing (maybe just a click?)
-- Music pre-monolith to announce its arrival?
-- Make the monolith a standard sprite, jesus christ.
-
+- ~~Sound for non-firing (maybe just a click?)~~
+- ~~Music pre-monolith to announce its arrival?~~
+- ~~Make the monolith a standard sprite, jesus christ.~~
 
 # Au Hasard Balthazar (Donkey)
 

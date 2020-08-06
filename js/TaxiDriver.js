@@ -59,6 +59,6 @@ class TaxiDriver extends GameScene {
     this.talkinSFX.once('complete', () => {
       this.player.score++;
       this.playerScore.text = this.player.score;
-    })
+    });
   }
 }
