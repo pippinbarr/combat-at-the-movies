@@ -40,15 +40,15 @@ class BeauTravail extends GameScene {
 
     this.showInstruction("DANCE", () => {
       this.music.play();
+      setTimeout(() => {
+        this.showGameOver("THE CREDITS ROLL");
+      }, 10000);
     });
-
-    setTimeout(() => {
-      this.showGameOver("THE CREDITS ROLL");
-    }, 30000);
   }
 
   update(time, delta) {
     super.update(time, delta);
+    if (!this.playing) return;
 
     // Update the mirror
     this.enemy.setFrame(this.player.frame.name);

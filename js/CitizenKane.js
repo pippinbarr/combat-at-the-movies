@@ -36,6 +36,7 @@ class CitizenKane extends GameScene {
 
   update(time, delta) {
     super.update(time, delta);
+    if (!this.playing) return;
   }
 
   handleInput() {

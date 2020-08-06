@@ -27,17 +27,20 @@ class TheGodfather extends GameScene {
 
     this.shooting = false;
 
-    this.showInstruction("PASS THROUGH THE TOLL PLAZA");
+    this.showInstruction("PASS THROUGH THE TOLL PLAZA", () => {
+      this.timeout = setTimeout(() => {
+        this.showGameOver("YOU DIDN'T PASS THROUGH THE TOLL PLAZA");
+      }, 10000);
+    });
 
-    this.timeout = setTimeout(() => {
-      this.showGameOver("YOU DIDN'T PASS THROUGH THE TOLL PLAZA");
-    }, 20000);
+
   }
 
   update(time, delta) {
     super.update(time, delta);
 
     if (this.black.visible) return;
+    if (!this.playing) return;
 
     if (this.player.x > 250 && !this.shooting) {
       this.enemy.visible = true;

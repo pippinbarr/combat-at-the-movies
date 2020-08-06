@@ -44,18 +44,15 @@ class TheConversation extends GameScene {
     this.enemy2.visible = false;
 
     this.showInstruction("LISTEN THROUGH THE WALL", () => {
-
+      this.events.addListener("DEATH", (tank) => {
+        if (this.gameOverTimer) return;
+        this.events.removeListener("DEATH");
+        this.gameOverTimer = setTimeout(() => {
+          this.gameOverTimer = undefined;
+          this.showGameOver("MURDER!");
+        }, 5000);
+      });
     });
-
-    this.events.addListener("DEATH", (tank) => {
-      if (this.gameOverTimer) return;
-      this.events.removeListener("DEATH");
-      this.gameOverTimer = setTimeout(() => {
-        this.gameOverTimer = undefined;
-        this.showGameOver("MURDER!");
-      }, 5000);
-    });
-
   }
 
   update(time, delta) {

@@ -46,11 +46,13 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
       tank.hit(wall);
     });
 
-    this.showInstruction("EVOLVE");
+    this.showInstruction("EVOLVE", () => {
+      this.timeout = setTimeout(() => {
+        this.showGameOver("YOU DIDN'T EVOLVE");
+      }, 20000);
+    });
 
-    this.timeout = setTimeout(() => {
-      this.showGameOver("YOU DIDN'T EVOLVE");
-    }, 30000);
+
 
     setTimeout(() => {
       this.setMonolithActive(true);
@@ -90,6 +92,9 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
 
   update(time, delta) {
     super.update(time, delta);
+
+    if (!this.playing) return;
+
     this.enemy.update();
   }
 

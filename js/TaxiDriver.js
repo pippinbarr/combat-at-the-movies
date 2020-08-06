@@ -31,20 +31,21 @@ class TaxiDriver extends GameScene {
 
     this.talkinSFX = this.sound.add('you-talkin-to-me');
 
-    this.showInstruction("PREPARE");
-
-    this.timeout = setTimeout(() => {
-      if (this.player.score >= 3) {
-        this.showGameOver("YOU'RE READY");
-      }
-      else {
-        this.showGameOver("YOU'RE NOT READY");
-      }
-    }, 20000);
+    this.showInstruction("PREPARE", () => {
+      this.timeout = setTimeout(() => {
+        if (this.player.score >= 2) {
+          this.showGameOver("YOU'RE READY");
+        }
+        else {
+          this.showGameOver("YOU'RE NOT READY");
+        }
+      }, 10000);
+    });
   }
 
   update(time, delta) {
     super.update(time, delta);
+    if (!this.playing) return;
 
     this.enemy.setFrame(this.player.frame.name);
     this.enemy.x = this.player.x;

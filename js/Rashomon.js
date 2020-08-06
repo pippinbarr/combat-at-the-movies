@@ -59,23 +59,27 @@ class Rashomon extends GameScene {
       .ignore(hDivider)
       .ignore(vDivider);
 
-    this.showInstruction("FIGHT");
-
-    this.events.addListener("DEATH", (tank) => {
-      if (this.gameOverTimer) return;
-      this.events.removeListener("DEATH");
-      this.gameOverTimer = setTimeout(() => {
-        this.camera1.visible = false;
-        this.camera2.visible = false;
-        this.camera3.visible = false;
-        this.camera4.visible = false;
-        this.showGameOver("WAIT... THAT'S NOT WHAT HAPPENED...?");
-      }, 5000);
+    this.showInstruction("FIGHT", () => {
+      this.events.addListener("DEATH", (tank) => {
+        if (this.gameOverTimer) return;
+        this.events.removeListener("DEATH");
+        this.gameOverTimer = setTimeout(() => {
+          this.camera1.visible = false;
+          this.camera2.visible = false;
+          this.camera3.visible = false;
+          this.camera4.visible = false;
+          this.showGameOver("WAIT... THAT'S NOT WHAT HAPPENED...?");
+        }, 5000);
+      });
     });
+
+
   }
 
   update(time, delta) {
     super.update(time, delta);
+
+    if (!this.playing) return;
 
     this.enemy.update();
 

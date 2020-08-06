@@ -36,6 +36,7 @@ class AuHasardBalthazar extends GameScene {
     super.update(time, delta);
 
     if (this.black.visible) return;
+    if (!this.playing) return;
 
     this.balthazar.update();
     // if (this.balthazar.dead) {
