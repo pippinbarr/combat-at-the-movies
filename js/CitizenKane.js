@@ -16,11 +16,22 @@ class CitizenKane extends GameScene {
 
     this.enemyScore.visible = false;
 
-    this.showInstruction("REMEMBER");
+    this.showInstruction("REMEMBER", () => {
+      setTimeout(() => {
+        let bullet = this.player.shoot();
+        this.player.die();
+        setTimeout(() => {
+          if (this.player.score === 0) {
+            this.showGameOver("YOU DIDN'T REMEMBER ROSEBUD");
+          }
+          else {
+            this.showGameOver("YOU REMEMBERED ROSEBUD");
+          }
+        }, 5000);
+      }, 10000);
+    });
 
-    this.memoryTimer = setTimeout(() => {
-      this.showGameOver("YOU DIDN'T REMEMBER ROSEBUD");
-    }, 10000);
+
   }
 
   update(time, delta) {
@@ -30,23 +41,23 @@ class CitizenKane extends GameScene {
   handleInput() {
     if (this.player.waiting || this.player.dead) return;
 
+    if (this.cursors.left.isDown) {
+      this.player.rotationDirection = -1;
+    }
+    else if (this.cursors.right.isDown) {
+      this.player.rotationDirection = 1;
+    }
+    else {
+      this.player.rotationDirection = 0;
+    }
+
+    // ROSEBUD
     if (this.cursors.space.isDown && !this.player.shooting && !this.rosebudded) {
       this.sound.play('rosebud');
       this.rosebudded = true;
-      clearTimeout(this.memoryTimer);
 
-      setTimeout(() => {
-        let bullet = this.player.shoot();
-        this.player.die();
-        this.player.score++;
-        this.playerScore.text = this.player.score;
-
-        setTimeout(() => {
-          this.showGameOver("YOU REMEMBERED ROSEBUD");
-        }, 4000);
-
-      }, 3000);
-
+      this.player.score++;
+      this.playerScore.text = this.player.score;
     }
   }
 }

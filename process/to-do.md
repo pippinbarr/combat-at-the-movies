@@ -21,10 +21,13 @@
 - ~~Create a basic menu so you can at least load different levels for testing stuff out~~
 
 - Make an actually good menu (what does a good menu look like?)
+- Maybe move to a menu where you select with a cursor instead of letters because they're pretty gross-looking?
 
 # Meta
 
 - ~~__NO__ Contemplate two-player idea for all games? Player 2 as sled? Player 2 as missing woman? Player 2 as Balthazar?~~
+
+- Try out more detailed instructions (they could potentially even look like Atari style instructions?)
 
 # Citizen Kane (Rosebud)
 
@@ -34,11 +37,9 @@
 - ~~Draw the castle from the movie "properly"~~
 - ~~Endings: YOU REMEMBERED, YOU DIDN'T REMEMBER~~
 - ~~Instruction: REMEMBER~~
-
-- Better audio?
-- Wiggling as Kane tank for some more agency?
-- Restore the idea that time runs out and you die, rather than hitting shoot to die
-
+- ~~__FULL MOTION OF TOSSING AND TURNING HA HA__ Wiggling as Kane tank for some more agency?~~
+- ~~__IT'S FINE?__ Better audio?~~
+- ~~Restore the idea that time runs out and you die, rather than hitting shoot to die~~
 
 # L'Avventura (Island)
 
