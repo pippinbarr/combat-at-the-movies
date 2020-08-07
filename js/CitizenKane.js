@@ -14,24 +14,30 @@ class CitizenKane extends GameScene {
     this.player.x = this.game.canvas.width / 2 - 5;
     this.player.y = 3 * this.game.canvas.height / 4 - 28;
 
+    this.rosebudSFX = this.sound.add('rosebud');
+
     this.enemyScore.visible = false;
 
-    this.showInstruction("REMEMBER", () => {
-      setTimeout(() => {
-        let bullet = this.player.shoot();
-        this.player.die();
-        setTimeout(() => {
-          if (this.player.score === 0) {
-            this.showGameOver("YOU DIDN'T REMEMBER ROSEBUD");
-          }
-          else {
-            this.showGameOver("YOU REMEMBERED ROSEBUD");
-          }
-        }, 5000);
-      }, 10000);
+    this.title = "CITIZEN KANE";
+    this.explanation = "CITIZEN KANE is a game of memories. Play Charles Foster Kane as he lies dying in Xanadu. Use the Arrow Keys to toss and turn in your bed, filled with regret. Press the Space Bar to give voice to your one most precious memory. But better remember it quickly! You're going to die!";
+    this.showInstructions(() => {
+      this.startGame();
     });
+  }
 
-
+  startGame() {
+    setTimeout(() => {
+      let bullet = this.player.shoot();
+      this.player.die();
+      setTimeout(() => {
+        if (this.player.score === 0) {
+          this.showGameOver("YOU DIDN'T REMEMBER ROSEBUD");
+        }
+        else {
+          this.showGameOver("YOU REMEMBERED ROSEBUD");
+        }
+      }, 5000);
+    }, 10000);
   }
 
   update(time, delta) {
@@ -40,7 +46,7 @@ class CitizenKane extends GameScene {
   }
 
   handleInput() {
-    if (this.player.waiting || this.player.dead) return;
+    if (this.player.waiting || this.player.dead || !this.playing) return;
 
     if (this.cursors.left.isDown) {
       this.player.rotationDirection = -1;
@@ -53,10 +59,12 @@ class CitizenKane extends GameScene {
     }
 
     // ROSEBUD
-    if (this.cursors.space.isDown && !this.player.shooting && !this.rosebudded) {
-      this.sound.play('rosebud');
-      this.rosebudded = true;
-
+    if (Phaser.Input.Keyboard.JustDown(this.cursors.space) && !this.rosebudding) {
+      this.rosebudSFX.play();
+      this.rosebudding = true;
+      this.rosebudSFX.once('complete', () => {
+        this.rosebudding = false
+      });;
       this.player.score++;
       this.playerScore.text = this.player.score;
     }

@@ -13,6 +13,9 @@ let Preloader = new Phaser.Class({
 
     this.load.image(`tileset`, `assets/tilesets/tileset.png`);
 
+    this.load.image(`citizen-kane-figure`, `assets/figures/citizen-kane-figure.png`);
+
+
     this.load.tilemapTiledJSON(`citizenkane-map`, `assets/tilemaps/citizenkane.json`);
     this.load.tilemapTiledJSON(`lavventura-map`, `assets/tilemaps/lavventura.json`);
     this.load.tilemapTiledJSON(`rashomon-map`, `assets/tilemaps/rashomon.json`);

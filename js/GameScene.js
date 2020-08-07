@@ -162,4 +162,91 @@ class GameScene extends Phaser.Scene {
       this.scene.start(START_SCENE);
     }, 2000);
   }
+
+  showInstructions(callback) {
+    // this.cameras.main.setBackgroundColor(0xcccccc);
+    this.instructions = this.add.group();
+
+    this.pageInset = 100;
+    this.pageWidth = this.game.canvas.width - 2 * this.pageInset;
+    this.pageMargin = 32;
+    this.textWidth = this.pageWidth - 2 * this.pageMargin;
+
+    this.titleStyle = {
+      font: "bold 24px sans-serif",
+      color: "#000",
+      padding: {
+        top: 5,
+        bottom: 5,
+      },
+      align: "center",
+      fixedWidth: this.textWidth,
+      backgroundColor: "#eb4034",
+    };
+    this.standardBoldStyle = {
+      font: "bold 12px sans-serif",
+      color: "#000",
+      padding: {
+        top: 0,
+        bottom: 0,
+      },
+      align: "left",
+      fixedWidth: this.textWidth,
+      wordWrap: {
+        width: this.textWidth
+      }
+    };
+    this.standardStyle = {
+      font: "12px sans-serif",
+      color: "#000",
+      padding: {
+        top: 0,
+        bottom: 0,
+      },
+      align: "left",
+      fixedWidth: this.textWidth,
+      wordWrap: {
+        width: this.textWidth
+      }
+    };
+
+    this.displayPage();
+    this.displayTitle();
+    this.displayInstruction();
+
+    this.cursors.space.once('down', () => {
+      this.page.destroy();
+      this.titleText.destroy();
+      this.instructionText.destroy();
+      this.explanationText.destroy();
+      this.continueText.destroy();
+      this.background.destroy();
+      setTimeout(() => {
+        this.playing = true;
+      }, 500);
+      callback();
+    });
+  }
+
+  displayPage() {
+    this.background = this.add.sprite(0, 0, 'atlas', 'pixel')
+      .setTint(0x000000)
+      .setScale(this.game.canvas.width, this.game.canvas.height)
+      .setOrigin(0, 0);
+
+    this.page = this.add.sprite(this.pageInset, 0, 'atlas', 'pixel')
+      .setTint(0xfafaf4)
+      .setScale(this.pageWidth, this.game.canvas.height)
+      .setOrigin(0, 0);
+  }
+
+  displayTitle() {
+    this.titleText = this.add.text(this.pageInset + this.pageMargin, this.pageMargin, this.title, this.titleStyle);
+  }
+
+  displayInstruction() {
+    this.instructionText = this.add.text(this.pageInset + this.pageMargin, this.titleText.y + this.titleText.height + 10, "Use the Arrow Keys and Space Bar with this Game Program.", this.standardBoldStyle);
+    this.explanationText = this.add.text(this.pageInset + this.pageMargin, this.instructionText.y + 20, this.explanation, this.standardStyle);
+    this.continueText = this.add.text(this.pageInset + this.pageMargin, 400, "Press the Space Bar to continue. Press Escape during play to return to the menu.", this.standardBoldStyle);
+  }
 }

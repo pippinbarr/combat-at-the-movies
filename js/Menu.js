@@ -74,7 +74,7 @@ class Menu extends Phaser.Scene {
 
   displayInstruction() {
     this.instructionText = this.add.text(this.pageInset + this.pageMargin, 80, "Use the Arrow Keys and Space Bar with this Game Program.", this.standardBoldStyle);
-    this.explanationText = this.add.text(this.pageInset + this.pageMargin, 100, "COMBAT AT THE MOVIES is a unique series of games from Pippin Barr. In each game you will encounter a classic film as acted out by one or more tanks from the game Combat by Atari. Specific instructions are provided after you select your chosen game mode.", this.standardStyle);
+    this.explanationText = this.add.text(this.pageInset + this.pageMargin, 100, "COMBAT AT THE MOVIES is a unique series of games from Pippin Barr. In each game you will encounter a classic film as acted out by one or more tanks from the game Combat by Atari. Specific instructions are provided after you select your chosen game mode. COMBAT AT THE MOVIES is a one-player game.", this.standardStyle);
     this.menuInstructionText = this.add.text(this.pageInset + this.pageMargin, 400, "Use the Arrow Keys to choose a game and press Space Bar to play it. Press Escape during any game to return to this menu.", this.standardStyle);
   }
 
