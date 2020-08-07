@@ -23,13 +23,13 @@ let config = {
     Menu
   ],
   render: {
-    antialias: false,
+    // antialias: false,
     pixelArt: true,
-    antialiasGL: false
+    // antialiasGL: false
   },
   pixelArt: true,
-  antialias: false,
-  antialiasGL: false,
+  // antialias: false,
+  // antialiasGL: false,
   physics: {
     default: 'arcade',
     arcade: {
@@ -37,7 +37,7 @@ let config = {
     }
   },
   scale: {
-    mode: Phaser.Scale.FIT,
+    // mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.BOTH,
     width: 640,
     height: 480,

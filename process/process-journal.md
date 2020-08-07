@@ -417,3 +417,29 @@ There are a few bits and pieces I will do and could do that would mitigate some 
 - Could add instructions per game that specify how each game works, rather than the kind of cutesy little instructions I have at the moment (this would be more in keeping with Atari instructions, frankly, maybe I could even go over-board and explain the shit out of each game?)
 
 So there are a few options here that might offer solace. Mostly I probably just need to get the damn thing finished and move on though!!
+
+---
+
+# Going manual (Friday, 7 August 2020, 14:56PM)
+
+Alright so after the sadnesses of lacks of understanding, the idea is to pursue far more detailed instructions more in keeping with the [Atari manual for Combat](https://atariage.com/manual_page.php?SystemID=2600&SoftwareLabelID=94&ItemTypeID=&currentPage=0&maxPages=8).
+
+Just found this amazing nugget of information: All games end after 2 minutes, 16 seconds. Which is 136 seconds. Wonder how they came up with that?
+
+Here are some notes on the Combat manual that might pertain to my game:
+
+- There's a really nice title page with that classic Atari game thing of outlandishly lush painted artwork suggesting the ideas of the game while being totally not representative of what you actually get. Could be a chance to make something like that for an initial splash screen?
+- There's a full page just talking about how the joystick works, doesn't even mention shooting, it's purely about movement. This could be some kind of basis for instructions. Nice to see the layouts with blue-backgrounded diagrams and yellow background "rule of thumb".
+- Then there's a "Missile Action" page which is entirely about shooting in the different games, tells you how to fire and then the behaviour of different missiles in different games (e.g. straight versus guided
+- Then it starts describing genres of game (TANK GAMES, TANK-PONG GAMES) and subgames within each (Open Field, Easy Maze, etc.), along with the Missile style. None of this really makes sense in my context because this is premised on the kind of combinatorial style of Combat, whereas all the subgames in Combat at the Movies are more or less unique.
+- At the back is literally a combinatorial chart where you can see game numbers, game genres, and missile types, and fields.
+
+So, looking at that, it might be more possible to take some of the format (font, headings, screenshots, etc.) but not really the content/writing itself. My premise would be for now:
+
+- Use a splash screen (will have to think about what image I could use though)
+- Menu screen should look like a list of games and you can select with a cursor, present them chronologically?
+- Then before each game you get an instructions screen to read which describes the game in some detail including the controls and lets you hit a key to continue to play itself? I think that seems pretty reasonable?
+
+What about game over screens? Do I keep the same kind of quip-based ending? Or do I describe the basic outcomes in the instructions and have no reaction from the game when the round ends? If so I'd generally need point to indicate outcomes a little better, and just some kind of game over with "press a key" to return to the menu.
+
+Also should add escape to menu any time.

@@ -29,6 +29,7 @@
 - ~~__NO__ Contemplate two-player idea for all games? Player 2 as sled? Player 2 as missing woman? Player 2 as Balthazar?~~
 
 - Try out more detailed instructions (they could potentially even look like Atari style instructions?)
+- Escape should go back to the menu
 
 # Citizen Kane (Rosebud)
 
@@ -41,6 +42,9 @@
 - ~~__FULL MOTION OF TOSSING AND TURNING HA HA__ Wiggling as Kane tank for some more agency?~~
 - ~~__IT'S FINE?__ Better audio?~~
 - ~~Restore the idea that time runs out and you die, rather than hitting shoot to die~~
+
+- BUG: On loading a second time can't say Rosebud
+- Allow multiple Rosebuds
 
 # L'Avventura (Island)
 
