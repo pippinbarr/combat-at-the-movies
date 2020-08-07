@@ -221,6 +221,7 @@ class GameScene extends Phaser.Scene {
       this.explanationText.destroy();
       this.continueText.destroy();
       this.background.destroy();
+      this.sound.setMute(false);
       setTimeout(() => {
         this.playing = true;
       }, 500);

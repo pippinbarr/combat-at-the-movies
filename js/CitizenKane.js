@@ -29,6 +29,7 @@ class CitizenKane extends GameScene {
     setTimeout(() => {
       let bullet = this.player.shoot();
       this.player.die();
+      this.rosebudSFX.pause();
       setTimeout(() => {
         if (this.player.score === 0) {
           this.showGameOver("YOU DIDN'T REMEMBER ROSEBUD");
