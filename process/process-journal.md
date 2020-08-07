@@ -443,3 +443,11 @@ So, looking at that, it might be more possible to take some of the format (font,
 What about game over screens? Do I keep the same kind of quip-based ending? Or do I describe the basic outcomes in the instructions and have no reaction from the game when the round ends? If so I'd generally need point to indicate outcomes a little better, and just some kind of game over with "press a key" to return to the menu.
 
 Also should add escape to menu any time.
+
+---
+
+# Manual a-go-go (Friday, 7 August 2020, 16:17PM)
+
+This is definitely going to work. Although it's not perfect at all, I really like the new menu in the Atari Combat manual style. It allows me to get more information in there, which may be advantageous in a relatively confusing game like this? And it's just a fun contrast (as with the original Combat) between the level of explanation and detail and then the actual game that emerges on the other end.
+
+Having made a basic menu, the next step is to produce at least one or two instruction screens for the games and see how that might change things.
