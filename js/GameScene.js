@@ -92,6 +92,10 @@ class GameScene extends Phaser.Scene {
     this.interstitialText.depth = 10001;
 
     this.sound.setMute(true);
+
+    this.input.keyboard.on('keydown-' + 'ESC', () => {
+      this.scene.start('menu');
+    });
   }
 
   update(time, delta) {
