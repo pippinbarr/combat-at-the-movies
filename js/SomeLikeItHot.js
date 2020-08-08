@@ -28,15 +28,21 @@ class SomeLikeItHot extends GameScene {
     this.tanks.add(this.enemy);
     this.shootables.add(this.enemy);
 
-    this.showInstruction("HIJINKS ENSUE", () => {
-      this.events.addListener("DEATH", (tank) => {
-        if (this.gameOverTimer) return;
-        this.events.removeListener("DEATH");
-        this.gameOverTimer = setTimeout(() => {
-          this.gameOverTimer = undefined;
-          this.showGameOver("I THOUGHT WE WERE FRIENDS...");
-        }, 5000);
-      });
+    this.title = "SOME LIKE IT HOT";
+    this.explanation = "...";
+    this.showInstructions(() => {
+      this.startGame();
+    });
+  }
+
+  startGame() {
+    this.events.addListener("DEATH", (tank) => {
+      if (this.gameOverTimer) return;
+      this.events.removeListener("DEATH");
+      this.gameOverTimer = setTimeout(() => {
+        this.gameOverTimer = undefined;
+        this.showGameOver("I THOUGHT WE WERE FRIENDS...");
+      }, 5000);
     });
   }
 

@@ -27,13 +27,17 @@ class TheGodfather extends GameScene {
 
     this.shooting = false;
 
-    this.showInstruction("PASS THROUGH THE TOLL PLAZA", () => {
-      this.timeout = setTimeout(() => {
-        this.showGameOver("YOU DIDN'T PASS THROUGH THE TOLL PLAZA");
-      }, 10000);
+    this.title = "THE GODFATHER";
+    this.explanation = "...";
+    this.showInstructions(() => {
+      this.startGame();
     });
+  }
 
-
+  startGame() {
+    this.timeout = setTimeout(() => {
+      this.showGameOver("YOU DIDN'T PASS THROUGH THE TOLL PLAZA");
+    }, 10000);
   }
 
   update(time, delta) {

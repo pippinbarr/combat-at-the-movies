@@ -38,12 +38,18 @@ class BeauTravail extends GameScene {
     this.music = this.sound.add('rhythm-of-the-night');
     this.music.loop = true;
 
-    this.showInstruction("DANCE", () => {
-      this.music.play();
-      setTimeout(() => {
-        this.showGameOver("THE CREDITS ROLL");
-      }, 10000);
+    this.title = "BEAU TRAVAIL";
+    this.explanation = "...";
+    this.showInstructions(() => {
+      this.startGame();
     });
+  }
+
+  startGame() {
+    this.music.play();
+    setTimeout(() => {
+      this.showGameOver("THE CREDITS ROLL");
+    }, 10000);
   }
 
   update(time, delta) {

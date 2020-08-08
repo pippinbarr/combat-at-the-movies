@@ -47,29 +47,25 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
     this.clickSFX = this.sound.add('click');
     this.sunriseMusic = this.sound.add('sunrise');
 
-    this.showInstruction("EVOLVE", () => {
-      setTimeout(() => {
-        this.sunriseMusic.play();
-        setTimeout(() => {
-          this.setMonolithActive(true);
-          // let dx = 155 - this.player.x;
-          // let dy = 210 - this.player.y;
-          //
-          // if (Math.abs(dx) < this.monolith.width / 2 && Math.abs(dy) < this.monolith.height / 2) {
-          //   this.player.x = 155;
-          //   this.player.y = 300;
-          // }
-          //
-          this.timeout = setTimeout(() => {
-            this.showGameOver("YOU DIDN'T EVOLVE");
-          }, 20000);
-        }, 6000);
-      }, 5000);
-
-
+    this.title = "2001: A SPACE ODYSSEY";
+    this.explanation = "...";
+    this.showInstructions(() => {
+      this.startGame();
     });
 
     this.canClick = true;
+  }
+
+  startGame() {
+    setTimeout(() => {
+      this.sunriseMusic.play();
+      setTimeout(() => {
+        this.setMonolithActive(true);
+        this.timeout = setTimeout(() => {
+          this.showGameOver("YOU DIDN'T EVOLVE");
+        }, 20000);
+      }, 6000);
+    }, 5000);
   }
 
   setMonolithActive(active) {

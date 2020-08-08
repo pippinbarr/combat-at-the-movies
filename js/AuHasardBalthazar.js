@@ -25,8 +25,14 @@ class AuHasardBalthazar extends GameScene {
 
     this.tanks.add(this.balthazar);
 
-    this.showInstruction("BALTHAZAR IS JUST A DONKEY");
+    this.title = "AU HASARD BALTHAZAR";
+    this.explanation = "...";
+    this.showInstructions(() => {
+      this.startGame();
+    });
+  }
 
+  startGame() {
     this.timeout = setTimeout(() => {
       this.showGameOver("LIFE GOES ON");
     }, 20000);
