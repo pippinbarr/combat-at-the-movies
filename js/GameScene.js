@@ -213,6 +213,7 @@ class GameScene extends Phaser.Scene {
     this.displayPage();
     this.displayTitle();
     this.displayInstruction();
+    this.displayFigure();
 
     this.cursors.space.once('down', () => {
       this.page.destroy();
@@ -221,6 +222,8 @@ class GameScene extends Phaser.Scene {
       this.explanationText.destroy();
       this.continueText.destroy();
       this.background.destroy();
+      this.figure.destroy();
+      this.captionText.destroy();
       this.sound.setMute(false);
       setTimeout(() => {
         this.playing = true;
@@ -248,6 +251,13 @@ class GameScene extends Phaser.Scene {
   displayInstruction() {
     this.instructionText = this.add.text(this.pageInset + this.pageMargin, this.titleText.y + this.titleText.height + 10, "Use the Arrow Keys and Space Bar with this Game Program.", this.standardBoldStyle);
     this.explanationText = this.add.text(this.pageInset + this.pageMargin, this.instructionText.y + 20, this.explanation, this.standardStyle);
-    this.continueText = this.add.text(this.pageInset + this.pageMargin, 400, "Press the Space Bar to continue. Press Escape during play to return to the menu.", this.standardBoldStyle);
+    this.continueText = this.add.text(this.pageInset + this.pageMargin, 0, "Press the Space Bar to continue. Press Escape during play to return to the menu.", this.standardBoldStyle);
+    this.continueText.y = this.game.canvas.height - this.continueText.height - 20;
+  }
+
+  displayFigure() {
+    this.figure = this.add.sprite(this.game.canvas.width / 2, 0, this.figureKey).setOrigin(0.5, 0).setScale(0.6);
+    this.figure.y = this.explanationText.y + this.explanationText.height + 20;
+    this.captionText = this.add.text(this.pageInset + this.pageMargin, this.figure.y + this.figure.height * 0.6 + 10, this.caption, this.standardBoldStyle);
   }
 }

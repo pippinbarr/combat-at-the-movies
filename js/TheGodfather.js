@@ -29,6 +29,8 @@ class TheGodfather extends GameScene {
 
     this.title = "THE GODFATHER";
     this.explanation = "Those Barzinis are up to no good. Play as Sonny Corleone (James Caan) driving through the toll plaza and minding your own business. Experience the shock and horror of a surprise attack from a Barzini tank that wants you dead. Use the Arrow Keys to drive your unarmed tank through the plaza to your assassination.";
+    this.figureKey = 'fig-the-godfather';
+    this.caption = 'Fig. G – Beware the toll plaza'
     this.showInstructions(() => {
       this.startGame();
     });

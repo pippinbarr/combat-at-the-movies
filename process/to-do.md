@@ -28,8 +28,12 @@
 - ~~__NO__ Contemplate two-player idea for all games? Player 2 as sled? Player 2 as missing woman? Player 2 as Balthazar?~~
 - ~~__IT IS THE WAY TO GO__ Try out more detailed instructions (they could potentially even look like Atari style instructions?)~~
 - ~~Escape should go back to the menu~~
+- ~~Add all new instruction styles~~
 
+- Add side-by-side images as figures for the instructions to fill out the window and add some visual information (especially for people who haven't seen the films, but also as comedy for those who have)
 - Muting problems (SFX carrying over (like tank sfx))
+- Do a "points pass" to see where points can be used expressively
+- Remove final title things as incompatible with the new version of instructions etc.?
 
 # Citizen Kane (Rosebud)
 
@@ -98,6 +102,9 @@
 - ~~__PART OF A LARGER ISSUE I NEED TO LOOK AT__ Improve instructions and timer endings?~~
 - ~~Change Balthazar to not go upside down?~~
 
+- Balthazar started upside down!
+- Make Balthazar die on a timer (per the movie)
+
 # Rashomon
 
 - ~~Create basic idea of four cameras looking at the same scene~~
@@ -123,6 +130,8 @@
 - ~~Ending: YOU'RE READY (or maybe not if you have 0 points?)~~
 
 - Should I restrict when you can say the words? Could it literally be as "simple" as making it a bullet-based thing? Or should I restrict to being in the mirror zone? Or that plus facing the mirror?
+- Mirror tank facing a funny direction?
+- Point awarded without pressing space? (when screenshotting)
 
 # Some Like It Hot (Pink Tanks)
 
@@ -144,6 +153,9 @@
 - ~~DANCE / THE CREDITS ROLL~~
 - ~~__TOO DISTRACTING I THINK__ Maybe speed up/slow down the rate of movement as with his dancing?~~
 - ~~Look into music maintenance (it might keep playing?)~~
+
+- Mirror tank starts in off direction?
+- Should start facing away (as per movie)
 
 # The Conversation
 

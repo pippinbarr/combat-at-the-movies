@@ -19,14 +19,24 @@ class AuHasardBalthazar extends GameScene {
     this.balthazar.x = this.game.canvas.width - this.game.canvas.width / 10;
     this.balthazar.y = this.game.canvas.height / 2 + 24;
     this.balthazar.setTexture('balthazar');
-    this.balthazar.setFrame(8);
+    this.balthazar.setFrame(0);
     this.balthazar.moveAngle = 180;
-
+    let angle = this.balthazar.moveAngle;
+    angle = angle % 360;
+    if (angle < 0) angle = angle + 360;
+    if (angle > 90 && angle < 270) {
+      this.balthazar.setFlip(true, false);
+    }
+    else {
+      this.balthazar.setFlip(false, false);
+    }
 
     this.tanks.add(this.balthazar);
 
     this.title = "AU HASARD BALTHAZAR";
-    this.explanation = "Play your part in the circuitous and everyday life of a donkey called Balthazar. Watch as he wanders around the field of play, guileless and innocent. Use the Arrow Keys to move and press the Space Bar to shoot. But who would really shoot a simple donkey just trying to live?";
+    this.explanation = "Play your part in the circuitous and everyday life of a donkey called Balthazar. Watch as he wanders around the field of play, guileless and innocent. Use the Arrow Keys to move and press the Space Bar to shoot. Balthazar will surely die, but how?";
+    this.figureKey = 'fig-au-hasard-balthazar';
+    this.caption = 'Fig. E – Balthazar is just a donkey'
     this.showInstructions(() => {
       this.startGame();
     });

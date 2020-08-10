@@ -13,7 +13,16 @@ let Preloader = new Phaser.Class({
 
     this.load.image(`tileset`, `assets/tilesets/tileset.png`);
 
-    this.load.image(`citizen-kane-figure`, `assets/figures/citizen-kane-figure.png`);
+    this.load.image(`fig-citizen-kane`, `assets/figures/fig-citizen-kane.png`);
+    this.load.image(`fig-rashomon`, `assets/figures/fig-rashomon.png`);
+    this.load.image(`fig-some-like-it-hot`, `assets/figures/fig-some-like-it-hot.png`);
+    this.load.image(`fig-lavventura`, `assets/figures/fig-lavventura.png`);
+    this.load.image(`fig-au-hasard-balthazar`, `assets/figures/fig-au-hasard-balthazar.png`);
+    this.load.image(`fig-2001-a-space-odyssey`, `assets/figures/fig-2001-a-space-odyssey.png`);
+    this.load.image(`fig-the-godfather`, `assets/figures/fig-the-godfather.png`);
+    this.load.image(`fig-the-conversation`, `assets/figures/fig-the-conversation.png`);
+    this.load.image(`fig-taxi-driver`, `assets/figures/fig-taxi-driver.png`);
+    this.load.image(`fig-beau-travail`, `assets/figures/fig-beau-travail.png`);
 
 
     this.load.tilemapTiledJSON(`citizenkane-map`, `assets/tilemaps/citizenkane.json`);

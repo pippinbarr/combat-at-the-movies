@@ -20,6 +20,8 @@ class CitizenKane extends GameScene {
 
     this.title = "CITIZEN KANE";
     this.explanation = "CITIZEN KANE is a game of memories. Play Charles Foster Kane as he lies dying in Xanadu. Use the Left and Right Arrow Keys to toss and turn in your bed, filled with regret. Press the Space Bar to give voice to your one most precious memory. But better remember it quickly! You're going to die!";
+    this.figureKey = 'fig-citizen-kane';
+    this.caption = 'Fig. A – Xanadu'
     this.showInstructions(() => {
       this.startGame();
     });

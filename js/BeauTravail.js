@@ -40,6 +40,9 @@ class BeauTravail extends GameScene {
 
     this.title = "BEAU TRAVAIL";
     this.explanation = "Your life has just violently ended, but there's time for one last curtain call. Play Chief Adjutant Galoup (Denis Lavant) and dance poignantly to The Rhythm of the Night by Corona. Use the Arrow Keys to express yourself through movement.";
+    this.figureKey = 'fig-beau-travail';
+    this.caption = 'Fig. J – The last dance'
+
     this.showInstructions(() => {
       this.startGame();
     });
