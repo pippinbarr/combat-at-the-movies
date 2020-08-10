@@ -40,10 +40,11 @@ class SomeLikeItHot extends GameScene {
   startGame() {
     this.events.addListener("DEATH", (tank) => {
       if (this.gameOverTimer) return;
+      this.playing = false;
       this.events.removeListener("DEATH");
       this.gameOverTimer = setTimeout(() => {
         this.gameOverTimer = undefined;
-        this.showGameOver("I THOUGHT WE WERE FRIENDS...");
+        this.gameOver();
       }, 5000);
     });
   }

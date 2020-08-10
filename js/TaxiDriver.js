@@ -45,13 +45,8 @@ class TaxiDriver extends GameScene {
   startGame() {
     this.mirror.visible = true;
     this.timeout = setTimeout(() => {
-      tjhis.mirror.visible = false;
-      if (this.player.score >= 2) {
-        this.showGameOver("YOU'RE READY");
-      }
-      else {
-        this.showGameOver("YOU'RE NOT READY");
-      }
+      this.mirror.visible = false;
+      this.gameOver();
     }, 10000);
   }
 

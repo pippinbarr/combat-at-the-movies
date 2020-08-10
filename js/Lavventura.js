@@ -25,7 +25,7 @@ class Lavventura extends GameScene {
 
   startGame() {
     setTimeout(() => {
-      this.showGameOver("YOU DIDN'T FIND ANNA");
+      this.gameOver();
     }, 10000);
   }
 

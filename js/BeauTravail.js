@@ -51,8 +51,8 @@ class BeauTravail extends GameScene {
   startGame() {
     this.music.play();
     setTimeout(() => {
-      this.showGameOver("THE CREDITS ROLL");
-    }, 10000);
+      this.gameOver();
+    }, 20000);
   }
 
   update(time, delta) {

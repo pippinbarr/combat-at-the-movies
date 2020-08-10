@@ -38,7 +38,8 @@ class TheGodfather extends GameScene {
 
   startGame() {
     this.timeout = setTimeout(() => {
-      this.showGameOver("YOU DIDN'T PASS THROUGH THE TOLL PLAZA");
+      this.playing = false;
+      this.gameOver();
     }, 10000);
   }
 
@@ -87,7 +88,8 @@ class TheGodfather extends GameScene {
 
           clearTimeout(this.timeout);
           this.gameOverTimer = setTimeout(() => {
-            this.showGameOver("YOU WERE MURDERED BY BARZINI'S PEOPLE");
+            this.playing = false;
+            this.gameOver();
           }, 5000);
         }
       }

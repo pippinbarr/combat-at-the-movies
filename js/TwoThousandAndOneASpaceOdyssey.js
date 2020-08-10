@@ -64,7 +64,7 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
       setTimeout(() => {
         this.setMonolithActive(true);
         this.timeout = setTimeout(() => {
-          this.showGameOver("YOU DIDN'T EVOLVE");
+          this.gameOver();
         }, 20000);
       }, 6000);
     }, 5000);

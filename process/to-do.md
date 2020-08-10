@@ -29,11 +29,14 @@
 - ~~__IT IS THE WAY TO GO__ Try out more detailed instructions (they could potentially even look like Atari style instructions?)~~
 - ~~Escape should go back to the menu~~
 - ~~Add all new instruction styles~~
+- ~~Add side-by-side images as figures for the instructions to fill out the window and add some visual information (especially for people who haven't seen the films, but also as comedy for those who have)~~
+- ~~Muting problems (SFX carrying over (like tank sfx))~~
+- ~~Remove final title things as incompatible with the new version of instructions etc.?~~
 
-- Add side-by-side images as figures for the instructions to fill out the window and add some visual information (especially for people who haven't seen the films, but also as comedy for those who have)
-- Muting problems (SFX carrying over (like tank sfx))
 - Do a "points pass" to see where points can be used expressively
-- Remove final title things as incompatible with the new version of instructions etc.?
+- Move images into the atlas and compress?
+- Need endings that make sense across all games (including issues around playing = false being set)
+- General bugs associated with endings
 
 # Citizen Kane (Rosebud)
 
@@ -58,8 +61,7 @@
 - ~~__YEAH__ Or perhaps no shooting no calling? The instruction kind of does the work here? (Only do the audio if I'm wanting to reference Heavy Rain?)~~
 - ~~Instruction: FIND ANNA~~
 - ~~Ending: YOU DIDN'T FIND ANNA~~
-
-- Add a Claudia tank??? Funny...
+- ~~__BUT NO__ Add a Claudia tank??? Funny...~~
 
 # The Godfather (Tollbridge)
 
@@ -104,6 +106,7 @@
 
 - Balthazar started upside down!
 - Make Balthazar die on a timer (per the movie)
+- Balthazar doesn't spin on death (because of the special orientation thing)
 
 # Rashomon
 
@@ -156,6 +159,7 @@
 
 - Mirror tank starts in off direction?
 - Should start facing away (as per movie)
+- Need some signification of the ending
 
 # The Conversation
 

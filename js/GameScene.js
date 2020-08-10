@@ -163,6 +163,14 @@ class GameScene extends Phaser.Scene {
     }, 2000);
   }
 
+  gameOver() {
+    this.playing = false;
+    setTimeout(() => {
+      this.scene.start(START_SCENE);
+    }, 3000);
+
+  }
+
   showInstructions(callback) {
     // this.cameras.main.setBackgroundColor(0xcccccc);
     this.instructions = this.add.group();

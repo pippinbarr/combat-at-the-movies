@@ -44,8 +44,13 @@ class AuHasardBalthazar extends GameScene {
 
   startGame() {
     this.timeout = setTimeout(() => {
-      this.showGameOver("LIFE GOES ON");
-    }, 20000);
+      this.balthazar.die();
+      this.playing = false;
+      clearTimeout(this.timeout);
+      this.gameOverTimer = setTimeout(() => {
+        this.gameOver();
+      }, 5000);
+    }, 2000);
   }
 
   update(time, delta) {
@@ -93,9 +98,10 @@ class AuHasardBalthazar extends GameScene {
     this.physics.add.overlap(bullet, this.balthazar, (bullet, target) => {
       bullet.destroy();
       this.balthazar.die();
+      this.playing = false;
       clearTimeout(this.timeout);
       this.gameOverTimer = setTimeout(() => {
-        this.showGameOver("YOU KILLED BALTHAZAR");
+        this.gameOver();
       }, 5000);
     });
   }

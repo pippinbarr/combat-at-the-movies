@@ -33,12 +33,7 @@ class CitizenKane extends GameScene {
       this.player.die();
       this.rosebudSFX.pause();
       setTimeout(() => {
-        if (this.player.score === 0) {
-          this.showGameOver("YOU DIDN'T REMEMBER ROSEBUD");
-        }
-        else {
-          this.showGameOver("YOU REMEMBERED ROSEBUD");
-        }
+        this.gameOver();
       }, 5000);
     }, 10000);
   }
