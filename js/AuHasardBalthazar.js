@@ -26,7 +26,7 @@ class AuHasardBalthazar extends GameScene {
     this.tanks.add(this.balthazar);
 
     this.title = "AU HASARD BALTHAZAR";
-    this.explanation = "...";
+    this.explanation = "Play your part in the circuitous and everyday life of a donkey called Balthazar. Watch as he wanders around the field of play, guileless and innocent. Use the Arrow Keys to move and press the Space Bar to shoot. But who would really shoot a simple donkey just trying to live?";
     this.showInstructions(() => {
       this.startGame();
     });

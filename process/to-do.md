@@ -19,17 +19,17 @@
 # Menu
 
 - ~~Create a basic menu so you can at least load different levels for testing stuff out~~
-
-- Make an actually good menu (what does a good menu look like?)
-- Maybe move to a menu where you select with a cursor instead of letters because they're pretty gross-looking?
-- Could it look like an Atari instruction booklet?
+- ~~__IT LOOKS LIKE ATARI INSTRUCTIONS__ Make an actually good menu (what does a good menu look like?)~~
+- ~~Maybe move to a menu where you select with a cursor instead of letters because they're pretty gross-looking?~~
+- ~~__YES__ Could it look like an Atari instruction booklet?~~
 
 # Meta
 
 - ~~__NO__ Contemplate two-player idea for all games? Player 2 as sled? Player 2 as missing woman? Player 2 as Balthazar?~~
+- ~~__IT IS THE WAY TO GO__ Try out more detailed instructions (they could potentially even look like Atari style instructions?)~~
+- ~~Escape should go back to the menu~~
 
-- Try out more detailed instructions (they could potentially even look like Atari style instructions?)
-- Escape should go back to the menu
+- Muting problems (SFX carrying over (like tank sfx))
 
 # Citizen Kane (Rosebud)
 
@@ -42,9 +42,8 @@
 - ~~__FULL MOTION OF TOSSING AND TURNING HA HA__ Wiggling as Kane tank for some more agency?~~
 - ~~__IT'S FINE?__ Better audio?~~
 - ~~Restore the idea that time runs out and you die, rather than hitting shoot to die~~
-
-- BUG: On loading a second time can't say Rosebud
-- Allow multiple Rosebuds
+- ~~BUG: On loading a second time can't say Rosebud~~
+- ~~Allow multiple Rosebuds~~
 
 # L'Avventura (Island)
 
@@ -55,6 +54,8 @@
 - ~~__YEAH__ Or perhaps no shooting no calling? The instruction kind of does the work here? (Only do the audio if I'm wanting to reference Heavy Rain?)~~
 - ~~Instruction: FIND ANNA~~
 - ~~Ending: YOU DIDN'T FIND ANNA~~
+
+- Add a Claudia tank??? Funny...
 
 # The Godfather (Tollbridge)
 

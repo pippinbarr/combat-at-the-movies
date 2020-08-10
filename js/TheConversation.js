@@ -44,7 +44,7 @@ class TheConversation extends GameScene {
     this.enemy2.visible = false;
 
     this.title = "THE CONVERSATION";
-    this.explanation = "...";
+    this.explanation = "Become Harry Caul (Gene Hackman) as you listen through the hotel wall to an argument between husband and wife. Use the Arrow Keys to drive your tank alongside the wall. Use your Ears to try to figure out what is happening and, when it turns deadly, who killed who.";
     this.showInstructions(() => {
       this.startGame();
     });

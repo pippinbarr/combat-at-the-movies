@@ -28,18 +28,21 @@ class TaxiDriver extends GameScene {
       .setBackgroundColor(0xBEC86D)
       .centerOn(width / 2, height / 2 - 100)
       .ignore(this.walls)
+    mirror.visible = false;
 
     this.talkinSFX = this.sound.add('you-talkin-to-me');
 
     this.title = "TAXI DRIVER";
-    this.explanation = "...";
+    this.explanation = "You are Travis Bickle (Robert De Niro), alone again in your depressing apartment as you ready yourself for the ultimate confrontation. Point your canon at yourself in the mirror and practice your tough-guy routine. Feel the aching need to shoot just to show you're alive. Use the Arrow Keys to drive your tank and press the Space Bar to deliver your line.";
     this.showInstructions(() => {
       this.startGame();
     });
   }
 
   startGame() {
+    mirror.visible = true;
     this.timeout = setTimeout(() => {
+      mirror.visible = false;
       if (this.player.score >= 2) {
         this.showGameOver("YOU'RE READY");
       }

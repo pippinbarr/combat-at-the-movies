@@ -48,7 +48,7 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
     this.sunriseMusic = this.sound.add('sunrise');
 
     this.title = "2001: A SPACE ODYSSEY";
-    this.explanation = "...";
+    this.explanation = "Start out as a tank without firepower, seemingly doomed to a tedious pacifist existence of roaming the field of play in perpetual detente with your enemy. When it appears, use the power of the monolith to upgrade your gun and eliminate the competition. Use the Arrow Keys to drive your tank and Space Bar to shoot when enabled. Evolve.";
     this.showInstructions(() => {
       this.startGame();
     });

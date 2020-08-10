@@ -15,7 +15,7 @@ class Lavventura extends GameScene {
     this.player.y = this.game.canvas.height / 2;
 
     this.title = "L'AVVENTURA";
-    this.explanation = "...";
+    this.explanation = "Anna (Lea Massari) has gone missing on the island of Lisca Bianca. Take on the role of Sandro (Gabriele Ferzetti) as you search for her fruitlessly on the rocky isle. Use the Arrow Keys to scour the area, but she's nowhere to be seen! Betrayal of Anna with Claudia not included.";
     this.showInstructions(() => {
       this.startGame();
     });

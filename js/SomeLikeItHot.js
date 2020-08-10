@@ -29,7 +29,7 @@ class SomeLikeItHot extends GameScene {
     this.shootables.add(this.enemy);
 
     this.title = "SOME LIKE IT HOT";
-    this.explanation = "...";
+    this.explanation = "Experience combat in its purest form, one tank versus the other in a battle to the death. Use the Arrow Keys to drive your tank and the Space Bar to shoot. But this time both tanks are pink! Hilarity ensues as two old foes must navigate a new relationship... as ladies!";
     this.showInstructions(() => {
       this.startGame();
     });

@@ -65,7 +65,7 @@ class Rashomon extends GameScene {
     this.camera4.visible = false;
 
     this.title = "RASHOMON";
-    this.explanation = "...";
+    this.explanation = "Finally, Akira Kurosawa's complex tale of unreliable, self-serving narrators is available in videogame form. Fight in the famous duel between Tajōmaru (Toshiro Mifune) and the samurai (Masayuki Mori). Use the Arrow Keys to steer your fighter and press the Space Bar to fire. But beware, all is not as it seems: this game mode includes four separate views, each showing the game field from a different perspective. What is the truth, and what is a lie?";
     this.showInstructions(() => {
       this.startGame();
     });
