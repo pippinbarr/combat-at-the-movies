@@ -21,15 +21,7 @@ class AuHasardBalthazar extends GameScene {
     this.balthazar.setTexture('balthazar');
     this.balthazar.setFrame(0);
     this.balthazar.moveAngle = 180;
-    let angle = this.balthazar.moveAngle;
-    angle = angle % 360;
-    if (angle < 0) angle = angle + 360;
-    if (angle > 90 && angle < 270) {
-      this.balthazar.setFlip(true, false);
-    }
-    else {
-      this.balthazar.setFlip(false, false);
-    }
+    this.orientBalthazar();
 
     this.tanks.add(this.balthazar);
 
@@ -45,7 +37,7 @@ class AuHasardBalthazar extends GameScene {
   startGame() {
     this.timeout = setTimeout(() => {
       this.balthazar.die();
-      this.playing = false;
+      this.player.active = false;
       clearTimeout(this.timeout);
       this.gameOverTimer = setTimeout(() => {
         this.gameOver();
@@ -60,17 +52,13 @@ class AuHasardBalthazar extends GameScene {
     if (!this.playing) return;
 
     this.balthazar.update();
-    this.balthazar.setFrame(0);
-    let angle = this.balthazar.moveAngle;
-    angle = angle % 360;
-    if (angle < 0) angle = angle + 360;
-    if (angle > 90 && angle < 270) {
-      this.balthazar.setFlip(true, false);
-    }
-    else {
-      this.balthazar.setFlip(false, false);
+
+    if (!this.balthazar.dead) {
+      this.balthazar.setFrame(0);
+      this.orientBalthazar();
     }
 
+    //
     // if (this.balthazar.dead) {
     //   let frame = this.balthazar.frame.name;
     //   frame += 1;
@@ -98,11 +86,23 @@ class AuHasardBalthazar extends GameScene {
     this.physics.add.overlap(bullet, this.balthazar, (bullet, target) => {
       bullet.destroy();
       this.balthazar.die();
-      this.playing = false;
+      this.player.active = false;
       clearTimeout(this.timeout);
       this.gameOverTimer = setTimeout(() => {
         this.gameOver();
       }, 5000);
     });
+  }
+
+  orientBalthazar() {
+    let angle = this.balthazar.moveAngle;
+    angle = angle % 360;
+    if (angle < 0) angle = angle + 360;
+    if (angle > 90 && angle < 270) {
+      this.balthazar.setFlip(true, false);
+    }
+    else {
+      this.balthazar.setFlip(false, false);
+    }
   }
 }

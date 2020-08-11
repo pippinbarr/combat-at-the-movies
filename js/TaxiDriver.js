@@ -23,6 +23,11 @@ class TaxiDriver extends GameScene {
     this.add.existing(this.enemy);
     this.cameras.main.ignore(this.enemy);
 
+    this.enemy.setFrame(this.player.frame.name);
+    this.enemy.x = this.player.x;
+    let dy = this.game.canvas.height / 2 - this.player.y;
+    this.enemy.y = this.game.canvas.height / 2 + dy;
+
     // Create camera for mirror...
     this.mirror = this.cameras.add(16 * 18, 16 * 8, 16 * 4, 16 * 6)
       .setBackgroundColor(0xBEC86D)
@@ -45,7 +50,6 @@ class TaxiDriver extends GameScene {
   startGame() {
     this.mirror.visible = true;
     this.timeout = setTimeout(() => {
-      this.mirror.visible = false;
       this.gameOver();
     }, 10000);
   }
@@ -61,11 +65,18 @@ class TaxiDriver extends GameScene {
   }
 
   shoot() {
+    if (this.enemy.frame.name < 9 || this.enemy.frame.name > 15) return;
+    if (!this.mirror.worldView.contains(this.enemy.x, this.enemy.y)) return;
     if (this.talkinSFX.isPlaying) return;
     this.talkinSFX.play();
     this.talkinSFX.once('complete', () => {
       this.player.score++;
       this.playerScore.text = this.player.score;
     });
+  }
+
+  shutdown() {
+    clearTimeout(this.timeout);
+    super.shutdown();
   }
 }

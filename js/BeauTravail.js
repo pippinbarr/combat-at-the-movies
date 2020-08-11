@@ -25,8 +25,8 @@ class BeauTravail extends GameScene {
 
     this.player.x = width / 2;
     this.player.y = height / 2 + 100;
-    this.player.moveAngle = 270;
-    this.player.setFrame(12);
+    this.player.moveAngle = 90;
+    this.player.setFrame(4);
     this.player.updateFrame();
 
     // Create the mirror tank
@@ -34,6 +34,11 @@ class BeauTravail extends GameScene {
     this.enemy.setFlipY(true);
     this.enemy.depth = -100;
     this.add.existing(this.enemy);
+
+    this.enemy.setFrame(this.player.frame.name);
+    this.enemy.x = this.player.x;
+    let dy = this.game.canvas.height / 2 + 45 - this.player.y;
+    this.enemy.y = this.game.canvas.height / 2 + dy;
 
     this.music = this.sound.add('rhythm-of-the-night');
     this.music.loop = true;

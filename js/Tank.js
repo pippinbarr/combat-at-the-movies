@@ -23,6 +23,7 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     this.shooting = false;
     this.bulletSpeed = 800;
     this.dead = false;
+    this.active = true;
 
     this.score = 0;
 
@@ -41,6 +42,8 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
   }
 
   update() {
+    if (!this.active) return;
+
     if (this.dead) {
       this.rotationDirection = 1;
       this.updateFrame();

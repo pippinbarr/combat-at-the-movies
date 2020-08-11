@@ -10,9 +10,6 @@ class Menu extends Phaser.Scene {
     // this.cameras.main.setBackgroundColor(0xfefefe);
     this.cameras.main.setBackgroundColor(0xcccccc);
 
-    this.game.sound.stopAll();
-
-
     this.pageInset = 100;
     this.pageWidth = this.game.canvas.width - 2 * this.pageInset;
     this.pageMargin = 32;

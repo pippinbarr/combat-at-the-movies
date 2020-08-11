@@ -94,8 +94,10 @@ class GameScene extends Phaser.Scene {
     this.sound.setMute(true);
 
     this.input.keyboard.on('keydown-' + 'ESC', () => {
-      this.scene.start('menu');
+      this.shutdown();
     });
+
+    this.playing = false;
   }
 
   update(time, delta) {
@@ -129,7 +131,7 @@ class GameScene extends Phaser.Scene {
       this.player.speed = 0;
     }
 
-    if (this.cursors.space.isDown) {
+    if (Phaser.Input.Keyboard.DownDuration(this.cursors.space)) {
       this.shoot();
     }
   }
@@ -138,37 +140,36 @@ class GameScene extends Phaser.Scene {
     this.player.shoot(this.shootables);
   }
 
-  showInstruction(text, callback) {
-    // What to do when the game ends: display the text and then go back to the menu
-    this.black.visible = true;
-    this.interstitialText.visible = true;
-    this.interstitialText.text = text;
-    setTimeout(() => {
-      this.black.visible = false;
-      this.interstitialText.visible = false;
-      this.playing = true;
-      this.sound.setMute(false);
-      if (callback) callback();
-    }, 2000);
-  }
+  // showInstruction(text, callback) {
+  //   // What to do when the game ends: display the text and then go back to the menu
+  //   this.black.visible = true;
+  //   this.interstitialText.visible = true;
+  //   this.interstitialText.text = text;
+  //   setTimeout(() => {
+  //     this.black.visible = false;
+  //     this.interstitialText.visible = false;
+  //     this.playing = true;
+  //     this.sound.setMute(false);
+  //     if (callback) callback();
+  //   }, 2000);
+  // }
 
-  showGameOver(text) {
-    // What to do when the game ends: display the text and then go back to the menu
-    this.black.visible = true;
-    this.interstitialText.visible = true;
-    this.interstitialText.text = text;
-    this.sound.removeAll();
-    setTimeout(() => {
-      this.scene.start(START_SCENE);
-    }, 2000);
-  }
+  // showGameOver(text) {
+  //   // What to do when the game ends: display the text and then go back to the menu
+  //   this.black.visible = true;
+  //   this.interstitialText.visible = true;
+  //   this.interstitialText.text = text;
+  //   this.sound.removeAll();
+  //   setTimeout(() => {
+  //     this.scene.start(START_SCENE);
+  //   }, 2000);
+  // }
 
   gameOver() {
     this.playing = false;
     setTimeout(() => {
-      this.scene.start(START_SCENE);
+      this.shutdown();
     }, 3000);
-
   }
 
   showInstructions(callback) {
@@ -235,7 +236,7 @@ class GameScene extends Phaser.Scene {
       this.sound.setMute(false);
       setTimeout(() => {
         this.playing = true;
-      }, 500);
+      }, 100);
       callback();
     });
   }
@@ -267,5 +268,10 @@ class GameScene extends Phaser.Scene {
     this.figure = this.add.sprite(this.game.canvas.width / 2, 0, this.figureKey).setOrigin(0.5, 0).setScale(0.6);
     this.figure.y = this.explanationText.y + this.explanationText.height + 20;
     this.captionText = this.add.text(this.pageInset + this.pageMargin, this.figure.y + this.figure.height * 0.6 + 10, this.caption, this.standardBoldStyle);
+  }
+
+  shutdown() {
+    this.game.sound.stopAll();
+    this.scene.start('menu');
   }
 }

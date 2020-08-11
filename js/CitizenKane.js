@@ -15,6 +15,7 @@ class CitizenKane extends GameScene {
     this.player.y = 3 * this.game.canvas.height / 4 - 28;
 
     this.rosebudSFX = this.sound.add('rosebud');
+    this.rosebudding = false;
 
     this.enemyScore.visible = false;
 
@@ -28,11 +29,11 @@ class CitizenKane extends GameScene {
   }
 
   startGame() {
-    setTimeout(() => {
+    this.deathTimeout = setTimeout(() => {
       let bullet = this.player.shoot();
       this.player.die();
       this.rosebudSFX.pause();
-      setTimeout(() => {
+      this.gameOverTimeout = setTimeout(() => {
         this.gameOver();
       }, 5000);
     }, 10000);
@@ -57,7 +58,8 @@ class CitizenKane extends GameScene {
     }
 
     // ROSEBUD
-    if (Phaser.Input.Keyboard.JustDown(this.cursors.space) && !this.rosebudding) {
+    console.log(this.rosebudding);
+    if (Phaser.Input.Keyboard.DownDuration(this.cursors.space) && !this.rosebudding) {
       this.rosebudSFX.play();
       this.rosebudding = true;
       this.rosebudSFX.once('complete', () => {
@@ -66,5 +68,11 @@ class CitizenKane extends GameScene {
       this.player.score++;
       this.playerScore.text = this.player.score;
     }
+  }
+
+  shutdown() {
+    clearTimeout(this.deathTimeout);
+    clearTimeout(this.gameOverTimeout);
+    super.shutdown();
   }
 }

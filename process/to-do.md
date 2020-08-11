@@ -37,6 +37,8 @@
 - Move images into the atlas and compress?
 - Need endings that make sense across all games (including issues around playing = false being set)
 - General bugs associated with endings
+- Endings: in original you get flashing score (warning) followed by complete freeze (no audio) with palette swapping of everything on the screen (could either leave it like this and expect them to press escape OR could just go back on a timer, or both)
+- Ending issues around playing boolean where you end up with player able to move/not move or the enemy not spinning or sounds playing, etc. Messy.
 
 # Citizen Kane (Rosebud)
 
@@ -103,10 +105,9 @@
 - ~~__NOT REALLY VERY MEANINGFUL?__ Alter movement code to use pure random movement?~~
 - ~~__PART OF A LARGER ISSUE I NEED TO LOOK AT__ Improve instructions and timer endings?~~
 - ~~Change Balthazar to not go upside down?~~
-
-- Balthazar started upside down!
-- Make Balthazar die on a timer (per the movie)
-- Balthazar doesn't spin on death (because of the special orientation thing)
+- ~~Balthazar started upside down!~~
+- ~~Balthazar doesn't spin on death (because of the special orientation thing)~~
+- ~~Make Balthazar die on a timer (per the movie)~~
 
 # Rashomon
 
@@ -131,10 +132,9 @@
 - ~~Timer for ending?~~
 - ~~Instruction: PREPARE YOURSELF~~
 - ~~Ending: YOU'RE READY (or maybe not if you have 0 points?)~~
-
-- Should I restrict when you can say the words? Could it literally be as "simple" as making it a bullet-based thing? Or should I restrict to being in the mirror zone? Or that plus facing the mirror?
-- Mirror tank facing a funny direction?
-- Point awarded without pressing space? (when screenshotting)
+- ~~Mirror tank facing a funny direction?~~
+- ~~Point awarded without pressing space? (when screenshotting)~~
+- ~~__DONE__ Should I restrict when you can say the words? Could it literally be as "simple" as making it a bullet-based thing? Or should I restrict to being in the mirror zone? Or that plus facing the mirror?~~
 
 # Some Like It Hot (Pink Tanks)
 
@@ -156,10 +156,9 @@
 - ~~DANCE / THE CREDITS ROLL~~
 - ~~__TOO DISTRACTING I THINK__ Maybe speed up/slow down the rate of movement as with his dancing?~~
 - ~~Look into music maintenance (it might keep playing?)~~
-
-- Mirror tank starts in off direction?
-- Should start facing away (as per movie)
-- Need some signification of the ending
+- ~~Mirror tank starts in off direction?~~
+- ~~Should start facing away (as per movie)~~
+- ~~__FOR NOW WILL "SOLVE" WITH STANDARD COMBAT ENDING__ Need some signification of the ending~~
 
 # The Conversation
 
