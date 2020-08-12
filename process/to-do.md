@@ -33,15 +33,15 @@
 - ~~Muting problems (SFX carrying over (like tank sfx))~~
 - ~~Remove final title things as incompatible with the new version of instructions etc.?~~
 - ~~Add more explicit driving instructions somewhere (either main screen or per game)~~
+- ~~Move images into the atlas and compress?~~
 
+- Tweak audio files to make them at least a bit easier to hear
 - Do a "points pass" to see where points can be used expressively
-- Move images into the atlas and compress?
 - Need endings that make sense across all games (including issues around playing = false being set)
 - General bugs associated with endings
 - Endings: in original you get flashing score (warning) followed by complete freeze (no audio) with palette swapping of everything on the screen (could either leave it like this and expect them to press escape OR could just go back on a timer, or both)
 - Ending issues around playing boolean where you end up with player able to move/not move or the enemy not spinning or sounds playing, etc. Messy.
 - Decide about removing Some Like It Hot and find a replacement (ugh)
-- Tweak audio files to make them at least a bit easier to hear
 
 # Citizen Kane (Rosebud)
 

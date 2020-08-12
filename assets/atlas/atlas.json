@@ -4,11 +4,221 @@
 			"image": "atlas.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 3,
-				"h": 3
+				"w": 1926,
+				"h": 919
 			},
 			"scale": 1,
 			"frames": [
+				{
+					"filename": "figures/fig-citizen-kane.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 233
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 233
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 640,
+						"h": 233
+					}
+				},
+				{
+					"filename": "figures/fig-2001-a-space-odyssey.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 232
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 232
+					},
+					"frame": {
+						"x": 643,
+						"y": 1,
+						"w": 640,
+						"h": 232
+					}
+				},
+				{
+					"filename": "figures/fig-lavventura.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 232
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 232
+					},
+					"frame": {
+						"x": 643,
+						"y": 235,
+						"w": 640,
+						"h": 232
+					}
+				},
+				{
+					"filename": "figures/fig-taxi-driver.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 232
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 232
+					},
+					"frame": {
+						"x": 1,
+						"y": 236,
+						"w": 640,
+						"h": 232
+					}
+				},
+				{
+					"filename": "figures/fig-au-hasard-balthazar.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 231
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 231
+					},
+					"frame": {
+						"x": 643,
+						"y": 469,
+						"w": 640,
+						"h": 231
+					}
+				},
+				{
+					"filename": "figures/fig-rashomon.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 230
+					},
+					"frame": {
+						"x": 1,
+						"y": 470,
+						"w": 640,
+						"h": 230
+					}
+				},
+				{
+					"filename": "figures/fig-some-like-it-hot.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 230
+					},
+					"frame": {
+						"x": 1285,
+						"y": 1,
+						"w": 640,
+						"h": 230
+					}
+				},
+				{
+					"filename": "figures/fig-the-conversation.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 228
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 228
+					},
+					"frame": {
+						"x": 1285,
+						"y": 233,
+						"w": 640,
+						"h": 228
+					}
+				},
+				{
+					"filename": "figures/fig-the-godfather.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 227
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 227
+					},
+					"frame": {
+						"x": 1285,
+						"y": 463,
+						"w": 640,
+						"h": 227
+					}
+				},
+				{
+					"filename": "figures/fig-beau-travail.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 226
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 226
+					},
+					"frame": {
+						"x": 1285,
+						"y": 692,
+						"w": 640,
+						"h": 226
+					}
+				},
 				{
 					"filename": "pixel.png",
 					"rotated": false,
@@ -25,7 +235,7 @@
 					},
 					"frame": {
 						"x": 1,
-						"y": 1,
+						"y": 702,
 						"w": 1,
 						"h": 1
 					}
@@ -36,6 +246,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:6f75019a18513255c3f4764557b2d292:5fed5ceb09948693b325c05f4aaf5af7:cbce6b53f0f49e0bf15173c25c41f876$"
+		"smartupdate": "$TexturePacker:SmartUpdate:2f7bdab2435d6213d99f8caa3406e7b9:0830398e21705912d0dc6b2f946330db:cbce6b53f0f49e0bf15173c25c41f876$"
 	}
 }

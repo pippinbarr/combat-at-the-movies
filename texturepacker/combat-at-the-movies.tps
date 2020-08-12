@@ -181,6 +181,76 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">images/figures/fig-2001-a-space-odyssey.jpg</key>
+            <key type="filename">images/figures/fig-lavventura.jpg</key>
+            <key type="filename">images/figures/fig-taxi-driver.jpg</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>160,58,320,116</rect>
+                <key>scale9Paddings</key>
+                <rect>160,58,320,116</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">images/figures/fig-au-hasard-balthazar.jpg</key>
+            <key type="filename">images/figures/fig-rashomon.jpg</key>
+            <key type="filename">images/figures/fig-some-like-it-hot.jpg</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>160,58,320,115</rect>
+                <key>scale9Paddings</key>
+                <rect>160,58,320,115</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">images/figures/fig-beau-travail.jpg</key>
+            <key type="filename">images/figures/fig-the-godfather.jpg</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>160,57,320,113</rect>
+                <key>scale9Paddings</key>
+                <rect>160,57,320,113</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">images/figures/fig-citizen-kane.jpg</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>160,58,320,117</rect>
+                <key>scale9Paddings</key>
+                <rect>160,58,320,117</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">images/figures/fig-the-conversation.jpg</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>160,57,320,114</rect>
+                <key>scale9Paddings</key>
+                <rect>160,57,320,114</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">images/pixel.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>

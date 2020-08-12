@@ -62,7 +62,7 @@ class Menu extends Phaser.Scene {
   }
 
   displayPage() {
-    this.page = this.add.sprite(this.pageInset, 0, 'atlas', 'pixel')
+    this.page = this.add.sprite(this.pageInset, 0, 'atlas', 'pixel.png')
       .setTint(0xfafaf4)
       .setScale(this.pageWidth, this.game.canvas.height)
       .setOrigin(0, 0)
