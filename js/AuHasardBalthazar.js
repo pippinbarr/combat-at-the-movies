@@ -42,7 +42,7 @@ class AuHasardBalthazar extends GameScene {
       this.gameOverTimer = setTimeout(() => {
         this.gameOver();
       }, 5000);
-    }, 2000);
+    }, 20000);
   }
 
   update(time, delta) {

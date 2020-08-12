@@ -451,3 +451,23 @@ Also should add escape to menu any time.
 This is definitely going to work. Although it's not perfect at all, I really like the new menu in the Atari Combat manual style. It allows me to get more information in there, which may be advantageous in a relatively confusing game like this? And it's just a fun contrast (as with the original Combat) between the level of explanation and detail and then the actual game that emerges on the other end.
 
 Having made a basic menu, the next step is to produce at least one or two instruction screens for the games and see how that might change things.
+
+---
+
+# Some Like It Not So Hot (Wednesday, 12 August 2020, 7:41AM)
+
+Well after some back and forth with Mary I think it's time to admit that Some Like It Hot just isn't working, as much as I wanted it to stay there just to take up the space, and as much as I thought it might somehow be a bit funny and say something about crappy re-skins and so on. No. Okay.
+
+So, that being the case, I need to come up with something new. Here are some thoughts.
+
+_Tokyo Story_ could be a good one. It's one of the great films and its sense of stillness is quite a good misfit/contrast with a combat game. I'm a bit unclear on the "violence" angle (though we could perhaps talk about the two "foes" sitting side by side? But that does work at all with the movie). Could have the wife tank die at a certain point and leave the other sitting there on its own. How would I a) make you feel like you are one of the tanks if you're just sitting together? b) make you feel connected to the other tank like you've been together forever? It reminds me a bit of passage actually, so perhaps something along those lines with it being more like you drive along together for a while but then she dies? Hard to say.
+
+_The Passion of Joan of Arc_ definitely fits the violence bill. Could be too related to The Godfather in the sense of a powerless? death (I mean, Sonny's no martyr, but there's a mechanical similarity). Making it black and white would of course be pretty funny (though Citizen Kane is in black and white and so are other movies in the list, so that wouldn't really make sense either). Hmmm. I suppose I just can't quite see it. A close-up could be kind of good? Extreme close-up, you can't move because you're tied to the stake, and at some point the other tank finds and kills you? There's maybe something there... it would be the only game where you have no control at all except maybe a bit of a Citizen Kane style movement? Does she move on the pyre in the movie or is just very still?
+
+_Apocalypse Now_ is violence personified. Perhaps some kind of thing where you have to make your way to a Kurtz tank arduously and then kill him? He says the horror the horror?
+
+_Stalker_ could be funny because it's already a "film adaptation". The idea of the room they can't approach could be of interest? An invisible barrier? But I don't know, that doesn't sound all that fascinating.
+
+_La Jetée_ is still pretty amazing? Maybe there's a way to resurrect it in some less complex fashion? Maybe you're just fleeing down the "jetty" and there's another tank the same colour as you that maybe is confined but it clearly moving in the same way? Maybe if the jetty is confined enough you can't turn around (and spoil the idea...). And you'd have the more frame-based idea in there as well so that it would only render sporadically...
+
+HMM. More thinking please.

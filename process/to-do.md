@@ -39,6 +39,9 @@
 - General bugs associated with endings
 - Endings: in original you get flashing score (warning) followed by complete freeze (no audio) with palette swapping of everything on the screen (could either leave it like this and expect them to press escape OR could just go back on a timer, or both)
 - Ending issues around playing boolean where you end up with player able to move/not move or the enemy not spinning or sounds playing, etc. Messy.
+- Add more explicit driving instructions somewhere (either main screen or per game)
+- Decide about removing Some Like It Hot and find a replacement (ugh)
+- Tweak audio files to make them at least a bit easier to hear
 
 # Citizen Kane (Rosebud)
 
@@ -92,6 +95,8 @@
 - ~~Sound for non-firing (maybe just a click?)~~
 - ~~Music pre-monolith to announce its arrival?~~
 - ~~Make the monolith a standard sprite, jesus christ.~~
+
+- Work on opening instruction as it's too confusing
 
 # Au Hasard Balthazar (Donkey)
 
@@ -159,6 +164,8 @@
 - ~~Mirror tank starts in off direction?~~
 - ~~Should start facing away (as per movie)~~
 - ~~__FOR NOW WILL "SOLVE" WITH STANDARD COMBAT ENDING__ Need some signification of the ending~~
+
+- Work with text to avoid certainty he's dead?
 
 # The Conversation
 
