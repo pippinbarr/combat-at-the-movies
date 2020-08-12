@@ -38,7 +38,7 @@ class TaxiDriver extends GameScene {
     this.talkinSFX = this.sound.add('you-talkin-to-me');
 
     this.title = "TAXI DRIVER";
-    this.explanation = "You are Travis Bickle (Robert De Niro), alone again in your depressing apartment as you ready yourself for the ultimate confrontation. Point your canon at yourself in the mirror and practice your tough-guy routine. Feel the aching need to shoot just to show you're alive. Use the Arrow Keys to drive your tank and press the Space Bar to deliver your line.";
+    this.explanation = "You are Travis Bickle (Robert De Niro), alone again in your depressing apartment as you ready yourself for the ultimate confrontation. Point your canon at yourself in the mirror and practice your tough-guy routine. Feel the aching need to shoot just to show you're alive. Hold the Up Arrow to move forwards, the Left and Right Arrows to turn, and press the Space Bar to deliver your line.";
     this.figureKey = 'fig-taxi-driver';
     this.caption = 'Fig. I – Looking into the mirror'
 

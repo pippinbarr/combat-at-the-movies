@@ -44,7 +44,7 @@ class BeauTravail extends GameScene {
     this.music.loop = true;
 
     this.title = "BEAU TRAVAIL";
-    this.explanation = "Your life has just violently ended, but there's time for one last curtain call. Play Chief Adjutant Galoup (Denis Lavant) and dance poignantly to The Rhythm of the Night by Corona. Use the Arrow Keys to express yourself through movement.";
+    this.explanation = "Hovering between life and death, there's time for one last curtain call. Play Chief Adjutant Galoup (Denis Lavant) and dance ecstatically to The Rhythm of the Night by Corona. Hold the Up Arrow to move forwards, the Down Arrow to reverse, and the Left and Right Arrows to turn. Express yourself through movement.";
     this.figureKey = 'fig-beau-travail';
     this.caption = 'Fig. J – The last dance'
 
