@@ -81,6 +81,10 @@ class Rashomon extends GameScene {
 
     this.events.addListener("DEATH", (tank) => {
       if (this.gameOverTimer) return;
+      tank.score++;
+      this.playerScore.text = this.player.score;
+      this.enemyScore.text = this.enemy.score;
+
       this.playing = false;
       this.events.removeListener("DEATH");
       this.gameOverTimer = setTimeout(() => {

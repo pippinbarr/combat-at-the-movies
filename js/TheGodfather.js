@@ -85,6 +85,8 @@ class TheGodfather extends GameScene {
           this.player.driveSFX.stop();
           this.player.idleSFX.stop();
           this.player.dead = true;
+          this.enemy.score++;
+          this.enemyScore.text = this.enemy.score;
 
           clearTimeout(this.timeout);
           this.gameOverTimer = setTimeout(() => {

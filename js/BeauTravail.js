@@ -43,6 +43,9 @@ class BeauTravail extends GameScene {
     this.music = this.sound.add('rhythm-of-the-night');
     this.music.loop = true;
 
+    this.playerScore.visible = false;
+    this.enemyScore.visible = false;
+
     this.title = "BEAU TRAVAIL";
     this.explanation = "Hovering between life and death, there's time for one last curtain call. Play Chief Adjutant Galoup (Denis Lavant) and dance ecstatically to The Rhythm of the Night by Corona. Hold the Up Arrow to move forwards, the Down Arrow to reverse, and the Left and Right Arrows to turn. Express yourself through movement.";
     this.figureKey = 'fig-beau-travail';
