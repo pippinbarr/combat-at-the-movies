@@ -19,9 +19,9 @@ class TokyoStory extends GameScene {
     this.enemyScore.destroy();
 
     this.title = "TOKYO STORY";
-    this.explanation = "???";
+    this.explanation = "Take on the role of Shūkichi Hirayama (Chishū Ryū), the recently bereaved widower of Tomi (Chieko Higashiyama) as you face the final act of your life alone. Hold the Up Arrow to move forwards, the Left and Right Arrows to turn, and press the Space Bar to shoot. But where is there to go and what is the value of shooting without Tomi?";
     this.figureKey = 'fig-tokyo-story';
-    this.caption = '???'
+    this.caption = 'Shūkichi is alone'
 
     this.showInstructions(() => {
       this.startGame();

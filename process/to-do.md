@@ -38,10 +38,11 @@
 - ~~__GENIUS__ In case I don't check below: REMOVE THE PLAYER TANK in The Conversation, it does nothing, and it breaks the sprite limit~~
 - ~~__TOKYO STORY FOR NOW__ Decide about removing Some Like It Hot and find a replacement (ugh)~~
 
-- Tweak audio files to make them at least a bit easier to hear
+- Tweak audio files to make them at least a bit easier to hear (but not too easy!)
 - Implement standard timer ending: flashing score (warning) followed by complete freeze (no audio) with palette swapping of everything on the screen, then return to menu on a timer
 - Check all endings make (some) sense across all games
 - General bugs associated with endings (esp. playing boolean where you end up with player able to move/not move or the enemy not spinning or sounds playing, etc. Messy.)
+- Make a splash/title screen (probably Citizen Kane poster image on top of a similar? painting of a tank)
 
 # Tokyo Story (Alone)
 
@@ -50,9 +51,7 @@
 - ~~Slow down the player tank to indicate age?~~
 - ~~__NAH, FEELS LIKE IT WOULD BE TOO IMMEDIATE AND THUS COUNT AGAINST THE IDEA OF A LONG HISTORY TOGETH__ Could consider a wife tank beside you initially that death spins and vanishes, leaving you alone~~
 - ~~Create figure (ideally a picture of the guy alone?)~~
-
-- Instructions are all about resignation to loneliness after the death of your wife
-
+- ~~Instructions are all about resignation to loneliness after the death of your wife~~
 
 # Citizen Kane (Rosebud)
 
