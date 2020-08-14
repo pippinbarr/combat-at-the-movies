@@ -16,38 +16,39 @@ class TheConversation extends GameScene {
       tile.tint = 0xF1B275;
     });
 
-    this.player.x = this.game.canvas.width / 10;
-    this.player.y = 10;
+    // this.player.x = this.game.canvas.width / 10;
+    // this.player.y = 10;
+    this.player.destroy();
 
-    this.enemy1 = new AITank(this, 100, 240, `tank`, 0x272AB0);
-    this.add.existing(this.enemy1);
-    this.enemy1.x = this.game.canvas.width - this.game.canvas.width / 10;
-    this.enemy1.y = this.game.canvas.height / 2 + 24;
-    this.enemy1.setFrame(8);
-    this.enemy1.moveAngle = 180;
+    this.husband = new AITank(this, 100, 240, `tank`, 0x272AB0);
+    this.add.existing(this.husband);
+    this.husband.x = this.game.canvas.width - this.game.canvas.width / 10;
+    this.husband.y = this.game.canvas.height / 2 + 24;
+    this.husband.setFrame(8);
+    this.husband.moveAngle = 180;
 
-    this.tanks.add(this.enemy1);
-    this.shootables.add(this.enemy1);
+    this.tanks.add(this.husband);
+    this.shootables.add(this.husband);
 
-    this.enemy2 = new AITank(this, 100, 240, `tank`, 0xC04141, this.enemy1);
-    this.add.existing(this.enemy2);
-    this.enemy2.x = this.game.canvas.width / 10;
-    this.enemy2.y = this.game.canvas.height / 2 + 24;
+    this.wife = new AITank(this, 100, 240, `tank`, 0xC04141, this.husband);
+    this.add.existing(this.wife);
+    this.wife.x = this.game.canvas.width / 10;
+    this.wife.y = this.game.canvas.height / 2 + 24;
 
-    this.enemy1.enemy = this.enemy2;
+    this.husband.enemy = this.wife;
 
-    this.tanks.add(this.enemy2);
-    this.shootables.add(this.enemy2);
+    this.tanks.add(this.wife);
+    this.shootables.add(this.wife);
 
     this.walls.visible = false;
-    this.enemy1.visible = false;
-    this.enemy2.visible = false;
+    this.husband.visible = false;
+    this.wife.visible = false;
 
     this.playerScore.visible = false;
     this.enemyScore.visible = false;
 
     this.title = "THE CONVERSATION";
-    this.explanation = "Become Harry Caul (Gene Hackman) as you listen through the hotel wall to an argument between husband and wife. Hold the Up Arrow to move forwards, the Left and Right Arrows to turn as you pace beside the wall. Use your Ears to try to figure out what is happening and, when it turns deadly, who killed who.";
+    this.explanation = "Become Harry Caul (Gene Hackman) as you listen through the hotel wall to an argument between husband tank and wife tank. Use your Ears to try to figure out what is happening and, when it turns deadly, who killed who.";
     this.figureKey = 'fig-the-conversation';
     this.caption = 'Fig. H – Listening through the wall'
 
@@ -70,18 +71,22 @@ class TheConversation extends GameScene {
 
   update(time, delta) {
     if (!this.playing) return;
+    if (this.black.visible) return;
 
-    super.update(time, delta);
-    this.enemy1.update();
-    this.enemy2.update();
+    this.husband.update();
+    this.wife.update();
 
-    if (Phaser.Math.Distance.Between(this.enemy1.x, this.enemy1.y, this.enemy2.x, this.enemy2.y) < 400) {
-      let bullet1 = this.enemy1.shoot(this.shootables);
-      let bullet2 = this.enemy2.shoot(this.shootables);
+    if (Phaser.Math.Distance.Between(this.husband.x, this.husband.y, this.wife.x, this.wife.y) < 400) {
+      let bullet1 = this.husband.shoot(this.shootables);
+      let bullet2 = this.wife.shoot(this.shootables);
 
       if (bullet1) bullet1.visible = false;
       if (bullet2) bullet2.visible = false;
     }
+  }
+
+  handleInput() {
+
   }
 
   shoot() {

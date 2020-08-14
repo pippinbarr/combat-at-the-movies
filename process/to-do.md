@@ -35,6 +35,7 @@
 - ~~Add more explicit driving instructions somewhere (either main screen or per game)~~
 - ~~Move images into the atlas and compress?~~
 - ~~Do a "points pass" to see where points can be used expressively and when they should not even be indicated~~
+- ~~__GENIUS__ In case I don't check below: REMOVE THE PLAYER TANK in The Conversation, it does nothing, and it breaks the sprite limit~~
 
 - Tweak audio files to make them at least a bit easier to hear
 - Endings
