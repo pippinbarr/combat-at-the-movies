@@ -37,9 +37,12 @@
 - ~~Do a "points pass" to see where points can be used expressively and when they should not even be indicated~~
 - ~~__GENIUS__ In case I don't check below: REMOVE THE PLAYER TANK in The Conversation, it does nothing, and it breaks the sprite limit~~
 - ~~__TOKYO STORY FOR NOW__ Decide about removing Some Like It Hot and find a replacement (ugh)~~
+- ~~Get basic palette cycle thing working~~
 
 - Tweak audio files to make them at least a bit easier to hear (but not too easy!)
 - Implement standard timer ending: flashing score (warning) followed by complete freeze (no audio) with palette swapping of everything on the screen, then return to menu on a timer
+- Catch special cases with different named sprites etc. to add to the cycle
+- Decide on how nicely you'll implement the cycle in terms of timing and which things change color when
 - Check all endings make (some) sense across all games
 - General bugs associated with endings (esp. playing boolean where you end up with player able to move/not move or the enemy not spinning or sounds playing, etc. Messy.)
 - Make a splash/title screen (probably Citizen Kane poster image on top of a similar? painting of a tank)

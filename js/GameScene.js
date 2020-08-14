@@ -140,36 +140,15 @@ class GameScene extends Phaser.Scene {
     this.player.shoot(this.shootables);
   }
 
-  // showInstruction(text, callback) {
-  //   // What to do when the game ends: display the text and then go back to the menu
-  //   this.black.visible = true;
-  //   this.interstitialText.visible = true;
-  //   this.interstitialText.text = text;
-  //   setTimeout(() => {
-  //     this.black.visible = false;
-  //     this.interstitialText.visible = false;
-  //     this.playing = true;
-  //     this.sound.setMute(false);
-  //     if (callback) callback();
-  //   }, 2000);
-  // }
-
-  // showGameOver(text) {
-  //   // What to do when the game ends: display the text and then go back to the menu
-  //   this.black.visible = true;
-  //   this.interstitialText.visible = true;
-  //   this.interstitialText.text = text;
-  //   this.sound.removeAll();
-  //   setTimeout(() => {
-  //     this.scene.start(START_SCENE);
-  //   }, 2000);
-  // }
-
   gameOver() {
+    console.log("Game over")
     this.playing = false;
-    setTimeout(() => {
-      this.shutdown();
-    }, 3000);
+    this.cycleInterval = setInterval(() => {
+      this.cyclePalette();
+    }, 1000);
+    // setTimeout(() => {
+    //   this.shutdown();
+    // }, 3000);
   }
 
   showInstructions(callback) {
@@ -271,6 +250,24 @@ class GameScene extends Phaser.Scene {
       .setScale(0.6);
     this.figure.y = this.explanationText.y + this.explanationText.height + 20;
     this.captionText = this.add.text(this.pageInset + this.pageMargin, this.figure.y + this.figure.height * 0.6 + 10, `Fig. ${this.figureLabel} – ${this.caption}`, this.standardBoldStyle);
+  }
+
+  cyclePalette() {
+    this.playerScore.setColor(this.randomColor(true));
+    this.enemyScore.setColor(this.randomColor(true));
+
+    this.player.setTint(this.randomColor());
+    this.cameras.main.setBackgroundColor(this.randomColor());
+    let wallColor = this.randomColor(true);
+    this.walls.forEachTile((tile) => {
+      tile.tint = wallColor;
+    });
+  }
+
+  randomColor(hex) {
+    let hexColors = ["#fff", "#000", '#f00', '#ff0', '#0ff', '#00f'];
+    let colors = [0xfff000, 0x000000, 0xff0000, 0xffff00, 0x00ffff, 0x0000ff];
+    return hex ? hexColors[Math.floor(Math.random() * hexColors.length)] : colors[Math.floor(Math.random() * colors.length)];
   }
 
   shutdown() {
