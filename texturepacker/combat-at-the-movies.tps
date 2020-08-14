@@ -184,6 +184,7 @@
             <key type="filename">images/figures/fig-2001-a-space-odyssey.jpg</key>
             <key type="filename">images/figures/fig-lavventura.jpg</key>
             <key type="filename">images/figures/fig-taxi-driver.jpg</key>
+            <key type="filename">images/figures/fig-tokyo-story.jpg</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -198,7 +199,6 @@
             </struct>
             <key type="filename">images/figures/fig-au-hasard-balthazar.jpg</key>
             <key type="filename">images/figures/fig-rashomon.jpg</key>
-            <key type="filename">images/figures/fig-some-like-it-hot.jpg</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>

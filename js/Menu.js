@@ -145,12 +145,14 @@ class Menu extends Phaser.Scene {
     this.games.sort((a, b) => a.year - b.year);
     let y = 180;
     this.menuItems = [];
+    this.labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     for (let i = 0; i < this.games.length; i++) {
       let title = `${i+1}. ${this.games[i].title} (${this.games[i].year})`
       let item = this.add.text(this.pageInset + this.pageMargin, y, title, gameMenuItemStyle);
       y += 20;
       item.game = this.games[i];
       this.menuItems.push(item);
+      this.scene.get(item.game.key).figureLabel = this.labels[i];
     }
 
     this.currentItem = 0;

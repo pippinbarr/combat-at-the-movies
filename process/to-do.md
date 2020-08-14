@@ -49,9 +49,10 @@
 - ~~Timer ends it (no death)~~
 - ~~Slow down the player tank to indicate age?~~
 - ~~__NAH, FEELS LIKE IT WOULD BE TOO IMMEDIATE AND THUS COUNT AGAINST THE IDEA OF A LONG HISTORY TOGETH__ Could consider a wife tank beside you initially that death spins and vanishes, leaving you alone~~
+- ~~Create figure (ideally a picture of the guy alone?)~~
 
 - Instructions are all about resignation to loneliness after the death of your wife
-- Create figure (ideally a picture of the guy alone?)
+
 
 # Citizen Kane (Rosebud)
 

@@ -94,6 +94,27 @@
 					}
 				},
 				{
+					"filename": "figures/fig-tokyo-story.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 232
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 232
+					},
+					"frame": {
+						"x": 643,
+						"y": 469,
+						"w": 640,
+						"h": 232
+					}
+				},
+				{
 					"filename": "figures/fig-au-hasard-balthazar.jpg",
 					"rotated": false,
 					"trimmed": false,
@@ -108,35 +129,14 @@
 						"h": 231
 					},
 					"frame": {
-						"x": 643,
-						"y": 469,
+						"x": 1,
+						"y": 470,
 						"w": 640,
 						"h": 231
 					}
 				},
 				{
 					"filename": "figures/fig-rashomon.jpg",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 640,
-						"h": 230
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 640,
-						"h": 230
-					},
-					"frame": {
-						"x": 1,
-						"y": 470,
-						"w": 640,
-						"h": 230
-					}
-				},
-				{
-					"filename": "figures/fig-some-like-it-hot.jpg",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -235,7 +235,7 @@
 					},
 					"frame": {
 						"x": 1,
-						"y": 702,
+						"y": 703,
 						"w": 1,
 						"h": 1
 					}
@@ -246,6 +246,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:ec92889804a31d3e2a3df35d576ce436:67d02f5a3689e81a3fe69b1e24d70eb7:cbce6b53f0f49e0bf15173c25c41f876$"
+		"smartupdate": "$TexturePacker:SmartUpdate:d081a019d2717abcae7ac266463adea9:7cc23a5dd551792addb948cbef4584de:cbce6b53f0f49e0bf15173c25c41f876$"
 	}
 }

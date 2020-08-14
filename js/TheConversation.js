@@ -50,7 +50,7 @@ class TheConversation extends GameScene {
     this.title = "THE CONVERSATION";
     this.explanation = "Become Harry Caul (Gene Hackman) as you listen through the hotel wall to an argument between husband tank and wife tank. Use your Ears to try to figure out what is happening and, when it turns deadly, who killed who.";
     this.figureKey = 'fig-the-conversation';
-    this.caption = 'Fig. H – Listening through the wall'
+    this.caption = 'Listening through the wall'
 
     this.showInstructions(() => {
       this.startGame();

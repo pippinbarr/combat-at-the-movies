@@ -21,7 +21,8 @@ class TokyoStory extends GameScene {
     this.title = "TOKYO STORY";
     this.explanation = "???";
     this.figureKey = 'fig-tokyo-story';
-    this.caption = 'Fig. ??? – ???'
+    this.caption = '???'
+
     this.showInstructions(() => {
       this.startGame();
     });

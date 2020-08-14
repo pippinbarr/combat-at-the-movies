@@ -265,11 +265,12 @@ class GameScene extends Phaser.Scene {
   }
 
   displayFigure() {
+
     this.figure = this.add.sprite(this.game.canvas.width / 2, 0, 'atlas', `figures/${this.figureKey}.jpg`)
       .setOrigin(0.5, 0)
       .setScale(0.6);
     this.figure.y = this.explanationText.y + this.explanationText.height + 20;
-    this.captionText = this.add.text(this.pageInset + this.pageMargin, this.figure.y + this.figure.height * 0.6 + 10, this.caption, this.standardBoldStyle);
+    this.captionText = this.add.text(this.pageInset + this.pageMargin, this.figure.y + this.figure.height * 0.6 + 10, `Fig. ${this.figureLabel} – ${this.caption}`, this.standardBoldStyle);
   }
 
   shutdown() {
