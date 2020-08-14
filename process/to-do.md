@@ -36,13 +36,22 @@
 - ~~Move images into the atlas and compress?~~
 - ~~Do a "points pass" to see where points can be used expressively and when they should not even be indicated~~
 - ~~__GENIUS__ In case I don't check below: REMOVE THE PLAYER TANK in The Conversation, it does nothing, and it breaks the sprite limit~~
+- ~~__TOKYO STORY FOR NOW__ Decide about removing Some Like It Hot and find a replacement (ugh)~~
 
 - Tweak audio files to make them at least a bit easier to hear
-- Endings
-  - Need endings that make sense across all games
-  - General bugs associated with endings (esp. playing boolean where you end up with player able to move/not move or the enemy not spinning or sounds playing, etc. Messy.)
-  - Endings: in original you get flashing score (warning) followed by complete freeze (no audio) with palette swapping of everything on the screen (could either leave it like this and expect them to press escape OR could just go back on a timer, or both)
-- Decide about removing Some Like It Hot and find a replacement (ugh)
+- Implement standard timer ending: flashing score (warning) followed by complete freeze (no audio) with palette swapping of everything on the screen, then return to menu on a timer
+- Check all endings make (some) sense across all games
+- General bugs associated with endings (esp. playing boolean where you end up with player able to move/not move or the enemy not spinning or sounds playing, etc. Messy.)
+
+# Tokyo Story (Alone)
+
+- ~~Player tank alone on the standard map~~
+- ~~Timer ends it (no death)~~
+- ~~Slow down the player tank to indicate age?~~
+- ~~__NAH, FEELS LIKE IT WOULD BE TOO IMMEDIATE AND THUS COUNT AGAINST THE IDEA OF A LONG HISTORY TOGETH__ Could consider a wife tank beside you initially that death spins and vanishes, leaving you alone~~
+
+- Instructions are all about resignation to loneliness after the death of your wife
+- Create figure (ideally a picture of the guy alone?)
 
 # Citizen Kane (Rosebud)
 

@@ -17,6 +17,8 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     this.tint = tint;
     this.body.maxSpeed = 150;
 
+    this.updateRate = 12;
+
     this.body.setBounce(1.25);
     this.body.setDrag(1000);
 
@@ -70,10 +72,11 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
     // Make me immovable when I'm not moving
     this.body.immovable = (this.body.velocity.x === 0 && this.body.velocity.y === 0);
 
-
-    if (this.scene.game.getFrame() % 12 !== 0) {
+    if (this.scene.game.getFrame() % this.updateRate !== 0) {
       return;
     }
+
+    console.log("update")
 
     this.scene.physics.velocityFromRotation(Phaser.Math.DegToRad(this.moveAngle), this.speed, this.body.velocity);
 

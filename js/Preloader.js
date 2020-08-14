@@ -30,7 +30,7 @@ let Preloader = new Phaser.Class({
     this.load.tilemapTiledJSON(`rashomon-map`, `assets/tilemaps/rashomon.json`);
     this.load.tilemapTiledJSON(`auhasardbalthazar-map`, `assets/tilemaps/auhasardbalthazar.json`);
     this.load.tilemapTiledJSON(`taxidriver-map`, `assets/tilemaps/taxidriver.json`);
-    this.load.tilemapTiledJSON(`somelikeithot-map`, `assets/tilemaps/somelikeithot.json`);
+    this.load.tilemapTiledJSON(`tokyostory-map`, `assets/tilemaps/tokyostory.json`);
     this.load.tilemapTiledJSON(`thegodfather-map`, `assets/tilemaps/thegodfather.json`);
     this.load.tilemapTiledJSON(`twothousandandoneaspaceodyssey-map`, `assets/tilemaps/twothousandandoneaspaceodyssey.json`);
     this.load.tilemapTiledJSON(`beautravail-map`, `assets/tilemaps/beautravail.json`);

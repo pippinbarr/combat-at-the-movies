@@ -15,11 +15,11 @@ let config = {
     Rashomon,
     AuHasardBalthazar,
     TaxiDriver,
-    SomeLikeItHot,
     TheGodfather,
     TwoThousandAndOneASpaceOdyssey,
     BeauTravail,
     TheConversation,
+    TokyoStory,
     Menu
   ],
   render: {

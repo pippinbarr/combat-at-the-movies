@@ -105,9 +105,9 @@ class Menu extends Phaser.Scene {
       year: 1950,
       menuKey: "R"
     }, {
-      key: "somelikeithot",
-      title: "Some Like It Hot",
-      year: 1959,
+      key: "tokyostory",
+      title: "Tokyo Story",
+      year: 1953,
       menuKey: "S"
     }, {
       key: "taxidriver",
