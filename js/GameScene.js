@@ -13,7 +13,21 @@ class GameScene extends Phaser.Scene {
     tileColor = 0xF1B275,
     playerColor = 0xC04141
   }) {
+
     this.cameras.main.setBackgroundColor(bgColor);
+
+    let h = 0;
+    let s = 1;
+    let v = 0;
+    setInterval(() => {
+      let color = Phaser.Display.Color.HSVToRGB(h, s, v);
+      this.cameras.main.setBackgroundColor(color);
+      h += 1 / 16;
+      if (h >= 1) {
+        v += 1 / 8;
+        h = 0;
+      }
+    }, 200);
 
     this.physics.world.setBounds(0, 0, this.game.canvas.width, this.game.canvas.height);
 

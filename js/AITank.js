@@ -49,14 +49,7 @@ class AITank extends Tank {
       this.rotationDirection = 0;
     }
 
-    let speed = Math.random();
-
-    if (speed < 0.1) {
-      this.speed = 0;
-    }
-    else {
-      this.speed = this.maxSpeed;
-    }
+    this.speed = Math.random() < 0.1 ? 0 : this.maxSpeed;
   }
 
   hit(object) {
