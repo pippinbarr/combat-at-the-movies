@@ -40,6 +40,7 @@
 - ~~Get basic palette cycle thing working~~
 
 - Tweak audio files to make them at least a bit easier to hear (but not too easy!)
+- Palette swapping: https://en.wikipedia.org/wiki/List_of_video_game_console_palettes#Atari
 - Implement standard timer ending: flashing score (warning) followed by complete freeze (no audio) with palette swapping of everything on the screen, then return to menu on a timer
 - Catch special cases with different named sprites etc. to add to the cycle
 - Decide on how nicely you'll implement the cycle in terms of timing and which things change color when
