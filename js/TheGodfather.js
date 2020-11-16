@@ -90,7 +90,6 @@ class TheGodfather extends GameScene {
 
           clearTimeout(this.timeout);
           this.gameOverTimer = setTimeout(() => {
-            this.playing = false;
             this.gameOver();
           }, 5000);
         }

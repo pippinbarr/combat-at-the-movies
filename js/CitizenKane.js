@@ -35,8 +35,8 @@ class CitizenKane extends GameScene {
       this.rosebudSFX.pause();
       this.gameOverTimeout = setTimeout(() => {
         this.gameOver();
-      }, 5000);
-    }, 10000);
+      }, 5000); // 5000
+    }, 1000); // 10000
   }
 
   update(time, delta) {

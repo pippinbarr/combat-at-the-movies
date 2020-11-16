@@ -16,19 +16,6 @@ class GameScene extends Phaser.Scene {
 
     this.cameras.main.setBackgroundColor(bgColor);
 
-    let h = 0;
-    let s = 1;
-    let v = 0;
-    setInterval(() => {
-      let color = Phaser.Display.Color.HSVToRGB(h, s, v);
-      this.cameras.main.setBackgroundColor(color);
-      h += 1 / 16;
-      if (h >= 1) {
-        v += 1 / 8;
-        h = 0;
-      }
-    }, 200);
-
     this.physics.world.setBounds(0, 0, this.game.canvas.width, this.game.canvas.height);
 
     this.map = this.make.tilemap({
@@ -156,10 +143,12 @@ class GameScene extends Phaser.Scene {
 
   gameOver() {
     console.log("Game over")
-    this.playing = false;
-    this.cycleInterval = setInterval(() => {
-      this.cyclePalette();
-    }, 1000);
+    if (this.playing) {
+      this.cycleInterval = setInterval(() => {
+        this.cyclePalette();
+      }, 1000);
+      this.playing = false;
+    }
     // setTimeout(() => {
     //   this.shutdown();
     // }, 3000);
@@ -267,21 +256,41 @@ class GameScene extends Phaser.Scene {
   }
 
   cyclePalette() {
-    this.playerScore.setColor(this.randomColor(true));
-    this.enemyScore.setColor(this.randomColor(true));
+    let playerScoreRGB = this.randomRGBColor();
+    let playerScoreHex = this.rgbToHex(`#`, playerScoreRGB);
+    this.playerScore.setColor(playerScoreHex);
 
-    this.player.setTint(this.randomColor());
-    this.cameras.main.setBackgroundColor(this.randomColor());
-    let wallColor = this.randomColor(true);
+    let enemyScoreRGB = this.randomRGBColor();
+    let enemyScoreHex = this.rgbToHex(`#`, enemyScoreRGB);
+    this.enemyScore.setColor(enemyScoreHex);
+
+    let playerRGB = this.randomRGBColor();
+    let playerHex = this.rgbToHex(`0x`, playerRGB);
+    this.player.setTint(playerHex);
+
+    let bgColor = this.randomRGBColor();
+    this.cameras.main.setBackgroundColor(bgColor);
+
+    let wallRGB = this.randomRGBColor();
+    let wallHex = this.rgbToHex(`0x`, wallRGB);
     this.walls.forEachTile((tile) => {
-      tile.tint = wallColor;
+      tile.tint = wallHex;
     });
   }
 
-  randomColor(hex) {
-    let hexColors = ["#fff", "#000", '#f00', '#ff0', '#0ff', '#00f'];
-    let colors = [0xfff000, 0x000000, 0xff0000, 0xffff00, 0x00ffff, 0x0000ff];
-    return hex ? hexColors[Math.floor(Math.random() * hexColors.length)] : colors[Math.floor(Math.random() * colors.length)];
+  randomRGBColor() {
+    let h = Math.floor(Math.random() * 16) / 16;
+    let s = Math.random() < 1 / 16 ? 0 : 0.75;
+    let v = Math.floor(Math.random() * 8) / 8;
+    let color = Phaser.Display.Color.HSVToRGB(h, s, v);
+    return color;
+  }
+
+  rgbToHex(prefix, rgb) {
+    let r = Phaser.Display.Color.ComponentToHex(rgb.r);
+    let g = Phaser.Display.Color.ComponentToHex(rgb.g);
+    let b = Phaser.Display.Color.ComponentToHex(rgb.b);
+    return `${prefix}${r}${g}${b}`;
   }
 
   shutdown() {
