@@ -23,22 +23,24 @@ class TokyoStory extends GameScene {
     this.figureKey = 'fig-tokyo-story';
     this.caption = 'Shūkichi is alone'
 
-    this.showInstructions(() => {
-      this.startGame();
-    });
+    this.showInstructions(this.startGame.bind(this));
   }
 
   startGame() {
-    this.timeout = setTimeout(() => {
-      this.player.active = false;
-      clearTimeout(this.timeout);
-      this.gameOverTimer = setTimeout(() => {
-        this.gameOver();
-      }, 10);
-    }, 10);
+
+  }
+
+  roundOver() {
+    super.roundOver();
+    this.gameOver();
   }
 
   update(time, delta) {
     super.update(time, delta);
+  }
+
+  shutdown() {
+    clearTimeout(this.timeout);
+    super.shutdown();
   }
 }

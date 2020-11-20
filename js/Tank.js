@@ -76,8 +76,6 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
       return;
     }
 
-    console.log("update")
-
     this.scene.physics.velocityFromRotation(Phaser.Math.DegToRad(this.moveAngle), this.speed, this.body.velocity);
 
     if (this.rotationDirection != 0) {
@@ -155,7 +153,6 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
       bullet.owner.wait();
     }
 
-    console.log("Emitting DEATH event.");
     this.scene.events.emit("DEATH", this);
   }
 

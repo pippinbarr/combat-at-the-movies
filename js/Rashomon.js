@@ -68,9 +68,7 @@ class Rashomon extends GameScene {
     this.explanation = "Finally, Akira Kurosawa's complex tale of unreliable, self-serving narrators is available in videogame form. Fight in the famous duel between Tajōmaru (Toshiro Mifune) and the samurai (Masayuki Mori). Hold the Up Arrow to move forwards, the Left and Right Arrows to turn, and press the Space Bar to shoot. But beware, all is not as it seems: this game mode includes four separate views, each showing the game field from a different perspective. What is the truth, and what is a lie?";
     this.figureKey = 'fig-rashomon';
     this.caption = 'The duel?'
-    this.showInstructions(() => {
-      this.startGame();
-    });
+    this.showInstructions(this.startGame.bind(this));
   }
 
   startGame() {
@@ -80,33 +78,46 @@ class Rashomon extends GameScene {
     this.camera4.visible = true;
 
     this.events.addListener("DEATH", (tank) => {
-      if (this.gameOverTimer) return;
-      tank.score++;
+      if (!this.playing) return;
+
+      this.playing = false;
+
+      clearTimeout(this.roundTimer);
+
+      if (Math.random() < 0.5) this.enemy.score++;
+      else this.player.score++;
+
       this.playerScore.text = this.player.score;
       this.enemyScore.text = this.enemy.score;
 
-      this.playing = false;
       this.events.removeListener("DEATH");
-      this.gameOverTimer = setTimeout(() => {
-        this.camera1.visible = false;
-        this.camera2.visible = false;
-        this.camera3.visible = false;
-        this.camera4.visible = false;
-        this.gameOver();
-      }, 5000);
-    });
 
+      this.gameOverTimer = setTimeout(() => {
+        this.gameOver();
+      }, this.POST_DEATH_DELAY);
+    });
   }
 
   update(time, delta) {
     super.update(time, delta);
 
-    if (!this.playing) return;
+    if (this.gameIsOver || !this.playing) return;
 
     this.enemy.update();
 
     if (!this.enemy.dead && Phaser.Math.Distance.Between(this.enemy.x, this.enemy.y, this.player.x, this.player.y) < 400) {
       this.enemy.shoot(this.shootables);
     }
+  }
+
+  roundOver() {
+    super.roundOver();
+    this.gameOver();
+  }
+
+  shutdown() {
+    clearTimeout(this.gameOverTimer);
+
+    super.shutdown();
   }
 }

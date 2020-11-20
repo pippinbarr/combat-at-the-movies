@@ -11,6 +11,7 @@ class CitizenKane extends GameScene {
       // tileColor: 0x00ff00,
       // playerColor: 0xFFFFFF
     });
+
     this.player.x = this.game.canvas.width / 2 - 5;
     this.player.y = 3 * this.game.canvas.height / 4 - 28;
 
@@ -29,19 +30,23 @@ class CitizenKane extends GameScene {
   }
 
   startGame() {
-    this.deathTimeout = setTimeout(() => {
-      let bullet = this.player.shoot();
-      this.player.die();
-      this.rosebudSFX.pause();
-      this.gameOverTimeout = setTimeout(() => {
-        this.gameOver();
-      }, 5000); // 5000
-    }, 1000); // 10000
+
+  }
+
+  roundOver() {
+    super.roundOver();
+
+    let bullet = this.player.shoot();
+    this.player.die();
+    this.rosebudSFX.pause();
+
+    this.gameOverTimeout = setTimeout(() => {
+      this.gameOver();
+    }, this.POST_DEATH_DELAY);
   }
 
   update(time, delta) {
     super.update(time, delta);
-    if (!this.playing) return;
   }
 
   handleInput() {

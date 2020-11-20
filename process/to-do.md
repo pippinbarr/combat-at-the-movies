@@ -39,9 +39,11 @@
 - ~~__TOKYO STORY FOR NOW__ Decide about removing Some Like It Hot and find a replacement (ugh)~~
 - ~~Get basic palette cycle thing working~~
 - ~~Palette swapping: (https://en.wikipedia.org/wiki/List_of_video_game_console_palettes#Atari)~~
+- ~~Implement standard timer ending: flashing score (warning) followed by complete freeze (no audio) with palette swapping of everything on the screen, then return to menu on a timer~~
+- ~~Stop all audio at end of a game~~
 
+- Maybe distinguish playing from gameOver to handle that interstitial moment?
 - Tweak audio files to make them at least a bit easier to hear (but not too easy!)
-- Implement standard timer ending: flashing score (warning) followed by complete freeze (no audio) with palette swapping of everything on the screen, then return to menu on a timer
 - Catch special cases with different named sprites etc. to add to the cycle
 - Decide on how nicely you'll implement the cycle in terms of timing and which things change color when
 - Check all endings make (some) sense across all games

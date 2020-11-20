@@ -14,6 +14,9 @@ class GameScene extends Phaser.Scene {
     playerColor = 0xC04141
   }) {
 
+    this.POST_DEATH_DELAY = 5000; // How long to spin before triggering palette cycle
+    this.ROUND_TIME = 5000; // Should match Combat
+
     this.cameras.main.setBackgroundColor(bgColor);
 
     this.physics.world.setBounds(0, 0, this.game.canvas.width, this.game.canvas.height);
@@ -24,7 +27,7 @@ class GameScene extends Phaser.Scene {
     this.tileset = this.map.addTilesetImage(`${this.key}-tileset`, `tileset`);
     this.walls = this.map.createDynamicLayer("walls", this.tileset, 0, 0);
     this.walls.setCollisionByProperty({
-      collides: true
+      // collides: true
     });
     this.walls.forEachTile((tile) => {
       tile.tint = tileColor;
@@ -77,11 +80,11 @@ class GameScene extends Phaser.Scene {
     //   faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
     // });
 
-    this.black = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'pixel.png')
-      .setTint(0x000000)
-      .setScale(this.game.canvas.width, this.game.canvas.height);
-    this.black.visible = false;
-    this.black.depth = 10000;
+    // this.black = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'pixel.png')
+    //   .setTint(0x000000)
+    //   .setScale(this.game.canvas.width, this.game.canvas.height);
+    // this.black.visible = false;
+    // this.black.depth = 10000;
 
     this.interstitialText = this.add.text(this.game.canvas.width / 2, this.game.canvas.height / 2, "TEXT", {
       fontFamily: "Square",
@@ -99,17 +102,15 @@ class GameScene extends Phaser.Scene {
     });
 
     this.playing = false;
+    this.gameIsOver = false;
   }
 
   update(time, delta) {
-    if (this.black.visible) return;
-    if (!this.playing) return;
+    if (this.gameIsOver) return;
 
     this.handleInput();
 
     this.player.update();
-
-    // this.physics.world.wrap(this.tanks);
   }
 
   handleInput() {
@@ -141,17 +142,23 @@ class GameScene extends Phaser.Scene {
     this.player.shoot(this.shootables);
   }
 
+  roundOver() {
+    this.gameOver();
+  }
+
   gameOver() {
-    console.log("Game over")
-    if (this.playing) {
+    if (!this.gameIsOver) {
+      this.gameIsOver = true;
+
+      this.game.sound.stopAll();
       this.cycleInterval = setInterval(() => {
         this.cyclePalette();
       }, 1000);
-      this.playing = false;
+
+      this.shutdownTimer = setTimeout(() => {
+        this.shutdown();
+      }, 10000);
     }
-    // setTimeout(() => {
-    //   this.shutdown();
-    // }, 3000);
   }
 
   showInstructions(callback) {
@@ -216,11 +223,21 @@ class GameScene extends Phaser.Scene {
       this.figure.destroy();
       this.captionText.destroy();
       this.sound.setMute(false);
-      setTimeout(() => {
+
+      this.startTimout = setTimeout(() => {
         this.playing = true;
       }, 100);
+
+      this.roundTimer = setTimeout(() => {
+        this.roundOver();
+      }, this.ROUND_TIME);
+
       callback();
     });
+  }
+
+  roundOver() {
+    this.playing = false;
   }
 
   displayPage() {
@@ -295,6 +312,10 @@ class GameScene extends Phaser.Scene {
 
   shutdown() {
     this.game.sound.stopAll();
+    clearInterval(this.cycleInterval);
+    clearTimeout(this.shutdownTimer);
+    clearTimeout(this.startTimout);
+    clearTimeout(this.roundTimer);
     this.scene.start('menu');
   }
 }
