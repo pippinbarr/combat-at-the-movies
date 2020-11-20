@@ -115,6 +115,15 @@ class Rashomon extends GameScene {
     this.gameOver();
   }
 
+  cyclePalette() {
+    super.cyclePalette();
+
+    let enemyRGB = this.randomRGBColor();
+    let enemyHex = this.rgbToHex(`0x`, enemyRGB);
+    this.enemy.setTint(enemyHex);
+
+  }
+
   shutdown() {
     clearTimeout(this.gameOverTimer);
 

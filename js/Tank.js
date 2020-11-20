@@ -153,6 +153,8 @@ class Tank extends Phaser.Physics.Arcade.Sprite {
       bullet.owner.wait();
     }
 
+    console.log("Emitting DEATH in Tank");
+
     this.scene.events.emit("DEATH", this);
   }
 

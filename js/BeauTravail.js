@@ -51,20 +51,23 @@ class BeauTravail extends GameScene {
     this.figureKey = 'fig-beau-travail';
     this.caption = 'The last dance'
 
-    this.showInstructions(() => {
-      this.startGame();
-    });
+    this.showInstructions(this.startGame.bind(this));
   }
 
   startGame() {
     this.music.play();
-    setTimeout(() => {
-      this.gameOver();
-    }, 20000);
+  }
+
+  roundOver() {
+    super.roundOver();
+
+    this.enemy.active = false;
+    this.gameOver();
   }
 
   update(time, delta) {
     super.update(time, delta);
+
     if (!this.playing) return;
 
     // Update the mirror
@@ -91,5 +94,21 @@ class BeauTravail extends GameScene {
 
   shoot() {
 
+  }
+
+  cyclePalette() {
+
+    super.cyclePalette();
+
+    let enemyRGB = this.randomRGBColor();
+    let enemyHex = this.rgbToHex(`0x`, enemyRGB);
+    this.player.setTint(enemyHex);
+    this.enemy.setTint(enemyHex);
+
+    let walls2RGB = this.randomRGBColor();
+    let walls2Hex = this.rgbToHex(`0x`, walls2RGB);
+    this.walls2.forEachTile((tile) => {
+      tile.tint = walls2Hex;
+    });
   }
 }

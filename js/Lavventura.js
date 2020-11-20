@@ -31,4 +31,8 @@ class Lavventura extends GameScene {
     super.update(time, delta);
     if (!this.playing) return;
   }
+
+  shoot() {
+    // No shooting
+  }
 }

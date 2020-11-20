@@ -12,6 +12,9 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
       // playerColor: 0xC04141
     });
 
+    this.TIME_TO_SUNRISE = 2000;
+    this.TIME_TO_MONOLITH = 6000;
+
     this.player.x = this.game.canvas.width / 10;
     this.player.y = this.game.canvas.height / 2 + 24;
     this.player.canShoot = false;
@@ -51,23 +54,33 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
     this.explanation = "Start out as a tank without firepower, low on the foodchain. When it appears, use the power of the monolith to upgrade your canon and eliminate the competition. Hold the Up Arrow to move forwards, the Left and Right Arrows to turn, and press the Space Bar to shoot once enabled. Evolve.";
     this.figureKey = 'fig-2001-a-space-odyssey';
     this.caption = 'The monolith arrives'
-    this.showInstructions(() => {
-      this.startGame();
-    });
+    this.showInstructions(this.startGame.bind(this));
 
     this.canClick = true;
   }
 
   startGame() {
-    setTimeout(() => {
+    this.sunriseTimer = setTimeout(() => {
       this.sunriseMusic.play();
-      setTimeout(() => {
+      this.monolithTimer = setTimeout(() => {
         this.setMonolithActive(true);
-        this.timeout = setTimeout(() => {
-          this.gameOver();
-        }, 20000);
-      }, 6000);
-    }, 5000);
+      }, this.TIME_TO_MONOLITH);
+    }, this.TIME_TO_SUNRISE);
+  }
+
+  roundOver() {
+    clearTimeout(this.sunriseTimer);
+    clearTimeout(this.monolithTimer);
+
+    super.roundOver();
+    this.player.active = false;
+    this.enemy.active = false;
+    this.gameOver();
+  }
+
+  gameOver() {
+    super.gameOver();
+    this.enemy.active = false;
   }
 
   setMonolithActive(active) {
@@ -89,7 +102,7 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
         this.player.y = this.monolith.y + this.monolith.body.height / 2 + this.player.body.height;
         return;
       }
-      if (this.monolith.touches < 5) {
+      if (this.monolith.touches < 2) {
         this.monolith.touches++;
       }
       else {
@@ -112,7 +125,7 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
       if (this.canClick) {
         this.clickSFX.play();
         this.canClick = false;
-        setTimeout(() => {
+        this.canClickTimer = setTimeout(() => {
           this.canClick = true;
         }, 500);
       }
@@ -131,11 +144,8 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
           this.player.score++;
           this.playerScore.text = this.player.score;
 
-          clearTimeout(this.timeout);
-          this.gameOverTimer = setTimeout(() => {
-            this.showGameOver("YOU EVOLVED");
-          }, 5000);
-
+          clearTimeout(this.roundTimer);
+          this.postDeathTimer = setTimeout(this.gameOver.bind(this), this.POST_DEATH_DELAY);
         }
       }
       else if (target.index === 1) {
@@ -143,6 +153,14 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
         bullet.destroy();
       }
     });
+  }
 
+  shutdown() {
+    clearTimeout(this.monolithTimer);
+    clearTimeout(this.sunriseTimer);
+    clearTimeout(this.postDeathTimer);
+    clearTimeout(this.canClickTimer);
+
+    super.shutdown();
   }
 }

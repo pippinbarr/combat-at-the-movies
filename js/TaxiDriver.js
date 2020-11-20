@@ -42,16 +42,18 @@ class TaxiDriver extends GameScene {
     this.figureKey = 'fig-taxi-driver';
     this.caption = 'Looking into the mirror'
 
-    this.showInstructions(() => {
-      this.startGame();
-    });
+    this.showInstructions(this.startGame.bind(this));
   }
 
   startGame() {
     this.mirror.visible = true;
-    this.timeout = setTimeout(() => {
-      this.gameOver();
-    }, 10000);
+  }
+
+  roundOver() {
+    super.roundOver();
+
+    this.enemy.active = false;
+    this.gameOver();
   }
 
   update(time, delta) {
@@ -76,7 +78,19 @@ class TaxiDriver extends GameScene {
   }
 
   shutdown() {
-    clearTimeout(this.timeout);
     super.shutdown();
+  }
+
+  cyclePalette() {
+    super.cyclePalette();
+
+    let enemyRGB = this.randomRGBColor();
+    let enemyHex = this.rgbToHex(`0x`, enemyRGB);
+    this.player.setTint(enemyHex);
+    this.enemy.setTint(enemyHex);
+
+    let bgColor = this.randomRGBColor();
+    this.cameras.main.setBackgroundColor(bgColor);
+    this.mirror.setBackgroundColor(bgColor);
   }
 }

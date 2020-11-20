@@ -39,6 +39,10 @@ class TokyoStory extends GameScene {
     super.update(time, delta);
   }
 
+  shoot() {
+    // No shooting
+  }
+
   shutdown() {
     clearTimeout(this.timeout);
     super.shutdown();

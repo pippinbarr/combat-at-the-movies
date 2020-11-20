@@ -27,7 +27,7 @@ class GameScene extends Phaser.Scene {
     this.tileset = this.map.addTilesetImage(`${this.key}-tileset`, `tileset`);
     this.walls = this.map.createDynamicLayer("walls", this.tileset, 0, 0);
     this.walls.setCollisionByProperty({
-      // collides: true
+      collides: true
     });
     this.walls.forEachTile((tile) => {
       tile.tint = tileColor;
@@ -213,6 +213,7 @@ class GameScene extends Phaser.Scene {
     this.displayInstruction();
     this.displayFigure();
 
+    // Switch from instructions to play
     this.cursors.space.once('down', () => {
       this.page.destroy();
       this.titleText.destroy();
@@ -226,6 +227,7 @@ class GameScene extends Phaser.Scene {
 
       this.startTimout = setTimeout(() => {
         this.playing = true;
+        console.log("Set playing true")
       }, 100);
 
       this.roundTimer = setTimeout(() => {

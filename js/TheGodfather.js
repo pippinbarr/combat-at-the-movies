@@ -31,22 +31,22 @@ class TheGodfather extends GameScene {
     this.explanation = "Those Barzinis are up to no good. Play as Sonny Corleone (James Caan) driving through the toll plaza and minding your own business. Experience the shock and horror of a surprise attack from a Barzini tank that wants you dead. Hold the Up Arrow to move forwards, the Left and Right Arrows to turn. Drive through the plaza to your assassination.";
     this.figureKey = 'fig-the-godfather';
     this.caption = 'Beware the toll plaza'
-    this.showInstructions(() => {
-      this.startGame();
-    });
+    this.showInstructions(this.startGame.bind(this));
   }
 
   startGame() {
-    this.timeout = setTimeout(() => {
-      this.playing = false;
-      this.gameOver();
-    }, 10000);
+
+  }
+
+  roundOver() {
+    super.roundOver();
+    this.enemy.active = false;
+    this.gameOver();
   }
 
   update(time, delta) {
     super.update(time, delta);
 
-    if (this.black.visible) return;
     if (!this.playing) return;
 
     if (this.player.x > 250 && !this.shooting) {
@@ -88,10 +88,10 @@ class TheGodfather extends GameScene {
           this.enemy.score++;
           this.enemyScore.text = this.enemy.score;
 
-          clearTimeout(this.timeout);
-          this.gameOverTimer = setTimeout(() => {
-            this.gameOver();
-          }, 5000);
+          clearTimeout(this.roundTimer);
+          this.enemy.active = false;
+
+          this.postDeathTimer = setTimeout(this.gameOver.bind(this), this.POST_DEATH_DELAY);
         }
       }
       // If it's a wall, end of bullet
@@ -109,5 +109,10 @@ class TheGodfather extends GameScene {
 
   shoot() {
 
+  }
+
+  shutdown() {
+    clearTimeout(this.postDeathTimer);
+    super.shutdown();
   }
 }

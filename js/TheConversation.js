@@ -37,6 +37,9 @@ class TheConversation extends GameScene {
 
     this.husband.enemy = this.wife;
 
+    this.husband.active = false;
+    this.wife.active = false;
+
     this.tanks.add(this.wife);
     this.shootables.add(this.wife);
 
@@ -52,29 +55,46 @@ class TheConversation extends GameScene {
     this.figureKey = 'fig-the-conversation';
     this.caption = 'Listening through the wall'
 
-    this.showInstructions(() => {
-      this.startGame();
-    });
+    this.showInstructions(this.startGame.bind(this));
   }
 
   startGame() {
+    clearTimeout(this.roundTimer);
+
+    this.husband.active = true;
+    this.wife.active = true;
+
     this.events.addListener("DEATH", (tank) => {
-      if (this.gameOverTimer) return;
-      this.playing = false;
+      console.log("Captured DEATH event");
+
+      if (!this.playing) return;
+
       this.events.removeListener("DEATH");
-      this.gameOverTimer = setTimeout(() => {
-        this.gameOverTimer = undefined;
-        this.gameOver();
-      }, 5000);
+      console.log("Set this.playing false in case of DEATH");
+      this.playing = false;
+      this.postDeathTimer = setTimeout(this.gameOver.bind(this), this.POST_DEATH_DELAY);
     });
   }
 
+  roundOver() {
+    // Doesn't happen
+  }
+
+  gameOver() {
+    super.gameOver();
+
+    this.wife.active = false;
+    this.husband.active = false;
+  }
+
   update(time, delta) {
-    if (!this.playing) return;
-    if (this.black.visible) return;
+
+    console.log(this.playing);
 
     this.husband.update();
     this.wife.update();
+
+    if (!this.playing) return;
 
     if (Phaser.Math.Distance.Between(this.husband.x, this.husband.y, this.wife.x, this.wife.y) < 400) {
       let bullet1 = this.husband.shoot(this.shootables);
@@ -91,5 +111,20 @@ class TheConversation extends GameScene {
 
   shoot() {
 
+  }
+
+  cyclePalette() {
+    super.cyclePalette();
+
+    let outerRGB = this.randomRGBColor();
+    let outerHex = this.rgbToHex(`0x`, outerRGB);
+    this.outer.forEachTile((tile) => {
+      tile.tint = outerHex;
+    });
+  }
+
+  shutdown() {
+    clearTimeout(this.postDeathTimer);
+    super.shutdown();
   }
 }
