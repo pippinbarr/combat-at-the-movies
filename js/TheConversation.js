@@ -60,6 +60,7 @@ class TheConversation extends GameScene {
 
   startGame() {
     clearTimeout(this.roundTimer);
+    this.stopWarning();
 
     this.husband.active = true;
     this.wife.active = true;

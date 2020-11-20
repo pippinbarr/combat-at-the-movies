@@ -13,8 +13,7 @@
 - ~~Add some score stuff by default~~
 - ~~Better AI tank? Maybe only as in: it tries not to just ram walls indefinitely?~~
 - ~~Improve sounds~~
-
-- Expiry of bullet by distance/time?
+- ~~__WHO CARES__ Expiry of bullet by distance/time?~~
 
 # Menu
 
@@ -46,11 +45,11 @@
 - ~~Check all endings make (some) sense across all games~~
 - ~~__KIND OF WENT ALL IN__ Decide on how nicely you'll implement the cycle in terms of timing and which things change color when~~
 - ~~__I THINK I GOT THIS SORTED OUT__ General bugs associated with endings (esp. playing boolean where you end up with player able to move/not move or the enemy not spinning or sounds playing, etc. Messy.)~~
+- ~~Fix "fire on start" issue~~
 
 - Add the flashing timer sign that the game is about to end
 - Tweak audio files to make them at least a bit easier to hear (but not too easy!)
 - Make a splash/title screen (probably Citizen Kane poster image on top of a similar? painting of a tank)
-- Fix "fire on start" issue
 
 # Tokyo Story (Alone)
 

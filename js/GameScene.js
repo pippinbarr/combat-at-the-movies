@@ -15,7 +15,8 @@ class GameScene extends Phaser.Scene {
   }) {
 
     this.POST_DEATH_DELAY = 5000; // How long to spin before triggering palette cycle
-    this.ROUND_TIME = 5000; // Should match Combat
+    this.ROUND_TIME = 30000; // Should match Combat?
+    this.ROUND_WARNING_TIME = this.ROUND_TIME - 10000;
 
     this.cameras.main.setBackgroundColor(bgColor);
 
@@ -106,7 +107,7 @@ class GameScene extends Phaser.Scene {
   }
 
   update(time, delta) {
-    if (this.gameIsOver) return;
+    if (!this.playing || this.gameIsOver) return;
 
     this.handleInput();
 
@@ -114,7 +115,7 @@ class GameScene extends Phaser.Scene {
   }
 
   handleInput() {
-    if (this.player.waiting || this.player.dead) return;
+    if (!this.playing || this.gameIsOver || this.player.waiting || this.player.dead) return;
 
     if (this.cursors.left.isDown) {
       this.player.rotationDirection = -1;
@@ -150,6 +151,8 @@ class GameScene extends Phaser.Scene {
     if (!this.gameIsOver) {
       this.gameIsOver = true;
 
+      this.stopWarning();
+
       this.game.sound.stopAll();
       this.cycleInterval = setInterval(() => {
         this.cyclePalette();
@@ -159,6 +162,13 @@ class GameScene extends Phaser.Scene {
         this.shutdown();
       }, 10000);
     }
+  }
+
+  stopWarning() {
+    clearInterval(this.roundWarningInterval);
+    clearTimeout(this.roundWarningTimer);
+    this.playerScore.alpha = 1;
+    this.enemyScore.alpha = 1;
   }
 
   showInstructions(callback) {
@@ -230,16 +240,26 @@ class GameScene extends Phaser.Scene {
         console.log("Set playing true")
       }, 100);
 
-      this.roundTimer = setTimeout(() => {
-        this.roundOver();
-      }, this.ROUND_TIME);
+      this.roundWarningTimer = setTimeout(this.roundWarning.bind(this), this.ROUND_WARNING_TIME);
+
+      this.roundTimer = setTimeout(this.roundOver.bind(this), this.ROUND_TIME);
 
       callback();
     });
   }
 
+  roundWarning() {
+    this.roundWarningInterval = setInterval(this.flashScores.bind(this), 500);
+  }
+
+  flashScores() {
+    this.playerScore.alpha = 1 - this.playerScore.alpha;
+    this.enemyScore.alpha = 1 - this.enemyScore.alpha;
+  }
+
   roundOver() {
     this.playing = false;
+    this.stopWarning();
   }
 
   displayPage() {
@@ -318,6 +338,8 @@ class GameScene extends Phaser.Scene {
     clearTimeout(this.shutdownTimer);
     clearTimeout(this.startTimout);
     clearTimeout(this.roundTimer);
+    this.stopWarning();
+
     this.scene.start('menu');
   }
 }

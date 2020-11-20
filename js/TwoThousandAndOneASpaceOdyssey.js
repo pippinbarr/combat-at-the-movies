@@ -145,6 +145,8 @@ class TwoThousandAndOneASpaceOdyssey extends GameScene {
           this.playerScore.text = this.player.score;
 
           clearTimeout(this.roundTimer);
+          this.stopWarning();
+
           this.postDeathTimer = setTimeout(this.gameOver.bind(this), this.POST_DEATH_DELAY);
         }
       }

@@ -75,6 +75,7 @@ class AuHasardBalthazar extends GameScene {
       this.balthazar.die();
 
       clearTimeout(this.roundTimer);
+      this.stopWarning();
 
       this.player.active = false;
 

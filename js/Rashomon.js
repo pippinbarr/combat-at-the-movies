@@ -83,6 +83,7 @@ class Rashomon extends GameScene {
       this.playing = false;
 
       clearTimeout(this.roundTimer);
+      this.stopWarning();
 
       if (Math.random() < 0.5) this.enemy.score++;
       else this.player.score++;

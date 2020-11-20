@@ -57,7 +57,6 @@ class TheGodfather extends GameScene {
     if (this.shooting) {
       this.handleShooting();
     }
-
   }
 
   handleShooting() {
@@ -85,10 +84,13 @@ class TheGodfather extends GameScene {
           this.player.driveSFX.stop();
           this.player.idleSFX.stop();
           this.player.dead = true;
+
           this.enemy.score++;
           this.enemyScore.text = this.enemy.score;
 
           clearTimeout(this.roundTimer);
+          this.stopWarning();
+
           this.enemy.active = false;
 
           this.postDeathTimer = setTimeout(this.gameOver.bind(this), this.POST_DEATH_DELAY);
