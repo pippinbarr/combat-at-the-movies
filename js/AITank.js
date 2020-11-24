@@ -5,6 +5,7 @@ class AITank extends Tank {
 
     this.hitDX = 0;
     this.enemy = enemy;
+    this.turnChance = 0.01;
   }
 
   create() {
@@ -38,11 +39,13 @@ class AITank extends Tank {
   }
 
   randomMovement() {
+
     let turn = Math.random();
-    if (turn < 0.01) {
+    console.log(turn);
+    if (turn < this.turnChance) {
       this.rotationDirection = -1;
     }
-    else if (turn < 0.02) {
+    else if (turn < this.turnChance * 2) {
       this.rotationDirection = 1;
     }
     else {

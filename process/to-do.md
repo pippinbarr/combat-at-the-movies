@@ -46,8 +46,14 @@
 - ~~__KIND OF WENT ALL IN__ Decide on how nicely you'll implement the cycle in terms of timing and which things change color when~~
 - ~~__I THINK I GOT THIS SORTED OUT__ General bugs associated with endings (esp. playing boolean where you end up with player able to move/not move or the enemy not spinning or sounds playing, etc. Messy.)~~
 - ~~Fix "fire on start" issue~~
+- ~~Add the flashing timer sign that the game is about to end~~
+- ~~Citizen Kane doesn't death spin, I think I have tensions around when the player is active and not, sigh~~
+- ~~__KEEP THE NO ROUND OVER BUT REMOVE THE WALLS__ The Conversation doesn't seem to end? Oh right I actually did that on purpose, but does it make sense? Should there be a time out or not? Maybe in a timeout a random one dies? Or is that weird?~~
+- ~~__ACTUALLY I THINK IT'S OKAY TO WAIT A WHOLE 30 SECONDS__ Citizen Kane and others that just involve waiting with a reduce round time so you don't just sit there for half a minute waiting for something to happen?~~
+- ~~Remove maze from The Conversation~~
+- ~~Tweak the conversation's movement to eliminate instant conflict in the centre most of the time~~
+- ~~Make the dead take visible while spinning to replicate the idea of the figure in seen through the frosted window - the player won't know which person it is!~~
 
-- Add the flashing timer sign that the game is about to end
 - Tweak audio files to make them at least a bit easier to hear (but not too easy!)
 - Make a splash/title screen (probably Citizen Kane poster image on top of a similar? painting of a tank)
 

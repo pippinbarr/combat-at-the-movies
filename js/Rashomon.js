@@ -80,6 +80,10 @@ class Rashomon extends GameScene {
     this.events.addListener("DEATH", (tank) => {
       if (!this.playing) return;
 
+      if (tank === this.player) {
+        this.enemy.active = false;
+      }
+
       this.playing = false;
 
       clearTimeout(this.roundTimer);
@@ -102,11 +106,11 @@ class Rashomon extends GameScene {
   update(time, delta) {
     super.update(time, delta);
 
-    if (this.gameIsOver || !this.playing) return;
+    if (this.gameIsOver) return;
 
     this.enemy.update();
 
-    if (!this.enemy.dead && Phaser.Math.Distance.Between(this.enemy.x, this.enemy.y, this.player.x, this.player.y) < 400) {
+    if (!this.enemy.dead && this.enemy.active && Phaser.Math.Distance.Between(this.enemy.x, this.enemy.y, this.player.x, this.player.y) < 400) {
       this.enemy.shoot(this.shootables);
     }
   }

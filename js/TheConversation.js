@@ -24,8 +24,9 @@ class TheConversation extends GameScene {
     this.add.existing(this.husband);
     this.husband.x = this.game.canvas.width - this.game.canvas.width / 10;
     this.husband.y = this.game.canvas.height / 2 + 24;
-    this.husband.setFrame(8);
-    this.husband.moveAngle = 180;
+    this.husband.setFrame(10);
+    this.husband.moveAngle = 225;
+    this.husband.turnChance = 0.1;
 
     this.tanks.add(this.husband);
     this.shootables.add(this.husband);
@@ -34,6 +35,9 @@ class TheConversation extends GameScene {
     this.add.existing(this.wife);
     this.wife.x = this.game.canvas.width / 10;
     this.wife.y = this.game.canvas.height / 2 + 24;
+    this.wife.setFrame(1);
+    this.wife.moveAngle = 22.5;
+    this.wife.turnChance = 0.1;
 
     this.husband.enemy = this.wife;
 
@@ -66,32 +70,34 @@ class TheConversation extends GameScene {
     this.wife.active = true;
 
     this.events.addListener("DEATH", (tank) => {
-      console.log("Captured DEATH event");
-
       if (!this.playing) return;
 
+      tank.visible = true;
+
       this.events.removeListener("DEATH");
-      console.log("Set this.playing false in case of DEATH");
       this.playing = false;
       this.postDeathTimer = setTimeout(this.gameOver.bind(this), this.POST_DEATH_DELAY);
     });
   }
 
   roundOver() {
-    // Doesn't happen
+    // super.roundOver();
+    // this.gameOver();
+    // No round over because otherwise it's super unlikely they'll get to kill one another... unless I have no walls at all?
+    // Which would be fair enough, there are COMBAT levels like that?
   }
 
   gameOver() {
     super.gameOver();
+
+    this.husband.visible = false;
+    this.wife.visible = false;
 
     this.wife.active = false;
     this.husband.active = false;
   }
 
   update(time, delta) {
-
-    console.log(this.playing);
-
     this.husband.update();
     this.wife.update();
 

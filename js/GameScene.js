@@ -74,19 +74,6 @@ class GameScene extends Phaser.Scene {
       color: "#272AB0"
     });
 
-    // const debugGraphics = this.add.graphics().setAlpha(0.75);
-    // walls.renderDebug(debugGraphics, {
-    //   tileColor: null, // Color of non-colliding tiles
-    //   collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
-    //   faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
-    // });
-
-    // this.black = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'pixel.png')
-    //   .setTint(0x000000)
-    //   .setScale(this.game.canvas.width, this.game.canvas.height);
-    // this.black.visible = false;
-    // this.black.depth = 10000;
-
     this.interstitialText = this.add.text(this.game.canvas.width / 2, this.game.canvas.height / 2, "TEXT", {
       fontFamily: "Square",
       fontSize: "24px",
@@ -107,7 +94,7 @@ class GameScene extends Phaser.Scene {
   }
 
   update(time, delta) {
-    if (!this.playing || this.gameIsOver) return;
+    if (this.gameIsOver) return;
 
     this.handleInput();
 

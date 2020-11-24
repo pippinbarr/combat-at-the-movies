@@ -40,9 +40,7 @@ class CitizenKane extends GameScene {
     this.player.die();
     this.rosebudSFX.pause();
 
-    this.gameOverTimeout = setTimeout(() => {
-      this.gameOver();
-    }, this.POST_DEATH_DELAY);
+    this.postDeathTimer = setTimeout(this.gameOver.bind(this), this.POST_DEATH_DELAY);
   }
 
   update(time, delta) {
@@ -63,7 +61,6 @@ class CitizenKane extends GameScene {
     }
 
     // ROSEBUD
-    console.log(this.rosebudding);
     if (Phaser.Input.Keyboard.DownDuration(this.cursors.space) && !this.rosebudding) {
       this.rosebudSFX.play();
       this.rosebudding = true;
@@ -76,8 +73,7 @@ class CitizenKane extends GameScene {
   }
 
   shutdown() {
-    clearTimeout(this.deathTimeout);
-    clearTimeout(this.gameOverTimeout);
+    clearTimeout(this.postDeathTimer);
     super.shutdown();
   }
 }
