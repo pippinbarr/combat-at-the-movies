@@ -1,5 +1,5 @@
 const DEBUG = false;
-const START_SCENE = "menu";
+const START_SCENE = "splash";
 const SCALE = 5;
 
 let config = {
@@ -20,6 +20,7 @@ let config = {
     BeauTravail,
     TheConversation,
     TokyoStory,
+    Splash,
     Menu
   ],
   render: {

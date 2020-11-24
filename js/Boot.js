@@ -2,15 +2,17 @@ let Boot = new Phaser.Class({
 
   Extends: Phaser.Scene,
 
-  initialize: function Boot () {
-    Phaser.Scene.call(this, { key: 'boot' });
+  initialize: function Boot() {
+    Phaser.Scene.call(this, {
+      key: 'boot'
+    });
   },
 
-  preload: function () {
-    this.load.image('clown_logo','assets/clown_logo.png');
+  preload: function() {
+    this.load.image('clown_logo', 'assets/clown_logo.png');
   },
 
-  create: function () {
+  create: function() {
     this.scene.start('preloader');
   },
 });

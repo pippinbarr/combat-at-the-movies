@@ -54,8 +54,9 @@
 - ~~Tweak the conversation's movement to eliminate instant conflict in the centre most of the time~~
 - ~~Make the dead take visible while spinning to replicate the idea of the figure in seen through the frosted window - the player won't know which person it is!~~
 - ~~Tweak audio files to make them at least a bit easier to hear (but not too easy!)~~
+- ~~Make a splash/title screen/preloader screen (probably Citizen Kane poster image on top of a similar? painting of a tank? Keep it simple)~~
 
-- Make a splash/title screen/preloader screen (probably Citizen Kane poster image on top of a similar? painting of a tank? Keep it simple)
+- Investigate a more real/effective preloading sequence...
 
 # Tokyo Story (Alone)
 

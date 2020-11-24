@@ -10,8 +10,8 @@ let Preloader = new Phaser.Class({
 
   preload: function() {
     this.load.atlas('atlas', 'assets/atlas/atlas.png', 'assets/atlas/atlas.json', Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
-
     this.load.image(`tileset`, `assets/tilesets/tileset.png`);
+    this.load.image(`splash`, `assets/splash/combat-at-the-movies-splash.png`);
 
     // this.load.image(`fig-citizen-kane`, `assets/figures/fig-citizen-kane.png`);
     // this.load.image(`fig-rashomon`, `assets/figures/fig-rashomon.png`);
@@ -68,9 +68,13 @@ let Preloader = new Phaser.Class({
     let title = this.add.text(0, 0, "123456", style);
     title.visible = false;
 
+    this.cameras.main.setBackgroundColor(0x000000);
+
+    this.clown = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, `clown_logo`);
+
     setTimeout(() => {
       console.log(`Starting ${START_SCENE}`);
       this.scene.start(START_SCENE);
-    }, 100);
+    }, 1000);
   },
 });
