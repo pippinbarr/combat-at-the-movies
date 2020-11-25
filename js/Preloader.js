@@ -13,18 +13,6 @@ let Preloader = new Phaser.Class({
     this.load.image(`tileset`, `assets/tilesets/tileset.png`);
     this.load.image(`splash`, `assets/splash/combat-at-the-movies-splash.png`);
 
-    // this.load.image(`fig-citizen-kane`, `assets/figures/fig-citizen-kane.png`);
-    // this.load.image(`fig-rashomon`, `assets/figures/fig-rashomon.png`);
-    // this.load.image(`fig-some-like-it-hot`, `assets/figures/fig-some-like-it-hot.png`);
-    // this.load.image(`fig-lavventura`, `assets/figures/fig-lavventura.png`);
-    // this.load.image(`fig-au-hasard-balthazar`, `assets/figures/fig-au-hasard-balthazar.png`);
-    // this.load.image(`fig-2001-a-space-odyssey`, `assets/figures/fig-2001-a-space-odyssey.png`);
-    // this.load.image(`fig-the-godfather`, `assets/figures/fig-the-godfather.png`);
-    // this.load.image(`fig-the-conversation`, `assets/figures/fig-the-conversation.png`);
-    // this.load.image(`fig-taxi-driver`, `assets/figures/fig-taxi-driver.png`);
-    // this.load.image(`fig-beau-travail`, `assets/figures/fig-beau-travail.png`);
-
-
     this.load.tilemapTiledJSON(`citizenkane-map`, `assets/tilemaps/citizenkane.json`);
     this.load.tilemapTiledJSON(`lavventura-map`, `assets/tilemaps/lavventura.json`);
     this.load.tilemapTiledJSON(`rashomon-map`, `assets/tilemaps/rashomon.json`);
@@ -57,11 +45,7 @@ let Preloader = new Phaser.Class({
     this.load.audio('rosebud', 'assets/sounds/rosebud.wav');
     this.load.audio('sunrise', 'assets/sounds/sunrise.wav');
     this.load.audio('rhythm-of-the-night', 'assets/sounds/rhythm-of-the-night.mp3');
-  },
 
-  create: function() {
-    // Absolutely hideous hack to avoid this font-loading problem: display invisible text in preloader for
-    // a tiny amount of time before going to the menu, which seems to fix it.
     let style = {
       fontFamily: 'Square',
     };
@@ -72,8 +56,18 @@ let Preloader = new Phaser.Class({
 
     this.clown = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, `clown_logo`);
 
+    let progressBar = this.add.graphics();
+
+    this.load.on('progress', (value) => {
+      progressBar.clear();
+      progressBar.fillStyle(0xffffff, 1);
+      progressBar.fillRect(this.clown.x - this.clown.width / 2, this.clown.y + this.clown.height / 2, this.clown.width * value, 5);
+    });
+  },
+
+  create: function() {
+
     setTimeout(() => {
-      console.log(`Starting ${START_SCENE}`);
       this.scene.start(START_SCENE);
     }, 1000);
   },
