@@ -471,3 +471,36 @@ _Stalker_ could be funny because it's already a "film adaptation". The idea of t
 _La Jetée_ is still pretty amazing? Maybe there's a way to resurrect it in some less complex fashion? Maybe you're just fleeing down the "jetty" and there's another tank the same colour as you that maybe is confined but it clearly moving in the same way? Maybe if the jetty is confined enough you can't turn around (and spoil the idea...). And you'd have the more frame-based idea in there as well so that it would only render sporadically...
 
 HMM. More thinking please.
+
+---
+
+# Quite a while later (Wednesday, 25 November 2020, 11:23AM)
+
+Guess it has been... 15 weeks since I wrote a process journal entry, which isn't amazing of me. Not very rigorous, not very procedural. I also haven't necessarily done a ton of work on the game since then, but have finally polished off a few of the more frustrating issues.
+
+## *Some Like It Hot* > *Tokyo Story*
+In particular, responding to the key concern of the previous entry, I replaced *Some Like It Hot* with *Tokyo Story* which was fairly straightforward, possibly too straightforward? It's just a lonely old tank on its own until the end of the round. An attempt to capture some of the pathos at the end of the film in which Shūkichi Hirayama sits alone in his house without his wife. It seems like in the *Combat* context it makes sense that a similar loss would be if the player tank lost its counterpart in the enemy tank and thus lacks grounded and motive. Of course the *Combat* tank doesn't have a neglectful family etc., but we can't have (or not have?) everything.
+
+## Endings and palette cycling
+
+One of the final hurdles to complete that game revolved around the way that *Combat* does a quite alluring palette cycle at the end of any given game/round. I wanted to recreate that with some degree of accuracy, which turned out to be kind of fiddly but doable in the end.
+
+Also added the flashing of the scores to warn about the impending end of a round due to its time limit. And generally spent time with the code making sure the various ending were all working correctly, which was a bit of a kerfuffle but worked out.
+
+## Splash page, preloader
+
+Finally, I put together an opening title screen based on the *Combat* box art, modified to reflect the new game. It's pretty cheesy, but I think relatively satisfying nonetheless.
+
+![](../assets/splash/combat-at-the-movies-splash.png)
+
+That and a working preloader mean the game is essentially finished as far as I can tell?
+
+## Next up: press kit?
+
+That seems to mean that the final stage is to write up the press kit and get the game out into the world, freeing me up to work on something new for the first time since I started this thing back in May. Bloody hell. So all told probably a development time of something like seven months? Ugh. Oh well. It's not like it really took seven months, there were some big ol' gaps.
+
+## Oh yeah: /arts/ article
+
+Oh yeah I wrote an article about the game called [Film Adaptation as Experimental Game Design](https://www.mdpi.com/2076-0752/9/4/103) for the journal *arts* and its Special Issue on [The Art of Adaptation in Film and Video Games](https://www.mdpi.com/journal/arts/special_issues/art_adaptation).
+
+That can really serve as a kind of closing statement for this particular project I think. It's a fairly deep dive into the design process and intentions behind the game.
