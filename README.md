@@ -1,6 +1,6 @@
 # Combat at the Movies
 
-![](../press/images/combat-at-the-movies-splash.png)
+[![Splash](press/images/combat-at-the-movies-splash.png)](https://pippinbarr.github.io/combat-at-the-movies)
 
 *Sure, great works of cinema are great! But aren't they missing something?! Yes! They're missing tanks! Move over Orson Welles! Move over Robert DiNiro! These tanks are ready for their close-up!*
 
