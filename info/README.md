@@ -1,6 +1,6 @@
 # Combat at the Movies
 
-![Splash](../press/images/combat-at-the-movies-banner.png)
+![Banner](images/combat-at-the-movies-banner.png)
 
 ## [Play Online](https://www.pippinbarr.com/combat-at-the-movies/) (desktop only)
 
