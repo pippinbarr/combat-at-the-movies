@@ -1,4 +1,4 @@
-# Combat at the Movies
+# *Combat at the Movies*
 
 ![Banner](images/combat-at-the-movies-banner.png)
 
